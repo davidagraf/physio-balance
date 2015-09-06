@@ -8,8 +8,8 @@ module.exports = {
   },
   debug: true,
   devtool: 'cheap-module-inline-source-map',
-  context: path.join(__dirname, 'public', 'scripts'),
-  entry: './main.js',
+  context: path.join(__dirname, 'public'),
+  entry: path.join('scripts', 'main.js'),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -45,7 +45,8 @@ module.exports = {
       {
         test: /\.(ttf|svg|woff|eot)/,
         loader: 'url-loader?limit=10000'
-      }
+      },
+      { test: /\.l20n$/, loader: 'file-loader?name=[path][name].[ext]' }
     ],
     noParse: [
       new RegExp('jquery.min.js'),
@@ -63,6 +64,7 @@ module.exports = {
     alias: {
       '^jquery$': 'jquery/dist/jquery.min.js',
       '^bootstrap$': 'bootstrap-sass/assets/javascrpt/bootstrap.min.js'
-    }
+    },
+    root: path.join(__dirname, 'public')
   }
 };

@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="defaultLanguage" content="de">
+    <meta name="availableLanguages" content="de">
+    <link rel="localization" href="locales/de.l20n">
     <title>Physio Balance</title>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -21,30 +24,28 @@
         </div>
         <nav id="navbar" class="collapse navbar-collapse" role="navigation">
           <ul class="nav navbar-nav">
-            <li ng-show="pics">
-              <a href="#pics">fotos</a>
-            </li>
-            <!--
             <li>
-              <a href="#wedding">hochzeit</a>
-            </li>
-            -->
-            <li>
-              <a href="#about">über uns</a>
+              <a href="#pics"><span data-l10n-id="pics"/></a>
             </li>
             <li>
-              <a href="#program">programm</a>
+              <a href="#about"><span data-l10n-id="about"/></a>
             </li>
             <li>
-              <a href="#infos">infos</a>
+              <a href="#program"><span data-l10n-id="program"/></a>
             </li>
             <li>
-              <a href="#contact">kontakt</a>
+              <a href="#infos"><span data-l10n-id="infos"/></a>
+            </li>
+            <li>
+              <a href="#contact"><span data-l10n-id="contact"/></a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <srcipt src="bundle.js"></script>
+    <div>
+
+    </div>
+    <script src="bundle.js"></script>
   </body>
 </html>
