@@ -1,11 +1,11 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-@import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 .content {
   padding-top: 45px;
 
-  h2[id] {
-    padding-top: 80px;
+  h2 {
     margin-top: -45px;
+    padding-top: 80px;
   }
 }
