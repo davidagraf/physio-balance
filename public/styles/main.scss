@@ -35,3 +35,9 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
     padding-top: 80px;
   }
 }
+
+// no highlighted navbar element on hover on touch
+.touch .navbar-nav > li:not(.active) > a:hover {
+  background-color: $navbar-inverse-bg;
+  color: $navbar-inverse-color;
+}
