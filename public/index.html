@@ -9,40 +9,48 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
-      <div class="container">
-        <div class="navbar-header">
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="#" class="navbar-brand">
-            <span class="glyphicon glyphicon-home"></span>
-          </a>
+    <div id="headeraffix">
+      <span id="headerimg" role="img">
+        <span>
+        </span>
+      </span>
+    </div>
+    <div id="nav">
+      <header class="navbar navbar-inverse" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">
+              <span class="glyphicon glyphicon-home"></span>
+            </a>
+          </div>
+          <nav id="navbar" class="collapse navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#pics"><span data-l10n-id="pics"/></a>
+              </li>
+              <li>
+                <a href="#about"><span data-l10n-id="about"/></a>
+              </li>
+              <li>
+                <a href="#program"><span data-l10n-id="program"/></a>
+              </li>
+              <li>
+                <a href="#infos"><span data-l10n-id="infos"/></a>
+              </li>
+              <li>
+                <a href="#contact"><span data-l10n-id="contact"/></a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav id="navbar" class="collapse navbar-collapse" role="navigation">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="#pics"><span data-l10n-id="pics"/></a>
-            </li>
-            <li>
-              <a href="#about"><span data-l10n-id="about"/></a>
-            </li>
-            <li>
-              <a href="#program"><span data-l10n-id="program"/></a>
-            </li>
-            <li>
-              <a href="#infos"><span data-l10n-id="infos"/></a>
-            </li>
-            <li>
-              <a href="#contact"><span data-l10n-id="contact"/></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+      </header>
+    </div>
     <div class="content">
       <h2 id="pics" data-l10n-id="pics"></h2>
       <p data-l10n-id="dummytext"></p>

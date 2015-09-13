@@ -1,6 +1,32 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+#nav.affix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#headerimg {
+  background-image: url('../imgs/headerimg.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: transparent;
+  display: inline-block;
+  font: 0/0 serif;
+  text-shadow: none;
+  vertical-align: middle;
+  width: 100%;
+
+  > span {
+    display: block;
+    height: 0;
+    padding-top: 32.6%; // height/width of image
+  }
+}
+
 .content {
   padding-top: 45px;
 
