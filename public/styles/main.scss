@@ -1,14 +1,32 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+$navbar-border-radius: 0;
+
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-#nav.affix {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+.headeraffix {
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
-#headerimg {
+.nav {
+  &:not(.affix) {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
+  &.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+  }
+}
+
+.headerimg {
   background-image: url('../imgs/headerimg.png');
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -28,8 +46,6 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 }
 
 .content {
-  padding-top: 45px;
-
   h2 {
     margin-top: -45px;
     padding-top: 80px;
@@ -40,4 +56,8 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 .touch .navbar-nav > li:not(.active) > a:hover {
   background-color: $navbar-inverse-bg;
   color: $navbar-inverse-color;
+}
+
+.affix + .content {
+  padding-top: 53px;
 }

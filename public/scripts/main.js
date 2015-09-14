@@ -13,7 +13,7 @@ require('bootstrap-sass');
 jquery('#nav').affix({
   offset: {
     top: function() {
-      return jquery('#headerimg').height();
+      return jquery('#headeraffix > .headerimg').height();
     }
   }
 });
