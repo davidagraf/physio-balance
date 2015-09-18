@@ -35,7 +35,6 @@ jquery('header').on('click', '#navbar.in a', () => {
   jquery('#nav .navbar-toggle').click();
 });
 
-
 if (!!('ontouchstart' in window)) {
   jquery('body').addClass('touch');
 }

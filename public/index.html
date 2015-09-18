@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=691100814354778";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <div id="headeraffix" class="headeraffix">
       <span class="headerimg" role="img">
         <span>
@@ -46,6 +54,9 @@
               <li>
                 <a href="#contact"><span data-l10n-id="contact"/></a>
               </li>
+              <li>
+                <a href="#facebook"><span data-l10n-id="facebook"/></a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -62,7 +73,11 @@
       <p data-l10n-id="dummytext"></p>
       <h2 id="contact" data-l10n-id="contact"></h2>
       <p data-l10n-id="dummytext"></p>
-    </div>
+      <h2 id="facebook" data-l10n-id="facebook"></h2>
+      <div class="facebook">
+        <!-- https://developers.facebook.com/docs/plugins/page-plugin -->
+        <div class="fb-page" data-href="https://www.facebook.com/teslamotors" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/teslamotors"><a href="https://www.facebook.com/teslamotors">Tesla Motors</a></blockquote></div></div>    </div>
+      </div>
     <script src="bundle.js"></script>
   </body>
 </html>
