@@ -9,7 +9,7 @@ module.exports = {
   debug: true,
   devtool: 'cheap-module-inline-source-map',
   context: path.join(__dirname, 'public'),
-  entry: path.join('scripts', 'main.js'),
+  entry: path.join('scripts', 'main.jsx'),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -29,24 +29,27 @@ module.exports = {
         loader: ExtractTextPlugin.extract(
           'css?sourceMap!autoprefixer'
         )
-      },
-      {
+      }, {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract(
           'css?sourceMap!autoprefixer!sass?outputStyle=expanded&sourceMap=true&sourceMapContents=true'
         )
-      },
-      {
+      }, {
         test: /\.js$/,
         exclude: path.join(__dirname, 'node_modules'),
         loader: 'babel?optional=runtime&blacklist=react'
-      },
-      { test: /\.json$/, loader: 'json-loader' },
-      {
+      }, {
+        test: /\.jsx$/,
+        exclude: path.join(__dirname, 'node_modules'),
+        loader: 'babel?optional=runtime'
+      }, {
+        test: /\.json$/, loader: 'json-loader'
+      }, {
         test: /\.(ttf|svg|woff|eot)/,
         loader: 'url-loader?limit=10000'
-      },
-      { test: /\.(l20n|png)$/, loader: 'file-loader?name=[path][name].[ext]' }
+      }, {
+        test: /\.(l20n|png)$/, loader: 'file-loader?name=[path][name].[ext]'
+      }
     ],
     noParse: [
       new RegExp('jquery.min.js'),
