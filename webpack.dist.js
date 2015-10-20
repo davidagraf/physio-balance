@@ -1,3 +1,5 @@
+/*eslint-env node */
+
 var devConfig = require('./webpack.dev.js');
 
 devConfig.debug = false;

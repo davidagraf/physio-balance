@@ -1,1 +1,33 @@
+$color-olive: #808000;
+$margin-widgets: 15px;
 
+.titlebar {
+  background-color: $color-olive;
+  height: 250px;
+  width: 100%;
+}
+
+.contentarea {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: $margin-widgets (-$margin-widgets);
+
+  &--wrapper {
+    overflow: hidden;
+  }
+}
+
+.widget {
+  border-style: solid;
+  border-width: 1px;
+  height: 200px;
+  margin: $margin-widgets;
+  min-width: 200px;
+  width: 200px;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

@@ -1,3 +1,5 @@
+/*eslint-env node */
+
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -37,11 +39,20 @@ module.exports = {
       }, {
         test: /\.js$/,
         exclude: path.join(__dirname, 'node_modules'),
-        loader: 'babel?optional=runtime&blacklist=react'
+        loader: 'babel',
+        query: {
+          optional: 'runtime',
+          blacklist: 'react',
+          stage: 0
+        }
       }, {
         test: /\.jsx$/,
         exclude: path.join(__dirname, 'node_modules'),
-        loader: 'babel?optional=runtime'
+        loader: 'babel',
+        query: {
+          optional: 'runtime',
+          stage: 0
+        }
       }, {
         test: /\.json$/, loader: 'json-loader'
       }, {

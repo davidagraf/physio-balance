@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import 'normalize.css/normalize.css';
 import 'styles/main.scss';
 import 'scripts/utils/mobile.js'
 //import 'locales/de.l20n';
