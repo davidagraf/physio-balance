@@ -1,5 +1,10 @@
 $color-olive: #808000;
+$color-grey: #808080;
 $margin-widgets: 15px;
+
+.noscroll {
+  overflow: hidden;
+}
 
 .titlebar {
   background-color: $color-olive;
@@ -7,14 +12,35 @@ $margin-widgets: 15px;
   width: 100%;
 }
 
-.contentarea__small {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: $margin-widgets (-$margin-widgets);
+.contentarea {
+  &__small {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: $margin-widgets (-$margin-widgets);
 
-  &--wrapper {
-    overflow: hidden;
+    &--wrapper {
+      overflow: hidden;
+    }
+  }
+
+  &__big {
+    background: $color-grey;
+
+    &--scroll {
+      max-height: 100%;
+      overflow-y: scroll;
+    }
+
+    &--wrapper {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
   }
 }
 
