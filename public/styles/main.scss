@@ -45,15 +45,32 @@ $margin-widgets: 15px;
 }
 
 .widget {
+  border-radius: 50%;
   border-style: solid;
   border-width: 1px;
   height: 200px;
   margin: $margin-widgets;
-  min-width: 200px;
+  overflow: hidden;
   width: 200px;
 
   &:hover {
     cursor: pointer;
     text-decoration: underline;
+  }
+
+  &__img {
+    height: 65%;
+    overflow: hidden;
+    width: 100%;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    margin-top: 10px;
+    padding: 0 20px;
+    text-align: center;
   }
 }

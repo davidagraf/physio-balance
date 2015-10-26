@@ -59,7 +59,7 @@ module.exports = {
         test: /\.(ttf|svg|woff|eot)/,
         loader: 'url-loader?limit=10000'
       }, {
-        test: /\.(l20n|png)$/, loader: 'file-loader?name=[path][name].[ext]'
+        test: /\.(l20n|png|jpg)$/, loader: 'file-loader?name=[path][name].[ext]'
       }
     ],
     noParse: [
