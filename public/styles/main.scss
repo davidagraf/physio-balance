@@ -1,4 +1,4 @@
-$color-olive: #808000;
+$color-olive: #7BB064;
 $color-white: #fff;
 $color-black: #000;
 $margin-widgets: 15px;
@@ -31,11 +31,28 @@ $desktop-width: 1024px;
 .titlebar {
   background-color: $color-olive;
   height: 250px;
+  position: relative;
   width: 100%;
+
+  &__img {
+    height: 100%;
+    opacity: .5;
+    position: absolute;
+    right: 150px;
+  }
+
+  &__text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    right: 450px;
+    top: 150px;
+    z-index: 100;
+  }
 }
 
-.contentarea {
-  &__small {
+.board {
+  &__widgets {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -46,7 +63,7 @@ $desktop-width: 1024px;
     }
   }
 
-  &__big {
+  &__modal {
     background: $color-white;
     box-shadow: 0px 0px 25px 1px rgba($color-black, .75);
     margin: 25px 0;

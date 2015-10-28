@@ -1,23 +1,23 @@
 import React from 'react';
 import TitleBar from 'scripts/components/TitleBar.jsx';
-import ContentArea from 'scripts/components/ContentArea.jsx';
+import Board from 'scripts/components/Board.jsx';
 import Widget from 'scripts/components/Widget.jsx';
-import WidgetBig from 'scripts/components/WidgetBig.jsx';
+import Modal from 'scripts/components/Modal.jsx';
 
 export default class extends React.Component {
   render() {
     return (
       <div>
         <TitleBar />
-        <ContentArea
-          small={[<Widget />, <Widget />, <Widget />, <Widget />, <Widget />]}
-          big={[<WidgetBig />, <WidgetBig />, <WidgetBig />, <WidgetBig />, <WidgetBig />]}
+        <Board
+          widgets={[<Widget />, <Widget />, <Widget />, <Widget />, <Widget />]}
+          modals={[<Modal />, <Modal />, <Modal />, <Modal />, <Modal />]}
         />
         <TitleBar />
-          <ContentArea
-            small={[<Widget />, <Widget />, <Widget />]}
-            big={[<WidgetBig />, <WidgetBig />, <WidgetBig />]}
-          />
+        <Board
+          widgets={[<Widget />, <Widget />, <Widget />]}
+          modals={[<Modal />, <Modal />, <Modal />]}
+        />
       </div>
     );
   }

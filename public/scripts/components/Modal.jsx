@@ -9,7 +9,7 @@ export default class extends React.Component {
   }
   render() {
     return (
-      <div className="widgetbig">
+      <div className="">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt ut arcu sed commodo. Aliquam et
         urna tortor. Cras purus neque, finibus eget nisi eu, mollis fringilla justo. Vestibulum in lacus nisi. Cum
         sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec efficitur mollis
