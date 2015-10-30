@@ -7,9 +7,9 @@ export default class extends React.Component {
   }
   render() {
     return (
-      <div className="titlebar">
-        <div className="titlebar__text">{this.props.text}</div>
-        <img className="titlebar__img" src={this.props.img} />
+      <div className="bar">
+        <div className="bar__text">{this.props.text}</div>
+        <img className="bar__img" src={this.props.img} />
       </div>
     );
   }
