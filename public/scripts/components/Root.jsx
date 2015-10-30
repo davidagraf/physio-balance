@@ -1,19 +1,25 @@
 import React from 'react';
-import TitleBar from 'scripts/components/TitleBar.jsx';
 import Board from 'scripts/components/Board.jsx';
-import Widget from 'scripts/components/Widget.jsx';
-import Modal from 'scripts/components/Modal.jsx';
+
+import Bar from 'scripts/components/bars/Bar.jsx';
+import CompanyBar from 'scripts/components/bars/CompanyBar.jsx';
+
+import Widget from 'scripts/components/widgets/Widget.jsx';
+import TeamWidget from 'scripts/components/widgets/TeamWidget.jsx';
+
+import Modal from 'scripts/components/modals/Modal.jsx';
+import TeamModal from 'scripts/components/modals/TeamModal.jsx';
 
 export default class extends React.Component {
   render() {
     return (
       <div>
-        <TitleBar />
+        <CompanyBar />
         <Board
-          widgets={[<Widget />, <Widget />, <Widget />, <Widget />, <Widget />]}
-          modals={[<Modal />, <Modal />, <Modal />, <Modal />, <Modal />]}
+          widgets={[<TeamWidget />, <Widget />, <Widget />, <Widget />, <Widget />]}
+          modals={[<TeamModal />, <Modal />, <Modal />, <Modal />, <Modal />]}
         />
-        <TitleBar />
+        <Bar />
         <Board
           widgets={[<Widget />, <Widget />, <Widget />]}
           modals={[<Modal />, <Modal />, <Modal />]}

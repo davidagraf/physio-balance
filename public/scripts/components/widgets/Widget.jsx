@@ -1,16 +1,17 @@
 import React from 'react';
-import maxUndMoritz from 'imgs/maxundmoritz.jpg';
 
 export default class extends React.Component {
+  static propTypes = {
+    img: React.PropTypes.string,
+    text: React.PropTypes.string
+  }
   render() {
     return (
       <div className="widget">
         <div className="widget__img">
-          <img src={maxUndMoritz}/>
+          <img src={this.props.img}/>
         </div>
-        <div className="widget__text">
-          Hello World
-        </div>
+        <div className="widget__text">{this.props.text}</div>
       </div>
     );
   }

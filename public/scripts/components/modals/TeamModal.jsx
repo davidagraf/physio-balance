@@ -1,15 +1,10 @@
 import React from 'react';
+import Modal from 'scripts/components/modals/Modal.jsx';
 
 export default class extends React.Component {
-  componentWillMount() {
-    document.body.classList.add('noscroll');
-  }
-  componentWillUnmount() {
-    document.body.classList.remove('noscroll');
-  }
   render() {
     return (
-      <div className="">
+      <Modal>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt ut arcu sed commodo. Aliquam et
         urna tortor. Cras purus neque, finibus eget nisi eu, mollis fringilla justo. Vestibulum in lacus nisi. Cum
         sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec efficitur mollis
@@ -87,7 +82,7 @@ export default class extends React.Component {
         ultricies in augue non, auctor tempor dolor. Aliquam felis diam, tempor eu neque consectetur, ullamcorper
         dictum mauris. Integer ac quam metus. Proin et cursus est. Nunc fringilla nec purus iaculis eleifend. Interdum
         et malesuada fames ac ante ipsum primis in faucibus. Pellentesque lobortis egestas hendrerit.
-      </div>
+      </Modal>
     );
   }
 }
