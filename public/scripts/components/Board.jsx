@@ -16,9 +16,9 @@ export default class extends React.Component {
 
     if (this.state.modal) {
       big = (
-        <div className="modal--wrapper">
-          <div className="modal--scroll">
-            <div className="modal">
+        <div className="modal">
+          <div className="modal__scroll">
+            <div className="modal__content">
               <button onClick={() => this.setState({modal: null})}>close</button>
               { this.state.modal }
             </div>
@@ -29,8 +29,8 @@ export default class extends React.Component {
 
     return (
       <div>{big}
-        <div className="board--wrapper">
-          <div className="board">{
+        <div className="board">
+          <div className="board__content">{
               this.props.widgets.map(
                 (child, index) => <div key={index} onClick={() => this.showModal(index)}>{child}</div>
               )

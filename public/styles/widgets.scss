@@ -1,11 +1,11 @@
 .board {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: $margin-widgets (-$margin-widgets);
+  overflow: hidden;
 
-  &--wrapper {
-    overflow: hidden;
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: $margin-widgets (-$margin-widgets);
   }
 }
 
