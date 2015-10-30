@@ -25,6 +25,10 @@ $fa-font-path: '~font-awesome/fonts';
   overflow: hidden;
 }
 
+body {
+  background-color: $color-background;
+}
+
 @import 'bars';
 @import 'modals';
 @import 'widgets';
