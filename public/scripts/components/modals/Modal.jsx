@@ -4,6 +4,7 @@ import {Emitter, Constants} from 'scripts/utils/events.js';
 
 export default class extends React.Component {
   static propTypes = {
+    title: React.PropTypes.string,
     children: React.PropTypes.node
   }
   componentWillMount() {
