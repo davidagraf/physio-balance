@@ -1,5 +1,4 @@
 import {EventEmitter} from 'events';
-import keyMirror from 'keymirror';
 
 const internal = new EventEmitter();
 
@@ -14,8 +13,5 @@ export default {
     emit: (event) => {
       internal.emit(event);
     }
-  },
-  Constants: keyMirror({
-    MODAL_CLOSE: null
-  })
+  }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Emitter, Constants} from 'scripts/utils/events.js';
+import {Emitter} from 'scripts/utils/events.js';
 
 export default class extends React.Component {
   static propTypes = {
@@ -16,7 +16,7 @@ export default class extends React.Component {
   render() {
     return (
       <div className="modal__content">
-        <button onClick={() => Emitter.emit(Constants.MODAL_CLOSE)}>close</button>
+        <button onClick={() => Emitter.emit(this)}>close</button>
         { this.props.children }
       </div>
     );
