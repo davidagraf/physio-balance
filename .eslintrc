@@ -34,7 +34,7 @@
     "react/prop-types": 1,
     "react/wrap-multilines": 1,
     "react/self-closing-comp": 1,
-    "react/no-did-mount-set-state": 1,
+    "react/no-did-mount-set-state": [1, "allow-in-func"],
     "react/no-did-update-set-state": 1,
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1,
