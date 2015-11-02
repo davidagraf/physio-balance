@@ -10,16 +10,18 @@
 }
 
 .widget {
-  border: $color-border solid 1px;
-  border-radius: 50%;
+  background-color: $color-background-widget;
   height: 200px;
   margin: $margin-widgets;
+  outline: $color-border solid 1px;
   overflow: hidden;
+  transition: all $time-hover linear;
   width: 200px;
 
   &:hover {
     box-shadow: 0 0 5px 1px $color-border;
     cursor: pointer;
+    outline-color: $color-border-hover;
     text-decoration: underline;
   }
 
@@ -34,8 +36,7 @@
   }
 
   &__text {
-    margin-top: 10px;
-    padding: 0 20px;
+    margin-top: 15px;
     text-align: center;
   }
 }

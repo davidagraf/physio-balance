@@ -28,9 +28,11 @@
   &__header {
     display: flex;
     justify-content: space-between;
+
     &__title {
       padding: 20px 0 0 20px;
     }
+
     &__close {
       align-self: flex-start;
     }
