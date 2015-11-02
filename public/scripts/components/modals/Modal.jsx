@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Icon from 'scripts/components/Icon.jsx';
 import {Emitter} from 'scripts/utils/events.js';
 
 export default class extends React.Component {
@@ -15,9 +15,14 @@ export default class extends React.Component {
   }
   render() {
     return (
-      <div className="modal__content">
-        <button onClick={() => Emitter.emit(this)}>close</button>
+      <div className="modal__visible">
+        <div className="modal__header">
+          <div className="modal__header__title">{this.props.title}</div>
+          <button className="modal__header__close" onClick={() => Emitter.emit(this)}><Icon name="times" /></button>
+        </div>
+        <div className="modal__content">
         { this.props.children }
+        </div>
       </div>
     );
   }

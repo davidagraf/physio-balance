@@ -21,14 +21,7 @@ $fa-font-path: '~font-awesome/fonts';
   }
 }
 
-.noscroll {
-  overflow: hidden;
-}
-
-body {
-  background-color: $color-background;
-}
-
+@import 'globals';
 @import 'bars';
 @import 'modals';
 @import 'widgets';

@@ -1,0 +1,13 @@
+.noscroll {
+  overflow: hidden;
+}
+
+body {
+  background-color: $color-background;
+}
+
+button {
+  border: 0;
+  border-radius: 0;
+  padding: 10px;
+}

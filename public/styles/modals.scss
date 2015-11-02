@@ -13,19 +13,30 @@
   &__scroll {
     max-height: 100%;
     overflow-y: auto;
+    width: 100%;
 
     @include desktop {
       padding: 0 100px;
     }
   }
 
-  &__content {
+  &__visible {
     background: $color-white;
-    box-shadow: 0 0 25px 1px rgba($color-black, .75);
     margin: 25px 0;
+  }
 
-    @include desktop {
-      border-radius: 5px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    &__title {
+      padding: 20px 0 0 20px;
     }
+    &__close {
+      align-self: flex-start;
+    }
+  }
+
+  &__content {
+    padding: 20px;
   }
 }
