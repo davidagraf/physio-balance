@@ -10,6 +10,18 @@
   width: 100%;
   z-index: 100;
 
+  &--animation-appear {
+    opacity: .5;
+    transform: scale(1, .5);
+    transform-origin: center;
+
+    &.modal--animation-appear-active {
+      opacity: 1;
+      transform: scale(1);
+      transition: all .5s cubic-bezier(.09, 1.14, .35, 1);
+    }
+  }
+
   &__scroll {
     max-height: 100%;
     overflow-y: auto;
