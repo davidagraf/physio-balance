@@ -1,3 +1,5 @@
+$height-header: 50px;
+
 .modal {
   align-items: center;
   background-color: rgba($color-black, .3);
@@ -34,7 +36,7 @@
 
   &__visible {
     background: $color-white;
-    margin: 25px 0;
+    margin: ($height-header + 25px) 0 25px;
   }
 
   &__header {
