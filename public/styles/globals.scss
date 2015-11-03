@@ -17,3 +17,20 @@ button {
     background-color: $color-button-hover;
   }
 }
+
+table {
+  tr {
+    border-left: $style-border;
+    border-top: $style-border;
+
+    &:first-child {
+      font-weight: bold;
+    }
+
+    td {
+      border-bottom: $style-border;
+      border-right: $style-border;
+      padding: 10px;
+    }
+  }
+}

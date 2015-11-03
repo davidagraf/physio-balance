@@ -52,7 +52,7 @@ export default class extends React.Component {
     }
 
     return (
-      <Modal title="Schedule">{content}</Modal>
+      <Modal title="Wochenplan">{content}</Modal>
     );
   }
 }

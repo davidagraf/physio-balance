@@ -13,7 +13,7 @@
   background-color: $color-background-widget;
   height: 200px;
   margin: $margin-widgets;
-  outline: $color-border solid 1px;
+  outline: $style-border;
   overflow: hidden;
   transition: all $time-hover linear;
   width: 200px;
