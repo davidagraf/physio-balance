@@ -26,7 +26,7 @@
     width: 100%;
 
     @include desktop {
-      padding: 0 100px;
+      padding: 0 $margin-modal-desktop;
     }
   }
 
@@ -36,8 +36,22 @@
   }
 
   &__header {
-    display: flex;
-    justify-content: space-between;
+    &__content {
+      background: $color-white;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--fixed {
+      position: fixed;
+      right: 0;
+      top: 0;
+
+      @include desktop {
+        left: $margin-modal-desktop;
+        right: $margin-modal-desktop;
+      }
+    }
 
     &__title {
       padding: 20px 0 0 20px;
@@ -50,5 +64,10 @@
 
   &__content {
     padding: 20px;
+
+    &--fixed {
+      //box-shadow: 0 0 5px 1px $color-border;
+      padding: 68px 20px 20px;
+    }
   }
 }

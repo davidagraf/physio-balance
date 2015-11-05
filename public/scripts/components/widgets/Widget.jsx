@@ -23,20 +23,9 @@ export default class extends React.Component {
     Emitter.remove(this.props.modal, this._closeModal);
   }
   render() {
-    let modal;
-
-    if (this.state.open) {
-      modal = (
-        <div className="modal">
-          <div className="modal__scroll">
-            { this.props.modal }
-          </div>
-        </div>
-      );
-    }
     return (
       <div>
-        {modal}
+        {(this.state.open ? this.props.modal : null)}
         <div className="widget" onClick={() => this.setState({open: true})}>
           <div className="widget__img">
             <img src={this.props.img}/>
