@@ -19,22 +19,33 @@ export default class extends React.Component {
       this.setState({headerFixed: overflow});
     }
   }
+  _close() {
+    Emitter.emit(this);
+  }
+  _checkEsc(ev) {
+    if (ev.keyCode === 27) {
+      this._close();
+    }
+  }
   componentDidMount() {
     document.body.classList.add('noscroll');
     this._checkHeaderPosThis = this._checkHeaderPos.bind(this);
     window.addEventListener('resize', this._checkHeaderPosThis);
     this.refs.scroll.addEventListener('scroll', this._checkHeaderPosThis);
+    this._checkEscThis = this._checkEsc.bind(this);
+    window.addEventListener('keyup', this._checkEscThis);
   }
   componentWillUnmount() {
     document.body.classList.remove('noscroll');
     window.removeEventListener('resize', this._checkHeaderPosThis);
     this.refs.scroll.removeEventListener('scroll', this._checkHeaderPosThis);
+    window.removeEventListener('keyup', this._checkEscThis);
   }
   render() {
     let headerContent = (
       <div className="modal__header__content">
         <div key="0" className="modal__header__title">{this.props.title}</div>
-        <button key="1" className="modal__header__close" onClick={() => Emitter.emit(this)}>
+        <button key="1" className="modal__header__close" onClick={() => this._close()}>
           <Icon name="times" />
         </button>
       </div>
