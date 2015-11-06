@@ -22,14 +22,14 @@
 
   &__scroll {
     max-height: 100%;
-    max-width: $width-max-modal;
     overflow-y: auto;
     width: 100%;
   }
 
   &__visible {
     background: $color-white;
-    margin: 25px 0;
+    margin: 25px auto;
+    max-width: $width-max-modal;
   }
 
   &__header {
