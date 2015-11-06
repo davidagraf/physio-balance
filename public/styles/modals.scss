@@ -22,12 +22,9 @@
 
   &__scroll {
     max-height: 100%;
+    max-width: $width-max-modal;
     overflow-y: auto;
     width: 100%;
-
-    @include desktop {
-      padding: 0 $margin-modal-desktop;
-    }
   }
 
   &__visible {
@@ -43,14 +40,10 @@
     }
 
     &--fixed {
+      max-width: $width-max-modal;
       position: fixed;
-      right: 0;
       top: 0;
-
-      @include desktop {
-        left: $margin-modal-desktop;
-        right: $margin-modal-desktop;
-      }
+      width: 100%;
     }
 
     &__title {
