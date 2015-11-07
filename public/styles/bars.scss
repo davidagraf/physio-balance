@@ -1,23 +1,54 @@
 .bar {
   background-color: $color-olive;
-  height: 250px;
+  color: $color-background;
+  overflow: hidden;
   position: relative;
   width: 100%;
 
   &__img {
-    height: 100%;
     opacity: .5;
     position: absolute;
-    right: 150px;
+    right: 0;
   }
 
-  &__text {
-    color: $color-background;
-    font-size: 20px;
-    line-height: 30px;
-    position: absolute;
-    right: 450px;
-    top: 150px;
+  &__title {
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    padding: 60px 0 40px;
+    position: relative;
+    text-align: center;
     z-index: 100;
+  }
+
+  &__infos {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+
+    &__info {
+      padding: 0 10px 40px;
+    }
+  }
+
+  &__next {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 10px;
+    position: relative;
+    z-index: 100;
+  }
+}
+
+.button--next {
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+
+  &:hover {
+    background-color: transparent;
   }
 }

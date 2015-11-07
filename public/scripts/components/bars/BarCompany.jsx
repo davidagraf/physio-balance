@@ -7,12 +7,16 @@ import men from 'imgs/men.png';
 export default class extends React.Component {
   render() {
     return (
-      <Bar img={men} text={
-        <div>
-          <Icon name="clock-o"/> Mo - Fr 09:00 - 17:00<br/>
-          <Icon name="phone"/> 061 123 45 67
-        </div>
-      } />
+      <Bar
+        img={men}
+        title={'Physio Balance'}
+        infos={[
+          <div><Icon name="map-marker"/> Widdengasse 1 5070 Frick</div>,
+          <div><Icon name="clock-o"/> Mo - Fr 09:00 - 17:00</div>,
+          <div><Icon name="phone"/> 061 123 45 67</div>
+        ]}
+        hasNext={true}
+      />
     );
   }
 }
