@@ -30,7 +30,9 @@ export default class extends React.Component {
           <div className="widget__img">
             <img src={this.props.img}/>
           </div>
-          <div className="widget__text">{this.props.text}</div>
+          <div className="widget__text"><div className="widget__text__content">{
+            this.props.text
+          }</div></div>
         </div>
       </div>
     );

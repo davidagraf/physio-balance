@@ -11,12 +11,12 @@
 
 .widget {
   background-color: $color-background-widget;
-  height: 200px;
+  height: 240px;
   margin: $margin-widgets;
   outline: $style-border;
   overflow: hidden;
   transition: all $time-hover linear;
-  width: 200px;
+  width: 300px;
 
   &:hover {
     box-shadow: 0 0 5px 1px $color-border;
