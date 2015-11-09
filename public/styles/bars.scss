@@ -22,13 +22,38 @@
   }
 
   &__infos {
-    display: flex;
-    justify-content: center;
+    padding: 0 0 40px;
     position: relative;
     z-index: 100;
 
+    @include phone {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__group {
+      @mixin content-group {
+        display: flex;
+        justify-content: center;
+      }
+
+      @include desktop {
+        @include content-group;
+      }
+
+      @include tablet {
+        @include content-group;
+      }
+    }
+
     &__info {
-      padding: 0 10px 40px;
+      padding: 0 10px;
+
+      @include phone {
+        &:not(:first-child) {
+          padding-top: 5px;
+        }
+      }
     }
   }
 

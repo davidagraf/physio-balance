@@ -11,7 +11,7 @@ export default class extends React.Component {
         img={men}
         title={'Physio Balance'}
         infos={[
-          <div><Icon name="map-marker"/> Widdengasse 1 5070 Frick</div>,
+          <div><Icon name="map-marker"/> Widdengasse 16 5070 Frick</div>,
           <div><Icon name="clock-o"/> Mo - Fr 09:00 - 17:00</div>,
           <div><Icon name="phone"/> 061 123 45 67</div>
         ]}

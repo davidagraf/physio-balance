@@ -5,9 +5,7 @@ export default class extends React.Component {
   render() {
     return (
       <Bar
-        title={'Physiotherapie'}
-        infos={[]}
-        hasNext={true}
+        title={'Aktiv'}
       />
     );
   }

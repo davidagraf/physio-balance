@@ -1,8 +1,9 @@
 import React from 'react';
 import Board from 'scripts/components/Board.jsx';
 
-import Bar from 'scripts/components/bars/Bar.jsx';
 import BarCompany from 'scripts/components/bars/BarCompany.jsx';
+import BarPhysio from 'scripts/components/bars/BarPhysio.jsx';
+import BarActive from 'scripts/components/bars/BarActive.jsx';
 
 import Widget from 'scripts/components/widgets/Widget.jsx';
 import WidgetTeam from 'scripts/components/widgets/WidgetTeam.jsx';
@@ -14,11 +15,15 @@ export default class extends React.Component {
       <div>
         <BarCompany />
         <Board
-          widgets={[<WidgetTeam />, <Widget />, <Widget />, <Widget />, <Widget />]}
+          widgets={[<WidgetTeam />, <Widget />, <Widget />]}
         />
-        <Bar />
+        <BarPhysio />
         <Board
-          widgets={[<Widget />, <WidgetSchedule />, <Widget />]}
+          widgets={[<Widget />, <Widget />]}
+        />
+        <BarActive/>
+        <Board
+          widgets={[<WidgetSchedule />]}
         />
       </div>
     );

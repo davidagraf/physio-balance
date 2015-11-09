@@ -26,11 +26,11 @@ export default class extends React.Component {
       <div className="bar" name={this.props.title} ref="bar">
         <img className="bar__img" src={this.props.img} />
         <div className="bar__title">{this.props.title}</div>
-        <div className="bar__infos">{
+        <div className="bar__infos"><div className="bar__infos__group">{
           (this.props.infos || []).map((info, i) => {
             return <div key={i} className="bar__infos__info">{info}</div>;
           })
-        }</div>
+        }</div></div>
       {( this.props.hasNext ?
         <div className="bar__next">
           <ButtonNext onClick={() => this._scrollToNext()} />
