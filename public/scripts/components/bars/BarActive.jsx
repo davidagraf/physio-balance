@@ -6,6 +6,7 @@ export default class extends React.Component {
     return (
       <Bar
         title={'Aktiv'}
+        className="bar--blue"
       />
     );
   }

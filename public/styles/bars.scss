@@ -1,9 +1,20 @@
 .bar {
-  background-color: $color-olive;
   color: $color-background;
   overflow: hidden;
   position: relative;
   width: 100%;
+
+  &--green {
+    background-color: $color-green;
+  }
+
+  &--red {
+    background-color: $color-red;
+  }
+
+  &--blue {
+    background-color: $color-blue;
+  }
 
   &__img {
     opacity: .5;
@@ -60,7 +71,7 @@
   &__next {
     display: flex;
     justify-content: center;
-    padding: 0 0 10px;
+    padding: 0 0 20px;
     position: relative;
     z-index: 100;
   }
