@@ -8,7 +8,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 200;
 
   &--animation-appear {
     transform: scale(1, .5);
@@ -62,5 +62,13 @@
       //box-shadow: 0 0 5px 1px $color-border;
       padding: 68px 20px 20px;
     }
+  }
+
+  &__contact__form {
+    height: 807px;
+    @media (min-width: 680px) {
+      height: 913px;
+    }
+    width: 100%;
   }
 }

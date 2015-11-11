@@ -8,6 +8,7 @@ import BarActive from 'scripts/components/bars/BarActive.jsx';
 import Widget from 'scripts/components/widgets/Widget.jsx';
 import WidgetTeam from 'scripts/components/widgets/WidgetTeam.jsx';
 import WidgetSchedule from 'scripts/components/widgets/WidgetSchedule.jsx';
+import WidgetContact from 'scripts/components/widgets/WidgetContact.jsx';
 
 export default class extends React.Component {
   render() {
@@ -15,7 +16,7 @@ export default class extends React.Component {
       <div>
         <BarCompany />
         <Board
-          widgets={[<WidgetTeam />, <Widget />, <Widget />]}
+          widgets={[<WidgetTeam />, <WidgetContact />, <Widget />]}
         />
         <BarPhysio />
         <Board
