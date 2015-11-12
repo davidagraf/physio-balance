@@ -36,7 +36,10 @@
   }
 
   &__text {
-    margin-top: 15px;
+    align-items: center;
+    display: flex;
+    height: 35%;
+    justify-content: center;
     text-align: center;
   }
 }
