@@ -1,6 +1,7 @@
 import React from 'react';
 import Board from 'scripts/components/Board.jsx';
 
+import Menu from 'scripts/components/bars/Menu.jsx';
 import BarCompany from 'scripts/components/bars/BarCompany.jsx';
 import BarPhysio from 'scripts/components/bars/BarPhysio.jsx';
 import BarActive from 'scripts/components/bars/BarActive.jsx';
@@ -14,6 +15,7 @@ export default class extends React.Component {
   render() {
     return (
       <div>
+        <Menu/>
         <BarCompany />
         <Board
           widgets={[<WidgetTeam />, <WidgetContact />, <Widget />]}
