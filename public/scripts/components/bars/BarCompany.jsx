@@ -15,7 +15,6 @@ export default class extends React.Component {
           <div><Icon name="clock-o"/> Mo - Fr 09:00 - 17:00</div>,
           <div><Icon name="phone"/> 061 123 45 67</div>
         ]}
-        hasNext={true}
         className="bar--green"
       />
     );

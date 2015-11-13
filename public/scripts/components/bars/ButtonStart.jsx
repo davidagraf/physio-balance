@@ -8,7 +8,7 @@ export default class extends React.Component {
   render() {
     return (
       <button className="button--next" onClick={(ev) => this.props.onClick(ev)}>
-        <Icon name="angle-down" />
+        <Icon name="angle-up" />
       </button>
     );
   }

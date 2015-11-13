@@ -7,6 +7,7 @@ export default class extends React.Component {
       <Bar
         title={'Aktiv'}
         className="bar--blue"
+        buttonStart={true}
       />
     );
   }

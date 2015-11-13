@@ -1,13 +1,17 @@
 import React from 'react';
 import ButtonNext from 'scripts/components/bars/ButtonNext.jsx';
+import ButtonStart from 'scripts/components/bars/ButtonStart.jsx';
 
 export default class extends React.Component {
   static propTypes = {
     img: React.PropTypes.string,
     title: React.PropTypes.node,
     infos: React.PropTypes.arrayOf(React.PropTypes.node),
-    hasNext: React.PropTypes.bool,
+    buttonStart: React.PropTypes.bool,
     className: React.PropTypes.string
+  }
+  static defaultProps = {
+    buttonStart: false
   }
   _scrollToNext() {
     let bars = document.getElementsByClassName('bar');
@@ -20,7 +24,6 @@ export default class extends React.Component {
         break;
       }
     }
-
   }
   render() {
     return (
@@ -37,11 +40,13 @@ export default class extends React.Component {
           null
         )}
         {(
-          this.props.hasNext ?
+          this.props.buttonStart ?
+          <div className="bar__next">
+            <ButtonStart onClick={() => window.scrollTo(0, 0)} />
+          </div> :
           <div className="bar__next">
             <ButtonNext onClick={() => this._scrollToNext()} />
-          </div> :
-          null
+          </div>
         )}
       </div>
     );

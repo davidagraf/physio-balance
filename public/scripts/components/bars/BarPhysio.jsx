@@ -6,7 +6,6 @@ export default class extends React.Component {
     return (
       <Bar
         title="Physiotherapie"
-        hasNext={true}
         className="bar--red"
       />
     );
