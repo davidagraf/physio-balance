@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 9000 --colors --config ./webpack.dev.js",
-    "dist": "rm -rf dist && node ./node_modules/webpack/bin/webpack.js --colors --config ./webpack.dist.js"
+    "dist": "rm -rf dist && node ./node_modules/webpack/bin/webpack.js --colors --config ./webpack.dist.js",
+    "deploy": "gsutil rsync -R dist/ gs://www.physiobalance.fit",
+    "publish": "gsutil -m acl ch -r -u AllUsers:R gs://www.physiobalance.fit/preview/*"
   },
   "repository": {
     "type": "git",

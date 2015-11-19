@@ -13,7 +13,7 @@ module.exports = {
   context: path.join(__dirname, 'public'),
   entry: path.join('scripts', 'main.jsx'),
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist', 'preview'),
     filename: 'bundle.js'
   },
   module: {

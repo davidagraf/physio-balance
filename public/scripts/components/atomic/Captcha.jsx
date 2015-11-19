@@ -10,7 +10,7 @@ export default class extends React.Component {
   componentDidMount() {
     grecaptcha.render(
       ReactDOM.findDOMNode(this.refs.captcha), {
-        sitekey: '6Le_RBETAAAAAJLA28XMDU5I_bbEsxdSlWcL4ssb',
+        sitekey: '6Ld0WhETAAAAAO0J-U9NBSrkE8yLZOfLgW6oCLsl',
         callback: (token) => this.props.tokenChanged(token)
       });
   }
