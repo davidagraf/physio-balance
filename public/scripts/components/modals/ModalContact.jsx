@@ -1,12 +1,16 @@
+/* global process */
+
 import React from 'react';
 import request from 'superagent';
 import Modal from 'scripts/components/modals/Modal.jsx';
 import Input from 'scripts/components/atomic/Input.jsx'
+import Captcha from 'scripts/components/atomic/Captcha.jsx';
 
 const DEFAULT_STATE = {
   email: '',
   subject: '',
   text: '',
+  captchaToken: null,
   success: false,
   error: null
 };
@@ -17,13 +21,16 @@ export default class extends React.Component {
     e.preventDefault();
 
     request.post('https://physio-balance.appspot.com/contact')
+    // request.post('http://localhost:8080/contact')
     .send({
       email: this.state.email,
       subject: this.state.email,
-      text: this.state.text
-    }).end((err) => {
+      text: this.state.text,
+      captchaToken: this.state.captchaToken,
+      dev: (process.env.NODE_ENV !== 'production')
+    }).end((err, resp) => {
       if (err) {
-        this.setState({error: err.text});
+        this.setState({error: resp.text});
       } else {
         this.setState({success: true});
       }
@@ -65,7 +72,10 @@ export default class extends React.Component {
               onChange={(ev) => this.setState({text: ev.target.value})} />
           } />
           <Input field={
-            <input type="submit" value="Senden"/>
+            <Captcha tokenChanged={(token) => this.setState({captchaToken: token})} />
+          } />
+          <Input field={
+            <input type="submit" value="Senden" />
           } />
         </form>
       );
