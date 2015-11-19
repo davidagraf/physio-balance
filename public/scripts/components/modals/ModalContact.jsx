@@ -20,7 +20,7 @@ export default class extends React.Component {
   _submit(e) {
     e.preventDefault();
 
-    request.post('https://physio-balance.appspot.com/contact')
+    request.post('https://physio-balance-server.appspot.com/contact')
     // request.post('http://localhost:8080/contact')
     .send({
       email: this.state.email,
