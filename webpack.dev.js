@@ -14,7 +14,7 @@ module.exports = {
   entry: path.join('scripts', 'main.jsx'),
   output: {
     path: path.join(__dirname, 'dist', 'preview'),
-    filename: 'bundle.js'
+    filename: '[hash].bundle.js'
   },
   module: {
     preLoaders: [
@@ -59,7 +59,8 @@ module.exports = {
         test: /\.(ttf|svg|woff|eot)/,
         loader: 'url-loader?limit=10000'
       }, {
-        test: /\.(l20n|png|jpg|jpeg)$/, loader: 'file-loader?name=[path][name].[ext]'
+        test: /\.(l20n|png|jpg|jpeg)$/,
+        loader: 'file-loader?name=[path][hash][name].[ext]'
       }
     ],
     noParse: [
@@ -69,7 +70,7 @@ module.exports = {
   },
   plugins: [
     // Extract inline css into separate 'style.css'
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin('[hash].style.css'),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'public', 'index.html')
     }),
