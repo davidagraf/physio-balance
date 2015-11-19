@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-import Icon from 'scripts/components/Icon.jsx';
+import Icon from 'scripts/components/atomic/Icon.jsx';
 import {Emitter} from 'scripts/utils/events.js';
 
 export default class extends React.Component {

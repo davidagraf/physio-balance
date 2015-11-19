@@ -1,6 +1,6 @@
 import React from 'react';
 import Bar from 'scripts/components/bars/Bar.jsx';
-import Icon from 'scripts/components/Icon.jsx';
+import Icon from 'scripts/components/atomic/Icon.jsx';
 
 import men from 'imgs/men.png';
 

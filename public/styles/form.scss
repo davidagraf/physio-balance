@@ -1,0 +1,27 @@
+.input {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+
+  &__label {
+    flex: 33%;
+    padding-right: 20px;
+    text-align: right;
+  }
+
+  &__field {
+    flex: 67%;
+
+    input:not([type="submit"]),
+    textarea {
+      border: $style-border;
+      width: 100%;
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+  }
+}

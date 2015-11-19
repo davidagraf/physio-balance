@@ -1,6 +1,7 @@
 import React from 'react';
 import request from 'superagent';
 import Modal from 'scripts/components/modals/Modal.jsx';
+import Input from 'scripts/components/atomic/Input.jsx'
 
 const DEFAULT_STATE = {
   email: '',
@@ -51,25 +52,21 @@ export default class extends React.Component {
     } else {
       content = (
         <form onSubmit={(e) => this._submit(e)}>
-          <div>
-            EMail:
-            <input type="email" placeholder="Deine EMail" value={this.state.email} required
+          <Input label="EMail" field={
+            <input type="email" value={this.state.email} required
               onChange={(ev) => this.setState({email: ev.target.value})} />
-          </div>
-          <div>
-            Betreff:
-            <input type="text" placeholder="Betreff" value={this.state.subject} required
+          } />
+          <Input label="Betreff" field={
+            <input type="text" value={this.state.subject} required
               onChange={(ev) => this.setState({subject: ev.target.value})} />
-          </div>
-          <div>
-            Text:
-            <textarea placeholder="Text" value={this.state.text} required
+          } />
+          <Input label="Text" field={
+            <textarea value={this.state.text} required
               onChange={(ev) => this.setState({text: ev.target.value})} />
-          </div>
-          <div>
+          } />
+          <Input field={
             <input type="submit" value="Senden"/>
-          </div>
-          <div className="g-recaptcha" data-sitekey="6Le_RBETAAAAAJLA28XMDU5I_bbEsxdSlWcL4ssb"></div>
+          } />
         </form>
       );
     }
