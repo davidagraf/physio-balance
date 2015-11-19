@@ -24,13 +24,13 @@ export default class extends React.Component {
     // request.post('http://localhost:8080/contact')
     .send({
       email: this.state.email,
-      subject: this.state.email,
+      subject: this.state.subject,
       text: this.state.text,
       captchaToken: this.state.captchaToken,
       dev: (process.env.NODE_ENV !== 'production')
     }).end((err, resp) => {
       if (err) {
-        this.setState({error: resp.text});
+        this.setState({error: err.message || resp.text});
       } else {
         this.setState({success: true});
       }
