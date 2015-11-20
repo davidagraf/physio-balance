@@ -1,6 +1,5 @@
 import React from 'react';
 import ButtonNext from 'scripts/components/bars/ButtonNext.jsx';
-import ButtonStart from 'scripts/components/bars/ButtonStart.jsx';
 
 export default class extends React.Component {
   static propTypes = {
@@ -42,7 +41,7 @@ export default class extends React.Component {
         {(
           this.props.buttonStart ?
           <div className="bar__next">
-            <ButtonStart onClick={() => window.scrollTo(0, 0)} />
+            <ButtonNext start={true} onClick={() => window.scrollTo(0, 0)} />
           </div> :
           <div className="bar__next">
             <ButtonNext onClick={() => this._scrollToNext()} />

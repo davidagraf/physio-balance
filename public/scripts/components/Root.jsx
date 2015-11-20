@@ -6,6 +6,7 @@ import BarCompany from 'scripts/components/bars/BarCompany.jsx';
 import BarPhysio from 'scripts/components/bars/BarPhysio.jsx';
 import BarActive from 'scripts/components/bars/BarActive.jsx';
 
+import ModalManager from 'scripts/components/modals/ModalManager.jsx';
 import Widget from 'scripts/components/widgets/Widget.jsx';
 import WidgetTeam from 'scripts/components/widgets/WidgetTeam.jsx';
 import WidgetSchedule from 'scripts/components/widgets/WidgetSchedule.jsx';
@@ -15,6 +16,7 @@ export default class extends React.Component {
   render() {
     return (
       <div>
+        <ModalManager />
         <Menu/>
         <BarCompany />
         <Board

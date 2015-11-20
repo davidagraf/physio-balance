@@ -5,8 +5,10 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 9000 --colors --config ./webpack.dev.js",
     "dist": "rm -rf dist && node ./node_modules/webpack/bin/webpack.js --colors --config ./webpack.dist.js",
-    "deploy": "gsutil rsync -R dist/ gs://www.physiobalance.fit",
-    "publish": "gsutil -m acl ch -r -u AllUsers:R gs://www.physiobalance.fit/preview/*"
+    "deploy_rm": "gsutil rm -r gs://www.physiobalance.fit/preview",
+    "deploy_upload": "gsutil rsync -R dist/ gs://www.physiobalance.fit",
+    "deploy_publish": "gsutil -m acl ch -r -u AllUsers:R gs://www.physiobalance.fit/preview/*",
+    "deploy": "npm run deploy_rm && npm run deploy_upload && npm run deploy_publish"
   },
   "repository": {
     "type": "git",
@@ -37,12 +39,12 @@
     "react": "0.14.2",
     "react-addons-css-transition-group": "0.14.2",
     "react-dom": "0.14.2",
+    "redux": "3.0.4",
     "sass-loader": "3.1.1",
     "superagent": "1.4.0",
     "url-loader": "0.5.6",
     "webpack": "1.12.2",
     "webpack-dev-server": "1.12.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

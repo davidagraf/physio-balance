@@ -71,7 +71,7 @@ export default class extends React.Component {
             <textarea value={this.state.text} required
               onChange={(ev) => this.setState({text: ev.target.value})} />
           } />
-          <Input field={
+          <Input label="Spamschutz" field={
             <Captcha tokenChanged={(token) => this.setState({captchaToken: token})} />
           } />
           <Input field={

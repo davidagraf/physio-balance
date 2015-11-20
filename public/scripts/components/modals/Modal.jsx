@@ -2,7 +2,9 @@ import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Icon from 'scripts/components/atomic/Icon.jsx';
-import {Emitter} from 'scripts/utils/events.js';
+
+import ModalStore from 'scripts/stores/ModalStore.js';
+import { MODAL_CLOSE } from 'scripts/constants/ActionTypes.js';
 
 export default class extends React.Component {
   static propTypes = {
@@ -20,7 +22,7 @@ export default class extends React.Component {
     }
   }
   _close() {
-    Emitter.emit(this);
+    ModalStore.dispatch({type: MODAL_CLOSE});
   }
   _checkEsc(ev) {
     if (ev.keyCode === 27) {
@@ -28,7 +30,6 @@ export default class extends React.Component {
     }
   }
   componentDidMount() {
-    document.body.classList.add('noscroll');
     this._checkHeaderPosThis = this._checkHeaderPos.bind(this);
     window.addEventListener('resize', this._checkHeaderPosThis);
     this.refs.scroll.addEventListener('scroll', this._checkHeaderPosThis);
@@ -36,7 +37,6 @@ export default class extends React.Component {
     window.addEventListener('keyup', this._checkEscThis);
   }
   componentWillUnmount() {
-    document.body.classList.remove('noscroll');
     window.removeEventListener('resize', this._checkHeaderPosThis);
     this.refs.scroll.removeEventListener('scroll', this._checkHeaderPosThis);
     window.removeEventListener('keyup', this._checkEscThis);
