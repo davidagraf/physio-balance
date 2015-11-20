@@ -5,10 +5,10 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 9000 --colors --config ./webpack.dev.js",
     "dist": "rm -rf dist && node ./node_modules/webpack/bin/webpack.js --colors --config ./webpack.dist.js",
-    "deploy_rm": "gsutil rm -r gs://www.physiobalance.fit/preview",
-    "deploy_upload": "gsutil rsync -R dist/ gs://www.physiobalance.fit",
+    "deploy_rm": "gsutil -m rm -r gs://www.physiobalance.fit/preview",
+    "deploy_upload": "gsutil -m rsync -R dist/ gs://www.physiobalance.fit",
     "deploy_publish": "gsutil -m acl ch -r -u AllUsers:R gs://www.physiobalance.fit/preview/*",
-    "deploy": "npm run deploy_rm && npm run deploy_upload && npm run deploy_publish"
+    "deploy": "npm run dist && npm run deploy_rm && npm run deploy_upload && npm run deploy_publish"
   },
   "repository": {
     "type": "git",
