@@ -3,5 +3,5 @@ function isMobile() {
 }
 
 if (isMobile()) {
-  document.getElementByTagName('body').className = 'touch';
+  document.body.classList.add('touch');
 }

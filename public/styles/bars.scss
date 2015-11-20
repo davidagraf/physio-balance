@@ -97,9 +97,11 @@
   border: 1px solid;
   border-radius: 50%;
   height: 50px;
+  transition: all $time-hover linear;
   width: 50px;
 
   &:hover {
     background-color: transparent;
+    box-shadow: 0 0 5px 1px $color-background;
   }
 }
