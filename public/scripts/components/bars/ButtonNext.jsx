@@ -23,7 +23,7 @@ export default class extends React.Component {
     this._unsubscribe();
   }
   render() {
-    const iconName = ( this.props.start ? 'angle-down' : 'angle-down' );
+    const iconName = ( this.props.start ? 'angle-up' : 'angle-down' );
 
     if (this.state.modalOpen) {
       return (
