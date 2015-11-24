@@ -72,7 +72,9 @@ module.exports = {
     // Extract inline css into separate 'style.css'
     new ExtractTextPlugin('[hash].style.css'),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'public', 'index.html')
+      template: path.join(__dirname, 'public', 'index.html'),
+      favicon: path.join(__dirname, 'public', 'imgs', 'logo', 'pb_logo_color_rgb_fav.png'),
+      hash: true
     }),
   ],
   resolve: {

@@ -3,13 +3,14 @@ import Bar from 'scripts/components/bars/Bar.jsx';
 import Icon from 'scripts/components/atomic/Icon.jsx';
 
 import men from 'imgs/men.png';
+import logo from 'imgs/logo/pb_logo_black_rgb.png';
 
 export default class extends React.Component {
   render() {
     return (
       <Bar
         img={men}
-        title={'Physio Balance'}
+        title={<img src={logo}/>}
         infos={[
           <div><Icon name="map-marker"/> Widdengasse 16 5070 Frick</div>,
           <div><Icon name="clock-o"/> Mo - Fr 09:00 - 17:00</div>,
