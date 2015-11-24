@@ -44,7 +44,7 @@ export default class extends React.Component {
   render() {
     let headerContent = (
       <div className="modal__header__content">
-        <div key="0" className="modal__header__title">{this.props.title}</div>
+        <div key="0" className="modal__header__title"><h1>{this.props.title}</h1></div>
         <button key="1" className="modal__header__close" onClick={() => this._close()}>
           <Icon name="times" />
         </button>

@@ -11,6 +11,9 @@ import Widget from 'scripts/components/widgets/Widget.jsx';
 import WidgetTeam from 'scripts/components/widgets/WidgetTeam.jsx';
 import WidgetSchedule from 'scripts/components/widgets/WidgetSchedule.jsx';
 import WidgetContact from 'scripts/components/widgets/WidgetContact.jsx';
+import WidgetConcept from 'scripts/components/widgets/WidgetConcept.jsx';
+import WidgetRooms from 'scripts/components/widgets/WidgetRooms.jsx';
+import WidgetFacebook from 'scripts/components/widgets/WidgetFacebook.jsx';
 
 export default class extends React.Component {
   render() {
@@ -20,7 +23,7 @@ export default class extends React.Component {
         <Menu/>
         <BarCompany />
         <Board
-          widgets={[<WidgetTeam />, <WidgetContact />, <Widget />]}
+          widgets={[<WidgetTeam />, <WidgetConcept />, <WidgetContact />, <WidgetRooms />, <WidgetFacebook />]}
         />
         <BarPhysio />
         <Board
