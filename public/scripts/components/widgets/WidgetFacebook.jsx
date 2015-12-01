@@ -7,7 +7,7 @@ export default class extends React.Component {
   render() {
     return (
       <Widget
-        text={'Facebook'} modal={<ModalFacebook/>} />
+        text={'facebook'} modal={<ModalFacebook/>} />
     );
   }
 }

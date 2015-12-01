@@ -64,8 +64,6 @@ module.exports = {
       }
     ],
     noParse: [
-      new RegExp('jquery.min.js'),
-      new RegExp('bootstrap.min.js')
     ]
   },
   plugins: [
@@ -79,8 +77,6 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '^jquery$': 'jquery/dist/jquery.min.js',
-      '^bootstrap$': 'bootstrap-sass/assets/javascrpt/bootstrap.min.js'
     },
     root: path.join(__dirname, 'public')
   }

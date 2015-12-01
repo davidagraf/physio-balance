@@ -9,7 +9,7 @@ export default class extends React.Component {
   render() {
     return (
       <Widget
-        img={contact} text={'Kontakt'} modal={<ModalContact/>} />
+        img={contact} text={'kontakt'} modal={<ModalContact/>} />
     );
   }
 }

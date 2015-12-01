@@ -8,7 +8,7 @@ import img from 'imgs/team.jpg';
 export default class extends React.Component {
   render() {
     return (
-      <Widget img={img} text={'Team'} modal={<ModalTeam />} />
+      <Widget img={img} text={'team'} modal={<ModalTeam />} />
     );
   }
 }

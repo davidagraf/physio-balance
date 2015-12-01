@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Widget from 'scripts/components/widgets/Widget.jsx';
-import ModalRooms from 'scripts/components/modals/ModalRooms.jsx';
+import ModalActivePrices from 'scripts/components/modals/ModalActivePrices.jsx';
 
 export default class extends React.Component {
   render() {
     return (
       <Widget
-        text={'räumlichkeiten'} modal={<ModalRooms/>} />
+        text={'preise'} modal={<ModalActivePrices/>} />
     );
   }
 }

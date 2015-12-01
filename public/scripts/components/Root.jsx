@@ -7,13 +7,20 @@ import BarPhysio from 'scripts/components/bars/BarPhysio.jsx';
 import BarActive from 'scripts/components/bars/BarActive.jsx';
 
 import ModalManager from 'scripts/components/modals/ModalManager.jsx';
-import Widget from 'scripts/components/widgets/Widget.jsx';
 import WidgetTeam from 'scripts/components/widgets/WidgetTeam.jsx';
-import WidgetSchedule from 'scripts/components/widgets/WidgetSchedule.jsx';
 import WidgetContact from 'scripts/components/widgets/WidgetContact.jsx';
 import WidgetConcept from 'scripts/components/widgets/WidgetConcept.jsx';
 import WidgetRooms from 'scripts/components/widgets/WidgetRooms.jsx';
 import WidgetFacebook from 'scripts/components/widgets/WidgetFacebook.jsx';
+
+import WidgetPhysioOffer from 'scripts/components/widgets/WidgetPhysioOffer.jsx';
+import WidgetPhysioInfos from 'scripts/components/widgets/WidgetPhysioInfos.jsx';
+import WidgetPhysioForm from 'scripts/components/widgets/WidgetPhysioForm.jsx';
+
+import WidgetActiveSchedule from 'scripts/components/widgets/WidgetActiveSchedule.jsx';
+import WidgetActiveForm from 'scripts/components/widgets/WidgetActiveForm.jsx';
+import WidgetActivePrices from 'scripts/components/widgets/WidgetActivePrices.jsx';
+import WidgetActiveOffer from 'scripts/components/widgets/WidgetActiveOffer.jsx';
 
 export default class extends React.Component {
   render() {
@@ -27,11 +34,11 @@ export default class extends React.Component {
         />
         <BarPhysio />
         <Board
-          widgets={[<Widget />, <Widget />]}
+          widgets={[<WidgetPhysioOffer />, <WidgetPhysioInfos />, <WidgetPhysioForm />]}
         />
         <BarActive/>
         <Board
-          widgets={[<WidgetSchedule />]}
+          widgets={[<WidgetActiveOffer />, <WidgetActiveSchedule />, <WidgetActivePrices />, <WidgetActiveForm />]}
         />
       </div>
     );

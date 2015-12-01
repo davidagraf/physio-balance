@@ -40,24 +40,24 @@ export default class extends React.Component {
     this.setState(DEFAULT_STATE);
   }
   render() {
-    let content;
+    let formContent;
 
     if (this.state.error) {
-      content = (
+      formContent = (
         <div>
           <div>Fehler: {this.state.error}</div>
           <div><button onClick={() => this._reset()}>erneute Anfrage</button></div>
         </div>
       );
     } else if (this.state.success) {
-      content = (
+      formContent = (
         <div>
           <div>Anfrage erfolgreich gesendet.</div>
           <div><button onClick={() => this._reset()}>erneute Anfrage</button></div>
         </div>
       );
     } else {
-      content = (
+      formContent = (
         <form onSubmit={(e) => this._submit(e)}>
           <Input label="EMail" field={
             <input type="email" value={this.state.email} required
@@ -81,6 +81,17 @@ export default class extends React.Component {
       );
     }
 
-    return <Modal title="Kontakt">{content}</Modal>;
+    return (
+      <Modal title="Kontakt">
+        <p>TODO Google Maps</p>
+        <p>
+          Parkmöglichkeiten in unmittelbarer Nähe vorhanden
+        </p>
+        <p>
+          ÖV ab Haltestelle Unterdorf Frick fünf minütiger Fussweg
+        </p>
+        {formContent}
+      </Modal>
+    );
   }
 }
