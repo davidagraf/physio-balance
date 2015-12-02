@@ -29,6 +29,11 @@ export default class extends React.Component {
       this._close();
     }
   }
+  _checkClickOutside(ev) {
+    if (!this.refs.visible.contains(ev.target)) {
+      this._close();
+    }
+  }
   componentDidMount() {
     this._checkHeaderPosThis = this._checkHeaderPos.bind(this);
     window.addEventListener('resize', this._checkHeaderPosThis);
@@ -51,7 +56,7 @@ export default class extends React.Component {
       </div>
     );
     return (
-      <div className="modal">
+      <div className="modal" onClick={(ev) => this._checkClickOutside(ev)}>
         <div className="modal__scroll" ref="scroll">
           <ReactCSSTransitionGroup transitionName="modal--animation"
                                    transitionAppear={true}
