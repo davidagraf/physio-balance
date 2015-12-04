@@ -1,11 +1,15 @@
 import React from 'react';
 import Modal from 'scripts/components/modals/Modal.jsx';
 
+import Mirjam from 'imgs/mirjam.jpg';
+import Denise from 'imgs/denise.jpg';
+
 export default class extends React.Component {
   render() {
     return (
       <Modal title="Team">
         <h2>denise</h2>
+        <img src={Denise} width="100" />
         <p>
           sypoba instruktorin basic & progressive
           personal training
@@ -19,6 +23,7 @@ export default class extends React.Component {
 
 
         <h2>mirjam</h2>
+        <img src={Mirjam} width="100" />
         <p>
           dipl. physiotherapeutin fh
           personal training

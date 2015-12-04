@@ -35,3 +35,23 @@ table {
     }
   }
 }
+
+h1 {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+
+  > li {
+    &:not(:first-child) {
+      margin-top: 5px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+}
