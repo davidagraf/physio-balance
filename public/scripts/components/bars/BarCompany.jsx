@@ -3,7 +3,7 @@ import Bar from 'scripts/components/bars/Bar.jsx';
 import Icon from 'scripts/components/atomic/Icon.jsx';
 
 import men from 'imgs/men.png';
-import logo from 'imgs/logo/pb_logo_black_rgb.png';
+import logo from 'imgs/logo/pb_logo_color_rgb.png';
 
 export default class extends React.Component {
   render() {
