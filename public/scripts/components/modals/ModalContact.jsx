@@ -3,8 +3,8 @@
 import React from 'react';
 import request from 'superagent';
 import Modal from 'scripts/components/modals/Modal.jsx';
-import Input from 'scripts/components/atomic/Input.jsx'
-import Captcha from 'scripts/components/atomic/Captcha.jsx';
+// import Input from 'scripts/components/atomic/Input.jsx'
+// import Captcha from 'scripts/components/atomic/Captcha.jsx';
 
 const DEFAULT_STATE = {
   email: '',
@@ -42,44 +42,44 @@ export default class extends React.Component {
   render() {
     let formContent;
 
-    if (this.state.error) {
-      formContent = (
-        <div>
-          <div>Fehler: {this.state.error}</div>
-          <div><button onClick={() => this._reset()}>erneute Anfrage</button></div>
-        </div>
-      );
-    } else if (this.state.success) {
-      formContent = (
-        <div>
-          <div>Anfrage erfolgreich gesendet.</div>
-          <div><button onClick={() => this._reset()}>erneute Anfrage</button></div>
-        </div>
-      );
-    } else {
-      formContent = (
-        <form onSubmit={(e) => this._submit(e)}>
-          <Input label="EMail" field={
-            <input type="email" value={this.state.email} required
-              onChange={(ev) => this.setState({email: ev.target.value})} />
-          } />
-          <Input label="Betreff" field={
-            <input type="text" value={this.state.subject} required
-              onChange={(ev) => this.setState({subject: ev.target.value})} />
-          } />
-          <Input label="Text" field={
-            <textarea value={this.state.text} required
-              onChange={(ev) => this.setState({text: ev.target.value})} />
-          } />
-          <Input label="Spamschutz" field={
-            <Captcha tokenChanged={(token) => this.setState({captchaToken: token})} />
-          } />
-          <Input field={
-            <input type="submit" value="Senden" />
-          } />
-        </form>
-      );
-    }
+    // if (this.state.error) {
+    //   formContent = (
+    //     <div>
+    //       <div>Fehler: {this.state.error}</div>
+    //       <div><button onClick={() => this._reset()}>erneute Anfrage</button></div>
+    //     </div>
+    //   );
+    // } else if (this.state.success) {
+    //   formContent = (
+    //     <div>
+    //       <div>Anfrage erfolgreich gesendet.</div>
+    //       <div><button onClick={() => this._reset()}>erneute Anfrage</button></div>
+    //     </div>
+    //   );
+    // } else {
+    //   formContent = (
+    //     <form onSubmit={(e) => this._submit(e)}>
+    //       <Input label="EMail" field={
+    //         <input type="email" value={this.state.email} required
+    //           onChange={(ev) => this.setState({email: ev.target.value})} />
+    //       } />
+    //       <Input label="Betreff" field={
+    //         <input type="text" value={this.state.subject} required
+    //           onChange={(ev) => this.setState({subject: ev.target.value})} />
+    //       } />
+    //       <Input label="Text" field={
+    //         <textarea value={this.state.text} required
+    //           onChange={(ev) => this.setState({text: ev.target.value})} />
+    //       } />
+    //       <Input label="Spamschutz" field={
+    //         <Captcha tokenChanged={(token) => this.setState({captchaToken: token})} />
+    //       } />
+    //       <Input field={
+    //         <input type="submit" value="Senden" />
+    //       } />
+    //     </form>
+    //   );
+    // }
 
     return (
       <Modal title="Kontakt">

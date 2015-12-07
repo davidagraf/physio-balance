@@ -2,19 +2,18 @@ import React from 'react';
 import Bar from 'scripts/components/bars/Bar.jsx';
 import Icon from 'scripts/components/atomic/Icon.jsx';
 
-import men from 'imgs/men.png';
 import logo from 'imgs/logo/pb_logo_color_rgb.png';
 
 export default class extends React.Component {
   render() {
     return (
       <Bar
-        img={men}
         title={<img src={logo}/>}
         infos={[
           <div><Icon name="map-marker"/> Widdengasse 16 5070 Frick</div>,
           <div><Icon name="clock-o"/> Mo - Fr 09:00 - 17:00</div>,
-          <div><Icon name="phone"/> 062 871 16 20</div>
+          <div><Icon name="phone"/> 062 871 16 20</div>,
+          <div><Icon name="email"/> team@physiobalance.fit</div>
         ]}
         className="bar--green"
       />

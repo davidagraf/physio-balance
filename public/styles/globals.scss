@@ -4,14 +4,14 @@
 
 body {
   background-color: $color-background;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 button {
   background-color: $color-button;
   border: 0;
   border-radius: 0;
-  padding: 15px;
+  padding: 20px;
   transition: background-color $time-hover linear;
 
   &:hover {

@@ -1,19 +1,20 @@
-.menu {
-  background-color: white;
-  height: 50px;
-  left: 0;
-  opacity: .7;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 200;
-
-  + .bar {
-    margin-top: 50px; // space for menu
-  }
-}
+// .menu {
+//   background-color: white;
+//   height: 50px;
+//   left: 0;
+//   opacity: .7;
+//   position: fixed;
+//   right: 0;
+//   top: 0;
+//   z-index: 200;
+//
+//   + .bar {
+//     margin-top: 50px; // space for menu
+//   }
+// }
 
 .bar {
+  background-color: $color-green;
   color: $color-background;
   overflow: hidden;
   position: relative;
@@ -24,23 +25,28 @@
   }
 
   &--red {
-    background-color: $color-red;
+    background-color: $color-green-logo;
   }
 
   &--blue {
-    background-color: $color-blue;
+    background-color: $color-green-logo;
   }
 
-  &__img {
+  &__img--left {
+    height: 100%;
+    left: 60px;
+    opacity: .5;
+    position: absolute;
+  }
+
+  &__img--right {
     opacity: .5;
     position: absolute;
     right: 0;
   }
 
   &__title {
-    display: flex;
     font-size: 60px;
-    justify-content: center;
     padding: 60px 0 40px;
     position: relative;
     text-align: center;
@@ -48,6 +54,7 @@
   }
 
   &__infos {
+    font-style: italic;
     padding: 0 0 40px;
     position: relative;
     z-index: 100;

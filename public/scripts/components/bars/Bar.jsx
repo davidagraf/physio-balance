@@ -7,7 +7,8 @@ export default class extends React.Component {
     title: React.PropTypes.node,
     infos: React.PropTypes.arrayOf(React.PropTypes.node),
     buttonStart: React.PropTypes.bool,
-    className: React.PropTypes.string
+    className: React.PropTypes.string,
+    imgRight: React.PropTypes.bool
   }
   static defaultProps = {
     buttonStart: false
@@ -27,7 +28,7 @@ export default class extends React.Component {
   render() {
     return (
       <div className={'bar ' + (this.props.className || '')} ref="bar">
-        <img className="bar__img" src={this.props.img} />
+        <img className={(this.props.imgRight ? 'bar__img--right' : 'bar__img--left')} src={this.props.img} />
         <div className="bar__title">{this.props.title}</div>
         {(
           this.props.infos ?
