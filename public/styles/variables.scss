@@ -1,4 +1,5 @@
 $color-green: #393f37;
+$color-green-logo: #7bb064;
 $color-red: #aa4465;
 $color-blue: #658e9c;
 $color-white: #fff;
@@ -7,8 +8,8 @@ $color-background: #e3e8e5;
 $color-background-widget: #fff;
 $color-border: #c1c1c1;
 $color-border-hover: #b0b0b0;
-$color-button: #c0c0c0;
-$color-button-hover: #d0d0d0;
+$color-button: $color-green-logo;
+$color-button-hover: lighten($color-green-logo, 20%);
 
 $time-hover: .2s;
 

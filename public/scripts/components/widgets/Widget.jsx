@@ -9,13 +9,18 @@ export default class extends React.Component {
   static propTypes = {
     img: React.PropTypes.string,
     text: React.PropTypes.string,
-    modal: React.PropTypes.element
+    modal: React.PropTypes.element,
+    uri: React.PropTypes.string
   }
   static defaultProps = {
     modal: <Modal />
   }
   _openModal() {
-    ModalStore.dispatch({type: MODAL_OPEN, modal: this.props.modal});
+    if (this.props.uri) {
+      window.open(this.props.uri, '_blank');
+    } else {
+      ModalStore.dispatch({type: MODAL_OPEN, modal: this.props.modal});
+    }
   }
   render() {
     return (
