@@ -8,7 +8,7 @@
     "deploy_rm": "gsutil -m rm -r gs://www.physiobalance.fit/preview",
     "deploy_upload": "gsutil -m rsync -R dist/ gs://www.physiobalance.fit",
     "deploy_publish": "gsutil -m acl ch -r -u AllUsers:R gs://www.physiobalance.fit/preview/*",
-    "deploy_cache": "gsutil setmeta -h \"Cache-Control:private\" gs://www.physiobalance.fit/preview/index.html",
+    "deploy_cache": "gsutil setmeta -h \"Cache-Control: no-cache, no-store, must-revalidate, private\" gs://www.physiobalance.fit/preview/index.html",
     "deploy": "npm run dist && npm run deploy_rm && npm run deploy_upload && npm run deploy_publish && npm run deploy_cache"
   },
   "repository": {
