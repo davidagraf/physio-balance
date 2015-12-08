@@ -33,9 +33,7 @@ export default class extends React.Component {
         <div className="bar__title">{this.props.title}</div>
         {
           this.props.subtitle &&
-          <div className="bar__subtitle"><div className="bar__infos__group">
-            <div className="bar__infos__info">{this.props.subtitle}</div>
-          </div></div>
+          <div className="bar__subtitle">{this.props.subtitle}</div>
         }
         {
           this.props.infos &&

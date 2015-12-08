@@ -56,12 +56,19 @@
   }
 
   &__subtitle {
+    display: flex;
     font-style: italic;
+    justify-content: center;
     padding: 0 0 40px;
+    position: relative;
+    text-align: center;
+    z-index: 100;
   }
 
   &__infos {
     padding: 0 0 40px;
+    position: relative;
+    z-index: 100;
 
     @include phone {
       display: flex;
