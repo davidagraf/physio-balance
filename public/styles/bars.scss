@@ -40,9 +40,11 @@
   }
 
   &__img--right {
-    opacity: .5;
+    height: 130%;
+    opacity: .8;
     position: absolute;
     right: 0;
+    top: -120px;
   }
 
   &__title {

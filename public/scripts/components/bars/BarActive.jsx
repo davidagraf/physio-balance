@@ -1,11 +1,14 @@
 import React from 'react';
 import Bar from 'scripts/components/bars/Bar.jsx';
 
+import sypoba from 'imgs/sypoba.png';
+
 export default class extends React.Component {
   render() {
     return (
       <Bar
         imgRight={true}
+        img={sypoba}
         title="Aktiv"
         subtitle={<div>&laquo;Leben is Bewegung,<br/>Bewegung ist Gesundheit,<br/>Gesundheit ist Leben&raquo;</div>}
         className="bar--blue"
