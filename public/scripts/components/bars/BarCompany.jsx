@@ -13,7 +13,7 @@ export default class extends React.Component {
         infos={[
           <div><Icon name="map-marker"/> Widengasse 16 5070 Frick</div>,
           <div><Icon name="phone"/> 062 871 16 20</div>,
-          <div><Icon name="email"/> team@physiobalance.fit</div>
+          <div><Icon name="envelope"/> team@physiobalance.fit</div>
         ]}
         className="bar--green"
       />
