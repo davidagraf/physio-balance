@@ -8,10 +8,8 @@ export default class extends React.Component {
     return (
       <Bar
         img={wirbelsaeule}
-        title="Physiotherapie"
-        infos={[
-          <div>ihre Gesundheit ist mein Ziel</div>
-        ]}
+        title="Physio&shy;therapie"
+        subtitle="&laquo;ihre Gesundheit ist mein Ziel&raquo;"
         className="bar--red"
       />
     );

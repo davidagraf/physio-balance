@@ -5,6 +5,7 @@ export default class extends React.Component {
   static propTypes = {
     img: React.PropTypes.string,
     title: React.PropTypes.node,
+    subtitle: React.PropTypes.node,
     infos: React.PropTypes.arrayOf(React.PropTypes.node),
     buttonStart: React.PropTypes.bool,
     className: React.PropTypes.string,
@@ -30,15 +31,20 @@ export default class extends React.Component {
       <div className={'bar ' + (this.props.className || '')} ref="bar">
         <img className={(this.props.imgRight ? 'bar__img--right' : 'bar__img--left')} src={this.props.img} />
         <div className="bar__title">{this.props.title}</div>
-        {(
-          this.props.infos ?
+        {
+          this.props.subtitle &&
+          <div className="bar__subtitle"><div className="bar__infos__group">
+            <div className="bar__infos__info">{this.props.subtitle}</div>
+          </div></div>
+        }
+        {
+          this.props.infos &&
           <div className="bar__infos"><div className="bar__infos__group">{
             this.props.infos.map((info, i) => {
               return <div key={i} className="bar__infos__info">{info}</div>;
             })
-          }</div></div> :
-          null
-        )}
+          }</div></div>
+        }
         {(
           this.props.buttonStart ?
           <div className="bar__next">
