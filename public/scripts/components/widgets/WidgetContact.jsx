@@ -3,7 +3,7 @@ import React from 'react';
 import Widget from 'scripts/components/widgets/Widget.jsx';
 import ModalContact from 'scripts/components/modals/ModalContact.jsx';
 
-import contact from 'imgs/contact.jpg';
+import contact from 'imgs/contact.png';
 
 export default class extends React.Component {
   render() {

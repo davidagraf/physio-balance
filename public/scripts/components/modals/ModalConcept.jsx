@@ -4,7 +4,7 @@ import Modal from 'scripts/components/modals/Modal.jsx';
 export default class extends React.Component {
   render() {
     return (
-      <Modal title="Leitbild">
+      <Modal title="Wir stellen uns vor">
         <p>
           Gesundheit ist das grösste und wichtigste Gut des Menschen, welches gepflegt werden muss. Dazu bedarf es
           gezielte Prävention und allenfalls Rehabilitation.
