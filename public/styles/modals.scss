@@ -48,7 +48,7 @@
     }
 
     &__title {
-      padding: 0 0 0 20px;
+      padding: 0 0 0 40px;
     }
 
     &__close {
@@ -57,11 +57,25 @@
   }
 
   &__content {
-    padding: 20px;
+    padding: 40px;
 
     &--fixed {
       //box-shadow: 0 0 5px 1px $color-border;
       padding: 68px 20px 20px;
+    }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
