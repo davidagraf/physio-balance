@@ -22,6 +22,8 @@ import WidgetActiveForm from 'scripts/components/widgets/WidgetActiveForm.jsx';
 import WidgetActivePrices from 'scripts/components/widgets/WidgetActivePrices.jsx';
 import WidgetActiveOffer from 'scripts/components/widgets/WidgetActiveOffer.jsx';
 
+import Sponsors from 'scripts/components/Sponsors.jsx';
+
 export default class extends React.Component {
   render() {
     return (
@@ -39,6 +41,7 @@ export default class extends React.Component {
         <Board
           widgets={[<WidgetActiveOffer />, <WidgetActiveSchedule />, <WidgetActivePrices />, <WidgetActiveForm />]}
         />
+        <Sponsors />
       </div>
     );
   }
