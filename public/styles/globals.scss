@@ -54,5 +54,16 @@ ul {
       margin-bottom: 5px;
     }
   }
+}
 
+.splitview {
+  display: flex;
+}
+
+.splitview__right {
+  margin-left: 10px;
+
+  > *:first-child {
+    margin-top: 0;
+  }
 }

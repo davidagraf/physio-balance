@@ -9,12 +9,18 @@ export default class extends React.Component {
     return (
       <Modal title="Team">
         <h2>denise</h2>
-        <img src={Denise} width="100" />
-        <p>
-          sypoba instruktorin basic & progressive
-          personal training
-          faszien fitness
-        </p>
+        <div className="splitview">
+          <div className="splitview__left">
+          <img src={Denise} width="100" />
+          </div>
+          <div className="splitview__right">
+            <ul>
+              <li>sypoba instruktorin basic & progressive</li>
+              <li>personal training</li>
+              <li>faszien fitness</li>
+            </ul>
+          </div>
+        </div>
         <p>
           Ich motiviere jung und alt, um Stabilisation, Balance und koordinativen Fähigkeiten mittels effektiven
           Ganzkörpertrainings zu verbessern. Beweglichkeit durch geschmeidige Faszien und ein funktionstüchtiges
@@ -23,12 +29,18 @@ export default class extends React.Component {
 
 
         <h2>mirjam</h2>
-        <img src={Mirjam} width="100" />
-        <p>
-          dipl. physiotherapeutin fh
-          personal training
-          sling training, faszien fitness
-        </p>
+        <div className="splitview">
+          <div className="splitview__left">
+            <img src={Mirjam} width="100" />
+          </div>
+          <div className="splitview__right">
+            <ul>
+              <li>dipl. physiotherapeutin fh</li>
+              <li>personal training</li>
+              <li>sling training, faszien fitness</li>
+            </ul>
+          </div>
+        </div>
 
         <p>
           Durch gezieltes Training möchte ich dein persönliches Wohlbefinden steigern. Die individuelle Betreuung
