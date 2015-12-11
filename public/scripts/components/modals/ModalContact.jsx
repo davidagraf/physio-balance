@@ -3,6 +3,9 @@
 import React from 'react';
 import request from 'superagent';
 import Modal from 'scripts/components/modals/Modal.jsx';
+
+import GoogleMap from 'scripts/components/atomic/GoogleMap.jsx';
+
 // import Input from 'scripts/components/atomic/Input.jsx'
 // import Captcha from 'scripts/components/atomic/Captcha.jsx';
 
@@ -83,7 +86,14 @@ export default class extends React.Component {
 
     return (
       <Modal title="Kontakt">
-        <p>TODO Google Maps</p>
+        <p>
+          Physio Balance GmbH<br/>
+          Widengasse 16<br/>
+          5070 Frick<br/>
+          team@physiobalance.fit<br/>
+          062 871 16 20  
+        </p>
+        <GoogleMap address="Widengasse 16 5070 Frick" />
         <p>
           Parkmöglichkeiten in unmittelbarer Nähe vorhanden
         </p>

@@ -67,6 +67,8 @@ module.exports = {
       }
     ],
     noParse: [
+      // new RegExp('react-dom.min.js'),
+      // new RegExp('react.min.js')
     ]
   },
   plugins: [
@@ -80,6 +82,8 @@ module.exports = {
   ],
   resolve: {
     alias: {
+      // 'react-dom$': 'react-dom/dist/react-dom.min.js',
+      // react$: 'react/dist/react.min.js'
     },
     root: path.join(__dirname, 'public')
   }
