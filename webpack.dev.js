@@ -61,6 +61,9 @@ module.exports = {
       }, {
         test: /\.(l20n|png|jpg|jpeg)$/,
         loader: 'file-loader?name=[path][hash][name].[ext]'
+      }, {
+        test: /\.(pdf|docx)$/,
+        loader: 'file-loader?name=[path][name].[ext]'
       }
     ],
     noParse: [

@@ -1,6 +1,8 @@
 import React from 'react';
 import Modal from 'scripts/components/modals/Modal.jsx';
 
+import lebenslauf from 'documents/Lebenslauf_MB_pb.pdf';
+
 export default class extends React.Component {
   render() {
     return (
@@ -15,10 +17,12 @@ export default class extends React.Component {
           <li>Physikalische Therapie</li>
         </ul>
 
-        <ul>
-          <li>Eine physiotherapeutische Behandlung dauert ca. 25 Minuten.</li>
-          <li>Lebenslauf Mirjam Böni als PDF</li>
-        </ul>
+        <p>
+          Eine physiotherapeutische Behandlung dauert ca. 25 Minuten.
+        </p>
+        <p>
+          <a href={lebenslauf}>Lebenslauf Mirjam Böni</a>
+        </p>
 
       </Modal>
     );
