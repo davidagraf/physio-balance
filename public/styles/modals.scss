@@ -73,6 +73,16 @@
         margin-bottom: 0;
       }
     }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+
+      td {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+      }
+    }
   }
 
   &__contact__form {

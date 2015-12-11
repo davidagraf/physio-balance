@@ -42,7 +42,7 @@ export default class extends React.Component {
         <table><tbody>{
           this.state.data.map((row, i)=> {
             let rowvals = [], j;
-            for (j = 0; j < 7; ++j) {
+            for (j = 0; j < 6; ++j) {
               rowvals.push(<td key={j}>{row[j]}</td>);
             }
             return <tr key={i}>{rowvals}</tr>;
