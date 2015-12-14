@@ -1,0 +1,18 @@
+.gallery {
+
+  &__wrapper {
+    margin: -10px;
+  }
+
+  &__thumbnail {
+    height: 100px;
+    margin: 10px;
+    object-fit: cover;
+    width: 100px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: .7;
+    }
+  }
+}
