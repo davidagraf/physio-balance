@@ -19,11 +19,11 @@ export default class extends React.Component {
   }
   componentDidMount() {
     this._checkEscThis = this._checkEsc.bind(this);
-    window.addEventListener('keyup', this._checkEscThis);
+    window.addEventListener('keydown', this._checkEscThis);
   }
   componentWillUnmount() {
     this._unsubscribe();
-    window.removeEventListener('keyup', this._checkEscThis);
+    window.removeEventListener('keydown', this._checkEscThis);
   }
   componentDidUpdate() {
     if (this.state.modals.length > 0) {

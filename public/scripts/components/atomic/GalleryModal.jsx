@@ -1,5 +1,8 @@
 import React from 'react';
-import Modal from 'scripts/components/modals/Modal.jsx';
+import Icon from 'scripts/components/atomic/Icon.jsx';
+
+import ModalStore from 'scripts/stores/ModalStore.js';
+import { MODAL_CLOSE } from 'scripts/constants/ActionTypes.js';
 
 export default class extends React.Component {
   static propTypes = {
@@ -8,6 +11,9 @@ export default class extends React.Component {
   }
   state = {
     index: this.props.startIndex
+  }
+  _close() {
+    ModalStore.dispatch({type: MODAL_CLOSE});
   }
   _keyUp(ev) {
     let newIndex;
@@ -38,9 +44,12 @@ export default class extends React.Component {
   }
   render() {
     return (
-      <Modal>
-        <img src={this.props.uris[this.state.index]} />
-      </Modal>
+      <div className="gallerymodal">
+        <button key="1" className="gallerymodal__close" onClick={() => this._close()}>
+          <Icon name="times" />
+        </button>
+        <img className="gallerymodal__img" src={this.props.uris[this.state.index]} />
+      </div>
     );
   }
 }
