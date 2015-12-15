@@ -24,11 +24,6 @@ export default class extends React.Component {
   _close() {
     ModalStore.dispatch({type: MODAL_CLOSE});
   }
-  _checkEsc(ev) {
-    if (ev.keyCode === 27) {
-      this._close();
-    }
-  }
   _checkClickOutside(ev) {
     if (!this.refs.visible.contains(ev.target)) {
       this._close();
@@ -38,23 +33,25 @@ export default class extends React.Component {
     this._checkHeaderPosThis = this._checkHeaderPos.bind(this);
     window.addEventListener('resize', this._checkHeaderPosThis);
     this.refs.scroll.addEventListener('scroll', this._checkHeaderPosThis);
-    this._checkEscThis = this._checkEsc.bind(this);
-    window.addEventListener('keyup', this._checkEscThis);
   }
   componentWillUnmount() {
     window.removeEventListener('resize', this._checkHeaderPosThis);
     this.refs.scroll.removeEventListener('scroll', this._checkHeaderPosThis);
-    window.removeEventListener('keyup', this._checkEscThis);
   }
   render() {
-    let headerContent = (
+    const closeButton = (
+      <button key="1" className="modal__header__close" onClick={() => this._close()}>
+        <Icon name="times" />
+      </button>
+    );
+
+    const headerContent = (
       <div className="modal__header__content">
         <div key="0" className="modal__header__title"><h1>{this.props.title}</h1></div>
-        <button key="1" className="modal__header__close" onClick={() => this._close()}>
-          <Icon name="times" />
-        </button>
+        {closeButton}
       </div>
     );
+
     return (
       <div className="modal" onClick={(ev) => this._checkClickOutside(ev)}>
         <div className="modal__scroll" ref="scroll">
