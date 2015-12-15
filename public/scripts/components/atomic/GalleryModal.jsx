@@ -15,25 +15,30 @@ export default class extends React.Component {
   _close() {
     ModalStore.dispatch({type: MODAL_CLOSE});
   }
-  _keyUp(ev) {
-    let newIndex;
-    if (ev.keyCode === 37) {
-      newIndex = this.state.index - 1;
-    } else if (ev.keyCode === 39) {
-      newIndex = this.state.index + 1;
-    } else {
-      return;
-    }
-
-    if (newIndex < 0) {
-      newIndex = this.props.uris.length - 1;
-    } else if (newIndex >= this.props.uris.length) {
+  _next() {
+    let newIndex = this.state.index + 1;
+    if (newIndex >= this.props.uris.length) {
       newIndex = 0;
     }
-
     this.setState({
       index: newIndex
     });
+  }
+  _prev() {
+    let newIndex = this.state.index - 1;
+    if (newIndex < 0) {
+      newIndex = this.props.uris.length - 1;
+    }
+    this.setState({
+      index: newIndex
+    });
+  }
+  _keyUp(ev) {
+    if (ev.keyCode === 37) {
+      this._prev();
+    } else if (ev.keyCode === 39) {
+      this._next();
+    }
   }
   componentDidMount() {
     this._keyUpThis = this._keyUp.bind(this);
@@ -45,8 +50,14 @@ export default class extends React.Component {
   render() {
     return (
       <div className="gallerymodal">
-        <button key="1" className="gallerymodal__close" onClick={() => this._close()}>
+        <button className="gallerymodal__close" onClick={() => this._close()}>
           <Icon name="times" />
+        </button>
+        <button className="gallerymodal__prev" onClick={() => this._prev()}>
+          <Icon name="angle-left" />
+        </button>
+        <button className="gallerymodal__next" onClick={() => this._next()}>
+          <Icon name="angle-right" />
         </button>
         <img className="gallerymodal__img" src={this.props.uris[this.state.index]} />
       </div>
