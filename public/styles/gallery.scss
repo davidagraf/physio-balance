@@ -39,7 +39,7 @@
     @include gallerybutton;
     right: 0;
     top: 0;
-    z-index: 301;
+    z-index: 302;
 
     &:hover {
       background-color: $color-background-button-gallery-hover;
@@ -47,30 +47,44 @@
   }
 
   @mixin gallerynav {
-    @include gallerybutton;
-
-    cursor: auto;
     height: 100%;
-    outline: 0;
+    position: fixed;
     width: 50%;
     z-index: 300;
+  }
+
+  @mixin gallerynavbutton {
+    @include gallerybutton;
+    height: 100%;
+    max-width: 50%;
+    width: 200px;
+    z-index: 301;
 
     &:hover {
       background-color: transparent;
-      cursor: auto;
     }
   }
 
   &__next {
     @include gallerynav;
     right: 0;
-    text-align: right;
+
+    &__button {
+      @include gallerynavbutton;
+      right: 0;
+      text-align: right;
+    }
   }
 
   &__prev {
     @include gallerynav;
     left: 0;
-    text-align: left;
+
+    &__button {
+      @include gallerynavbutton;
+      left: 0;
+      text-align: left;
+    }
   }
 
   &__img {

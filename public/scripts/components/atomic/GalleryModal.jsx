@@ -53,12 +53,16 @@ export default class extends React.Component {
         <button className="gallerymodal__close" onClick={() => this._close()}>
           <Icon name="times" />
         </button>
-        <button className="gallerymodal__prev" onClick={() => this._prev()}>
-          <Icon name="angle-left" />
-        </button>
-        <button className="gallerymodal__next" onClick={() => this._next()}>
-          <Icon name="angle-right" />
-        </button>
+        <div className="gallerymodal__prev" onClick={() => this._prev()}>
+          <button className="gallerymodal__prev__button">
+            <Icon name="angle-left" />
+          </button>
+        </div>
+        <div className="gallerymodal__next" onClick={() => this._next()}>
+          <button className="gallerymodal__next__button">
+            <Icon name="angle-right" />
+          </button>
+        </div>
         <img className="gallerymodal__img" src={this.props.uris[this.state.index]} />
       </div>
     );
