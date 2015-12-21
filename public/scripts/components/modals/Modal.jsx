@@ -29,15 +29,6 @@ export default class extends React.Component {
       this._close();
     }
   }
-  componentDidMount() {
-    this._checkHeaderPosThis = this._checkHeaderPos.bind(this);
-    window.addEventListener('resize', this._checkHeaderPosThis);
-    this.refs.scroll.addEventListener('scroll', this._checkHeaderPosThis);
-  }
-  componentWillUnmount() {
-    window.removeEventListener('resize', this._checkHeaderPosThis);
-    this.refs.scroll.removeEventListener('scroll', this._checkHeaderPosThis);
-  }
   render() {
     const closeButton = (
       <button key="1" className="modal__header__close" onClick={() => this._close()}>
@@ -54,7 +45,7 @@ export default class extends React.Component {
 
     return (
       <div className="modal" onClick={(ev) => this._checkClickOutside(ev)}>
-        <div className="modal__scroll" ref="scroll">
+        <div className="modal__scroll" ref="scroll" onScroll={() => this._checkHeaderPos()}>
           <ReactCSSTransitionGroup transitionName="modal--animation"
                                    transitionAppear={true}
                                    transitionAppearTimeout={500}
