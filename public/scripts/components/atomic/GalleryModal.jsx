@@ -40,6 +40,19 @@ export default class extends React.Component {
       this._next();
     }
   }
+  _touchStart(ev) {
+    this._touchStartX = ev.nativeEvent.touches[0] && ev.nativeEvent.touches[0].pageX;
+  }
+  _touchEnd(ev) {
+    const touchEndX = ev.nativeEvent.changedTouches[0] && ev.nativeEvent.changedTouches[0].pageX;
+    if (this._touchStartX && touchEndX) {
+      if (touchEndX > this._touchStartX) {
+        this._next();
+      } else if (touchEndX < this._touchStartX) {
+        this._prev();
+      }
+    }
+  }
   componentDidMount() {
     this._keyUpThis = this._keyUp.bind(this);
     window.addEventListener('keydown', this._keyUpThis);
@@ -49,7 +62,7 @@ export default class extends React.Component {
   }
   render() {
     return (
-      <div className="gallerymodal">
+      <div className="gallerymodal" onTouchStart={(ev) => this._touchStart(ev)} onTouchEnd={(ev) => this._touchEnd(ev)}>
         <button className="gallerymodal__close" onClick={() => this._close()}>
           <Icon name="times" />
         </button>
