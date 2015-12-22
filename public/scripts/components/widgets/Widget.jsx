@@ -5,6 +5,8 @@ import Modal from 'scripts/components/modals/Modal.jsx';
 import ModalStore from 'scripts/stores/ModalStore.js';
 import { MODAL_OPEN } from 'scripts/constants/ActionTypes.js';
 
+import placeholder from 'imgs/placeholder.png';
+
 export default class extends React.Component {
   static propTypes = {
     img: React.PropTypes.string,
@@ -27,7 +29,7 @@ export default class extends React.Component {
       <div>
         <div className="widget" onClick={() => this._openModal()}>
           <div className="widget__img">
-            <img src={this.props.img}/>
+            <img src={this.props.img || placeholder}/>
           </div>
           <div className="widget__text"><div className="widget__text__content">{
             this.props.text
