@@ -49,6 +49,7 @@
 
   @mixin gallerynav {
     height: 100%;
+    outline: none;
     position: fixed;
     width: 50%;
     z-index: 300;
