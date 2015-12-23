@@ -9,7 +9,7 @@ export default class extends React.Component {
   render() {
     return (
       <Widget
-        img={img} text={'wir stellen uns vor'} modal={<ModalConcept/>} />
+        img={img} text={'philosophie'} modal={<ModalConcept/>} />
     );
   }
 }

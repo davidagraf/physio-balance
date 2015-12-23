@@ -9,10 +9,10 @@ export default class extends React.Component {
     return (
       <Bar
         title={<img src={logo}/>}
-        subtitle="das gesundheitszentrum für prävention und rehabilitation"
+        subtitle="&laquo;das gesundheitszentrum für prävention und rehabilitation&raquo;"
         infos={[
-          <div><Icon name="map-marker"/> Widengasse 16 5070 Frick</div>,
-          <div><Icon name="phone"/> 062 871 16 20</div>,
+          <div><Icon name="map-marker"/> widengasse 16 5070 frick</div>,
+          <div><Icon name="phone"/> +41 62 871 16 20</div>,
           <div><Icon name="envelope"/> team@physiobalance.fit</div>
         ]}
         className="bar--green"

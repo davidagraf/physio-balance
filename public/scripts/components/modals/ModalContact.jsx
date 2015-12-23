@@ -43,7 +43,7 @@ export default class extends React.Component {
     this.setState(DEFAULT_STATE);
   }
   render() {
-    let formContent;
+    // let formContent;
 
     // if (this.state.error) {
     //   formContent = (
@@ -87,20 +87,13 @@ export default class extends React.Component {
     return (
       <Modal title="Kontakt">
         <p>
-          Physio Balance GmbH<br/>
+          physio balance gmbh<br/>
           Widengasse 16<br/>
           5070 Frick<br/>
           team@physiobalance.fit<br/>
-          062 871 16 20  
+          062 871 16 20
         </p>
         <GoogleMap address="Widengasse 16 5070 Frick" />
-        <p>
-          Parkmöglichkeiten in unmittelbarer Nähe vorhanden
-        </p>
-        <p>
-          ÖV ab Haltestelle Unterdorf Frick fünf minütiger Fussweg
-        </p>
-        {formContent}
       </Modal>
     );
   }

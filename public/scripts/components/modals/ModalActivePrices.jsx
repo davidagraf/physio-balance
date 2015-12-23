@@ -4,14 +4,9 @@ import Modal from 'scripts/components/modals/Modal.jsx';
 export default class extends React.Component {
   render() {
     return (
-      <Modal title="Wochenplan">
+      <Modal title="Preise">
         <table>
           <tbody>
-            <tr>
-              <td>Personal Training</td>
-              <td>Pro 60 Minuten</td>
-              <td>Fr. 120.--</td>
-            </tr>
             <tr>
               <td>Gruppenkurse</td>
               <td>Jahresabo</td>
@@ -36,6 +31,11 @@ export default class extends React.Component {
               <td></td>
               <td>Kinder</td>
               <td>Fr. 15.-- / pro Anlass</td>
+            </tr>
+            <tr>
+              <td>Personal Training</td>
+              <td>Pro 60 Minuten</td>
+              <td>Fr. 120.--</td>
             </tr>
           </tbody>
         </table>

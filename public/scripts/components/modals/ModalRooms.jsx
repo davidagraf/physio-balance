@@ -12,19 +12,16 @@ import five from 'imgs/gallery/physiotherapie.jpg';
 export default class extends React.Component {
   render() {
     return (
-      <Modal title="Rooms">
+      <Modal title="Räumlichkeiten">
         <Gallery uris={[one, two, three, four, five]} />
         <p>
-          Top moderne Infrastruktur mit einem grosszügigen Aktivraum, zwei freundlichen Behandlungsräumen, Duschen und
-          WC.
-        </p>
-        <p>
-          Eine Spiegelwand und ein ausgeklügeltes Soundsystem machen das Training zur wahren Freude. Eine aktive
-          Wohlfühloase!:-)
-        </p>
-        <p>
-          Zur Entspannung während den passiven Therapieeinheiten tragen die komfortablen und hochwertigen
+          Wir bieten eine top moderne Infrastruktur mit einem grosszügigen Aktivraum, zwei
+          freundlichen Behandlungsräume, Duschen und WC. Zur Entspannung während den passiven Therapieeinheiten
+          tragen die komfortablen und hochwertigen
           Behandlungsliegen bei.
+        </p>
+        <p className="text-center">
+          <i>&laquo;eine Wohlfühloase&raquo;</i>
         </p>
       </Modal>
     );

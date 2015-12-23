@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'scripts/components/modals/Modal.jsx';
+import Icon from 'scripts/components/atomic/Icon.jsx';
 
 import lebenslauf from 'documents/Lebenslauf_MB_pb.pdf';
 
@@ -21,7 +22,7 @@ export default class extends React.Component {
           Eine physiotherapeutische Behandlung dauert ca. 25 Minuten.
         </p>
         <p>
-          <a href={lebenslauf}>Lebenslauf Mirjam Böni</a>
+          <Icon name="file-pdf-o"/> <a href={lebenslauf}>Lebenslauf Mirjam Böni</a>
         </p>
 
       </Modal>

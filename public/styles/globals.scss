@@ -44,7 +44,6 @@ h1 {
 }
 
 ul {
-  list-style-type: none;
   padding-left: 0;
 
   > li {
@@ -68,4 +67,12 @@ ul {
   > *:first-child {
     margin-top: 0;
   }
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  color: $color-black;
 }
