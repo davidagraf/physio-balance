@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'scripts/components/modals/Modal.jsx';
+import Li from 'scripts/components/atomic/Li.jsx';
 
 import Mirjam from 'imgs/mirjam.jpg';
 import Denise from 'imgs/denise.jpg';
@@ -15,9 +16,9 @@ export default class extends React.Component {
           </div>
           <div className="splitview__right">
             <ul>
-              <li>sypoba instruktorin basic & progressive</li>
-              <li>personal training</li>
-              <li>faszien fitness</li>
+              <Li>sypoba instruktorin basic & progressive</Li>
+              <Li>personal training</Li>
+              <Li>faszien fitness</Li>
             </ul>
           </div>
         </div>
@@ -35,9 +36,9 @@ export default class extends React.Component {
           </div>
           <div className="splitview__right">
             <ul>
-              <li>dipl. physiotherapeutin fh</li>
-              <li>personal training</li>
-              <li>sling training, faszien fitness</li>
+              <Li>dipl. physiotherapeutin fh</Li>
+              <Li>personal training</Li>
+              <Li>sling training, faszien fitness</Li>
             </ul>
           </div>
         </div>

@@ -44,6 +44,7 @@ h1 {
 }
 
 ul {
+  list-style-type: none;
   padding-left: 0;
 
   > li {
@@ -54,6 +55,19 @@ ul {
     &:not(:last-child) {
       margin-bottom: 5px;
     }
+  }
+}
+
+.li {
+  align-items: center;
+  display: flex;
+
+  &__bullet {
+    background-color: $color-black;
+    border-radius: 2px;
+    height: 4px;
+    margin-right: 5px;
+    width: 4px;
   }
 }
 
