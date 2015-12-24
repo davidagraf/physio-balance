@@ -26,8 +26,12 @@ table {
     border-left: $style-border;
     border-top: $style-border;
 
-    &:first-child {
+    th {
+      border-bottom: $style-border;
+      border-right: $style-border;
       font-weight: bold;
+      padding: 10px;
+      text-align: left;
     }
 
     td {

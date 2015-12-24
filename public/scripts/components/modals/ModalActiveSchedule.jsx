@@ -37,17 +37,30 @@ export default class extends React.Component {
   }
   render() {
     let content;
+
     if (this.state.data) {
       content = (
-        <table><tbody>{
-          this.state.data.map((row, i)=> {
-            let rowvals = [], j;
-            for (j = 0; j < 6; ++j) {
-              rowvals.push(<td key={j}>{row[j]}</td>);
+        <table>
+          <thead>{
+            this.state.data.slice(0, 1).map((row, i)=> {
+              let rowvals = [], j;
+              for (j = 0; j < 6; ++j) {
+                rowvals.push(<th key={j}>{row[j]}</th>);
+              }
+              return <tr key={i}>{rowvals}</tr>;
+            })
             }
-            return <tr key={i}>{rowvals}</tr>;
-          })
-        }</tbody></table>
+          }</thead>
+          <tbody>{
+            this.state.data.slice(1).map((row, i)=> {
+              let rowvals = [], j;
+              for (j = 0; j < 6; ++j) {
+                rowvals.push(<td key={j}>{row[j]}</td>);
+              }
+              return <tr key={i}>{rowvals}</tr>;
+            })
+          }</tbody>
+        </table>
       );
     }
 

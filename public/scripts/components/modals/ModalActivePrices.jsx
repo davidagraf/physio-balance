@@ -8,13 +8,13 @@ export default class extends React.Component {
         <table>
           <tbody>
             <tr>
-              <td>Gruppenkurse</td>
-              <td>Jahresabo</td>
+              <td>Gruppen&shy;kurse</td>
+              <td>Jahres&shy;abo</td>
               <td>Fr. 950.--</td>
             </tr>
             <tr>
               <td></td>
-              <td>Halbjahresabo</td>
+              <td>Halb&shy;jahres&shy;abo</td>
               <td>Fr. 580.--</td>
             </tr>
             <tr>
@@ -23,8 +23,8 @@ export default class extends React.Component {
               <td>Fr. 250.--</td>
             </tr>
             <tr>
-              <td>Gruppenkurse Outdoor</td>
-              <td>Erwachsene</td>
+              <td>Gruppen&shy;kurse Outdoor</td>
+              <td>Er&shy;wach&shy;se&shy;ne</td>
               <td>Aktivitäten abhängig</td>
             </tr>
             <tr>
