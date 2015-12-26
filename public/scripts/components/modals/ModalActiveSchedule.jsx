@@ -49,7 +49,6 @@ export default class extends React.Component {
               }
               return <tr key={i}>{rowvals}</tr>;
             })
-            }
           }</thead>
           <tbody>{
             this.state.data.slice(1).map((row, i)=> {

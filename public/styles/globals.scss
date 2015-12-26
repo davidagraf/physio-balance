@@ -91,6 +91,11 @@ ul {
   text-align: center;
 }
 
-a {
+.link {
   color: $color-black;
+  text-decoration: none;
+
+  &__text {
+    text-decoration: underline;
+  }
 }
