@@ -15,10 +15,8 @@ import WidgetFacebook from 'scripts/components/widgets/WidgetFacebook.jsx';
 
 import WidgetPhysioOffer from 'scripts/components/widgets/WidgetPhysioOffer.jsx';
 import WidgetPhysioInfos from 'scripts/components/widgets/WidgetPhysioInfos.jsx';
-import WidgetPhysioForm from 'scripts/components/widgets/WidgetPhysioForm.jsx';
 
 import WidgetActiveSchedule from 'scripts/components/widgets/WidgetActiveSchedule.jsx';
-import WidgetActiveForm from 'scripts/components/widgets/WidgetActiveForm.jsx';
 import WidgetActivePrices from 'scripts/components/widgets/WidgetActivePrices.jsx';
 import WidgetActiveOffer from 'scripts/components/widgets/WidgetActiveOffer.jsx';
 
@@ -35,11 +33,11 @@ export default class extends React.Component {
         />
         <BarPhysio />
         <Board
-          widgets={[<WidgetPhysioOffer />, <WidgetPhysioInfos />, <WidgetPhysioForm />]}
+          widgets={[<WidgetPhysioOffer />, <WidgetPhysioInfos />]}
         />
         <BarActive/>
         <Board
-          widgets={[<WidgetActiveOffer />, <WidgetActiveSchedule />, <WidgetActivePrices />, <WidgetActiveForm />]}
+          widgets={[<WidgetActiveOffer />, <WidgetActiveSchedule />, <WidgetActivePrices />]}
         />
         <Sponsors />
       </div>
