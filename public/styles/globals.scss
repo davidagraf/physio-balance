@@ -32,6 +32,11 @@ table {
       font-weight: bold;
       padding: 10px;
       text-align: left;
+
+      > div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
 
     td {

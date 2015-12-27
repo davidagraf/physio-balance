@@ -46,7 +46,7 @@ export default class extends React.Component {
             this.state.data.slice(0, 1).map((row, i)=> {
               let rowvals = [], j;
               for (j = 0; j < 6; ++j) {
-                rowvals.push(<th key={j}>{row[j]}</th>);
+                rowvals.push(<th key={j}><div>{row[j]}</div></th>);
               }
               return <tr key={i}>{rowvals}</tr>;
             })
@@ -55,7 +55,7 @@ export default class extends React.Component {
             this.state.data.slice(1).map((row, i)=> {
               let rowvals = [], j;
               for (j = 0; j < 6; ++j) {
-                rowvals.push(<td key={j}>{row[j]}</td>);
+                rowvals.push(<td key={j}><div>{row[j]}</div></td>);
               }
               return <tr key={i}>{rowvals}</tr>;
             })
