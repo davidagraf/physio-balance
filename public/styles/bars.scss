@@ -32,14 +32,21 @@
     background-color: $color-green-logo;
   }
 
-  &__img--left {
+  &__img--company {
+    bottom: 10px;
+    height: 50%;
+    position: absolute;
+    right: 0;
+  }
+
+  &__img--physio {
     left: 0;
     opacity: .5;
     position: absolute;
     top: -50px;
   }
 
-  &__img--right {
+  &__img--active {
     bottom: -30px;
     height: 140%;
     opacity: .3;

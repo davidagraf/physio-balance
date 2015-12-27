@@ -3,13 +3,12 @@ import ButtonNext from 'scripts/components/bars/ButtonNext.jsx';
 
 export default class extends React.Component {
   static propTypes = {
-    img: React.PropTypes.string,
+    img: React.PropTypes.node,
     title: React.PropTypes.node,
     subtitle: React.PropTypes.node,
     infos: React.PropTypes.arrayOf(React.PropTypes.node),
     buttonStart: React.PropTypes.bool,
-    className: React.PropTypes.string,
-    imgRight: React.PropTypes.bool
+    className: React.PropTypes.string
   }
   static defaultProps = {
     buttonStart: false
@@ -29,7 +28,7 @@ export default class extends React.Component {
   render() {
     return (
       <div className={'bar ' + (this.props.className || '')} ref="bar">
-        <img className={(this.props.imgRight ? 'bar__img--right' : 'bar__img--left')} src={this.props.img} />
+        {this.props.img}
         <div className="bar__title">{this.props.title}</div>
         {
           this.props.subtitle &&

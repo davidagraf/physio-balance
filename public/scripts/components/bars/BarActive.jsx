@@ -7,8 +7,7 @@ export default class extends React.Component {
   render() {
     return (
       <Bar
-        imgRight={true}
-        img={sypoba}
+        img={<img className="bar__img--active" src={sypoba} />}
         title="Aktiv"
         subtitle={<div>&laquo;Leben is Bewegung,<br/>Bewegung ist Gesundheit,<br/>Gesundheit ist Leben&raquo;</div>}
         className="bar--blue"
