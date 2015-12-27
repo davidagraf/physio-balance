@@ -1,6 +1,7 @@
 import React from 'react';
 import request from 'superagent';
 import Modal from 'scripts/components/modals/Modal.jsx';
+import Spinner from 'scripts/components/atomic/Spinner.jsx';
 
 const SHEETS_KEY = '1dE1g755F1LoRE6cXt3BxclVPFtIN3x1uDIqM697hx5w';
 const SHEET_ID = 'od6';
@@ -61,6 +62,8 @@ export default class extends React.Component {
           }</tbody>
         </table>
       );
+    } else {
+      content = <Spinner />;
     }
 
     return (
