@@ -98,10 +98,25 @@
 }
 
 .googlemap {
-  height: 500px;
+  height: 100%;
+  width: 100%;
 }
 
 .spinner {
   font-size: 25px;
   text-align: center;
+}
+
+.square {
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
+
+  &__inner {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }

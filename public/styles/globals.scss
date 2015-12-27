@@ -75,16 +75,27 @@ ul {
   }
 }
 
-.splitview {
-  display: flex;
+@mixin splitview {
+  .splitview {
+    display: flex;
+  }
+
+  .splitview__right {
+    padding-left: 20px;
+    width: 100%;
+
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
-.splitview__right {
-  margin-left: 10px;
+@include desktop {
+  @include splitview;
+}
 
-  > *:first-child {
-    margin-top: 0;
-  }
+@include tablet {
+  @include splitview;
 }
 
 .text-center {

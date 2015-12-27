@@ -5,6 +5,8 @@ import request from 'superagent';
 import Modal from 'scripts/components/modals/Modal.jsx';
 
 import GoogleMap from 'scripts/components/atomic/GoogleMap.jsx';
+import Square from 'scripts/components/atomic/Square.jsx';
+import Splitview from 'scripts/components/atomic/Splitview.jsx';
 
 // import Input from 'scripts/components/atomic/Input.jsx'
 // import Captcha from 'scripts/components/atomic/Captcha.jsx';
@@ -86,14 +88,22 @@ export default class extends React.Component {
 
     return (
       <Modal title="Kontakt">
-        <p>
-          physio balance gmbh<br/>
-          Widengasse 16<br/>
-          5070 Frick<br/>
-          team@physiobalance.fit<br/>
-          062 871 16 20
-        </p>
-        <GoogleMap address="Widengasse 16 5070 Frick" />
+        <Splitview
+          left = {
+            <p>
+              physio balance gmbh<br/>
+              Widengasse 16<br/>
+              5070 Frick<br/>
+              team@physiobalance.fit<br/>
+              062 871 16 20
+            </p>
+          }
+          right = {
+            <Square>
+              <GoogleMap address="Widengasse 16 5070 Frick" />
+            </Square>
+          }
+        />
       </Modal>
     );
   }
