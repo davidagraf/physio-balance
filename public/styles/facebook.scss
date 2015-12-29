@@ -1,0 +1,38 @@
+.facebook {
+  background-color: $color-background-widget;
+  font-size: 14px;
+  margin: 40px auto 0;
+  max-width: 940px;
+  outline: $style-border;
+  padding: 20px;
+  transition: all $time-hover linear;
+
+  &:hover {
+    box-shadow: 0 0 5px 1px $color-border;
+    cursor: pointer;
+    outline-color: $color-border-hover;
+  }
+
+  &__post {
+    color: $color-grey-logo;
+
+    &:not(:first-child) {
+      border-top: $style-border;
+      padding-top: 20px;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 20px;
+    }
+
+    &__date {
+      text-align: center;
+    }
+
+    &__message {
+      font-style: italic;
+      margin-top: 5px;
+      white-space: pre-line;
+    }
+  }
+}

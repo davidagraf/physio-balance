@@ -1,5 +1,6 @@
 import React from 'react';
 import Board from 'scripts/components/Board.jsx';
+import Facebook from 'scripts/components/Facebook.jsx';
 
 //import Menu from 'scripts/components/bars/Menu.jsx';
 import BarCompany from 'scripts/components/bars/BarCompany.jsx';
@@ -11,7 +12,6 @@ import WidgetTeam from 'scripts/components/widgets/WidgetTeam.jsx';
 import WidgetContact from 'scripts/components/widgets/WidgetContact.jsx';
 import WidgetConcept from 'scripts/components/widgets/WidgetConcept.jsx';
 import WidgetRooms from 'scripts/components/widgets/WidgetRooms.jsx';
-import WidgetFacebook from 'scripts/components/widgets/WidgetFacebook.jsx';
 
 import WidgetPhysioOffer from 'scripts/components/widgets/WidgetPhysioOffer.jsx';
 import WidgetPhysioInfos from 'scripts/components/widgets/WidgetPhysioInfos.jsx';
@@ -28,8 +28,9 @@ export default class extends React.Component {
       <div>
         <ModalManager />
         <BarCompany />
+        <Facebook />
         <Board
-          widgets={[<WidgetTeam />, <WidgetConcept />, <WidgetContact />, <WidgetRooms />, <WidgetFacebook />]}
+          widgets={[<WidgetTeam />, <WidgetConcept />, <WidgetContact />, <WidgetRooms />]}
         />
         <BarPhysio />
         <Board
