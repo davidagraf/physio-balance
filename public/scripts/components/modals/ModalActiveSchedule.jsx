@@ -2,6 +2,7 @@ import React from 'react';
 import request from 'superagent';
 import Modal from 'scripts/components/modals/Modal.jsx';
 import Spinner from 'scripts/components/atomic/Spinner.jsx';
+import Error from 'scripts/components/atomic/Error.jsx';
 
 const SHEETS_KEY = '1dE1g755F1LoRE6cXt3BxclVPFtIN3x1uDIqM697hx5w';
 const SHEET_ID = 'od6';
@@ -33,6 +34,8 @@ export default class extends React.Component {
       if (!err) {
         let parsed = generateMatix(res.body.feed.entry);
         this.setState({data: parsed});
+      } else {
+        this.setState({error: true});
       }
     });
   }
@@ -62,6 +65,8 @@ export default class extends React.Component {
           }</tbody>
         </table>
       );
+    } else if (this.state.error) {
+      content = <Error />;
     } else {
       content = <Spinner />;
     }
