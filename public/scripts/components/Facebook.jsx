@@ -1,5 +1,6 @@
 /* global FB, process */
 
+import moment from 'moment';
 import React from 'react';
 import Spinner from 'scripts/components/atomic/Spinner.jsx';
 
@@ -9,10 +10,6 @@ const APP_ACCESS_TOKEN = (
   '691100814354778|iSb_maGHNC9x7zyG9oUD7FGFHdw' :
   '718726034925589|RQQdhc0N8UgJU0b1iiuA3_y8XE0'
 );
-
-function fill(n) {
-  return ('00' + n).slice(-2);
-}
 
 export default class extends React.Component {
   state = {
@@ -54,11 +51,9 @@ export default class extends React.Component {
            if (msg.length > 320) {
              msg = msg.substring(0, 320) + '...';
            }
-           let date = new Date(post.created_time);
-           let dateString = fill(date.getDate()) + '.' + fill(date.getMonth() + 1) + '.' + date.getFullYear();
            return (
              <div key={i} className="facebook__post">
-               <div className="facebook__post__date">{dateString}</div>
+               <div className="facebook__post__date">{moment(post.created_time).format('DD.MM.YYYY')}</div>
                <div className="facebook__post__message">{msg}</div>
              </div>
            );
