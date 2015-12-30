@@ -48,7 +48,12 @@ export default class extends React.Component {
     }
   }
   _openFacebook() {
+    // let nativeOpened = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+    //   && window.open('fb://pages/physiobalance.fit');
+
+    // if (!nativeOpened) {
     window.open('https://www.facebook.com/physiobalance.fit', '_blank');
+    // }
   }
   render() {
     let content;
