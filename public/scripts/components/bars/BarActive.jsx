@@ -1,7 +1,7 @@
 import React from 'react';
 import Bar from 'scripts/components/bars/Bar.jsx';
 
-import sypoba from 'imgs/sypoba2.png';
+import sypoba from 'imgs/sypoba.png';
 
 export default class extends React.Component {
   render() {
