@@ -44,26 +44,31 @@ export default class extends React.Component {
 
     if (this.state.data) {
       content = (
-        <table>
-          <thead>{
-            this.state.data.slice(0, 1).map((row, i)=> {
-              let rowvals = [], j;
-              for (j = 0; j < 6; ++j) {
-                rowvals.push(<th key={j}><div>{row[j]}</div></th>);
-              }
-              return <tr key={i}>{rowvals}</tr>;
-            })
-          }</thead>
-          <tbody>{
-            this.state.data.slice(1).map((row, i)=> {
-              let rowvals = [], j;
-              for (j = 0; j < 6; ++j) {
-                rowvals.push(<td key={j}><div>{row[j]}</div></td>);
-              }
-              return <tr key={i}>{rowvals}</tr>;
-            })
-          }</tbody>
-        </table>
+        <div>
+          <table>
+            <thead>{
+              this.state.data.slice(0, 1).map((row, i)=> {
+                let rowvals = [], j;
+                for (j = 0; j < 6; ++j) {
+                  rowvals.push(<th key={j}><div>{row[j]}</div></th>);
+                }
+                return <tr key={i}>{rowvals}</tr>;
+              })
+            }</thead>
+            <tbody>{
+              this.state.data.slice(1).map((row, i)=> {
+                let rowvals = [], j;
+                for (j = 0; j < 6; ++j) {
+                  rowvals.push(<td key={j}><div>{row[j]}</div></td>);
+                }
+                return <tr key={i}>{rowvals}</tr>;
+              })
+            }</tbody>
+          </table>
+          <p>
+            (Änderungen bleiben vorbehalten)
+          </p>
+        </div>
       );
     } else if (this.state.error) {
       content = <Error />;

@@ -8,7 +8,7 @@ import formular from 'documents/VERORDNUNG_ZUR_PHYSIOTHERAPIE_MB.docx'
 export default class extends React.Component {
   render() {
     return (
-      <Modal title="Wichtige Informationen">
+      <Modal title="Verordnungsformular">
         <p>
           Physiotherapie ist mit ärztlicher Verordnung eine Dienstleistung der Krankenkassen Grundversicherung.
           Zudem besteht die Möglichkeit ohne Verordnung als Selbstzahler von unserem Angebot zu profitieren
