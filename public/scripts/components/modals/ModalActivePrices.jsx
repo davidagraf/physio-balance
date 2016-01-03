@@ -40,7 +40,7 @@ export default class extends React.Component {
           </tbody>
         </table>
         <p>
-          Bei Abschluss eines Abos nach Wahl bis und mit 9.1.2016 gewähren wir einen Rabatt von 25%!!!
+          Bei Abschluss eines Abos nach Wahl bis und mit 31.1.2016 gewähren wir einen Rabatt von 25%!!!
         </p>
       </Modal>
     );

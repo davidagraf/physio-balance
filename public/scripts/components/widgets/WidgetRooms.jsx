@@ -3,13 +3,13 @@ import React from 'react';
 import Widget from 'scripts/components/widgets/Widget.jsx';
 import ModalRooms from 'scripts/components/modals/ModalRooms.jsx';
 
-import room from 'imgs/room.png';
+import entry from 'imgs/entry.png';
 
 export default class extends React.Component {
   render() {
     return (
       <Widget
-        img={room} text={'räumlichkeiten'} modal={<ModalRooms/>} />
+        img={entry} text={'räumlichkeiten'} modal={<ModalRooms/>} />
     );
   }
 }
