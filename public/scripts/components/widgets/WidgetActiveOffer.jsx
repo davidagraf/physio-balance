@@ -3,7 +3,7 @@ import React from 'react';
 import Widget from 'scripts/components/widgets/Widget.jsx';
 import ModalActiveOffer from 'scripts/components/modals/ModalActiveOffer.jsx';
 
-import sypoba2 from 'imgs/sypoba2.png';
+import sypoba2 from 'imgs/widgets/sypoba.png';
 
 export default class extends React.Component {
   render() {

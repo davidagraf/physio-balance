@@ -3,7 +3,7 @@ import React from 'react';
 import Widget from 'scripts/components/widgets/Widget.jsx';
 import ModalPhysioOffer from 'scripts/components/modals/ModalPhysioOffer.jsx';
 
-import tape from 'imgs/tape.png';
+import tape from 'imgs/widgets/tape.png';
 
 export default class extends React.Component {
   render() {
