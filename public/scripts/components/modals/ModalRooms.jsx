@@ -15,10 +15,10 @@ export default class extends React.Component {
   render() {
     return (
       <Modal title="Räumlichkeiten">
-        
+
         <p>
           Wir bieten eine top moderne Infrastruktur mit einem grosszügigen Aktivraum, zwei
-          freundlichen Behandlungsräume, Duschen und WC. Zur Entspannung während den passiven Therapieeinheiten
+          freundlichen Behandlungsräumen, Duschen und WC. Zur Entspannung während den passiven Therapieeinheiten
           tragen die komfortablen und hochwertigen
           Behandlungsliegen bei.
         </p>

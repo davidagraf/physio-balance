@@ -55,7 +55,7 @@ export default class extends React.Component {
     let content;
 
     if (this.state.posts) {
-      content = this.state.posts.slice(0, 3).map((post, i) => {
+      content = this.state.posts.slice(0, 2).map((post, i) => {
         let msg = post.message;
         if (msg.length > 320) {
           msg = msg.substring(0, 320) + '...';
