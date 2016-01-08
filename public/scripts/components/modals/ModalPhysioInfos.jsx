@@ -3,7 +3,8 @@ import Modal from 'scripts/components/modals/Modal.jsx';
 import Link from 'scripts/components/atomic/Link.jsx';
 import Icon from 'scripts/components/atomic/Icon.jsx';
 
-import formular from 'documents/VERORDNUNG_ZUR_PHYSIOTHERAPIE_MB.docx'
+import formularWord from 'documents/Verordnung_zur_Physiotherapie.docx'
+import formularPDF from 'documents/Verordnung_zur_Physiotherapie.pdf'
 
 export default class extends React.Component {
   render() {
@@ -15,7 +16,9 @@ export default class extends React.Component {
           (65.00 Fr.pro Behandlung).
         </p>
         <p>
-          <Link icon={<Icon name="file-word-o" />} href={formular}>Verordnungsformular</Link>
+          <Link icon={<Icon name="file-pdf-o" />} href={formularPDF}>Verordnungsformular</Link>
+          <br/>
+          <Link icon={<Icon name="file-word-o" />} href={formularWord}>Verordnungsformular</Link>
         </p>
       </Modal>
     );
