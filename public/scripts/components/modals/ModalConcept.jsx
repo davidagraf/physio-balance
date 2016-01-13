@@ -7,7 +7,7 @@ export default class extends React.Component {
       <Modal title="Philosophie">
         <p>
           Gesundheit ist das grösste und wichtigste Gut des Menschen, welches gepflegt werden muss. Dazu bedarf es
-          gezielte Prävention und allenfalls Rehabilitation.
+          gezielter Prävention und allenfalls Rehabilitation.
           physio balance setzt sich zum Ziel genau dies zu betreiben, sich aber von herkömmlichen Fitnessinstitutionen
           abzuheben.
         </p>
