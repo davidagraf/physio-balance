@@ -1,9 +1,6 @@
 import React from 'react';
 
-export default class extends React.Component {
-  static propTypes = {
-    widgets: React.PropTypes.arrayOf(React.PropTypes.element).isRequired
-  }
+export default class Board extends React.Component {
   render() {
     return (
       <div className="board">
@@ -16,3 +13,7 @@ export default class extends React.Component {
     );
   }
 }
+
+Board.propTypes = {
+  widgets: React.PropTypes.arrayOf(React.PropTypes.element).isRequired
+};

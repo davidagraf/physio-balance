@@ -1,12 +1,6 @@
 import React from 'react';
 
-export default class extends React.Component {
-  static propTypes = {
-    name: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.arrayOf(React.PropTypes.string)
-    ]).isRequired
-  }
+export default class Icon extends React.Component {
   render() {
     let iconValues = this.props.name;
     if (!Array.isArray(iconValues)) {
@@ -22,3 +16,10 @@ export default class extends React.Component {
     );
   }
 }
+
+Icon.propTypes = {
+  name: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.arrayOf(React.PropTypes.string)
+  ]).isRequired
+};

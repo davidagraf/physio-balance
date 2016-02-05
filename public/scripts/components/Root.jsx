@@ -1,4 +1,6 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+
 import Board from 'scripts/components/Board.jsx';
 import Facebook from 'scripts/components/Facebook.jsx';
 
@@ -22,26 +24,30 @@ import WidgetActiveOffer from 'scripts/components/widgets/WidgetActiveOffer.jsx'
 
 import Sponsors from 'scripts/components/Sponsors.jsx';
 
+import store from 'scripts/reducers/store';
+
 export default class extends React.Component {
   render() {
     return (
-      <div>
-        <ModalManager />
-        <BarCompany />
-        <Facebook />
-        <Board
-          widgets={[<WidgetTeam />, <WidgetConcept />, <WidgetContact />, <WidgetRooms />]}
-        />
-        <BarPhysio />
-        <Board
-          widgets={[<WidgetPhysioOffer />, <WidgetPhysioInfos />]}
-        />
-        <BarActive/>
-        <Board
-          widgets={[<WidgetActiveOffer />, <WidgetActiveSchedule />, <WidgetActivePrices />]}
-        />
-        <Sponsors />
-      </div>
+      <Provider store={store}>
+        <div>
+          <ModalManager />
+          <BarCompany />
+          <Facebook />
+          <Board
+            widgets={[<WidgetTeam />, <WidgetConcept />, <WidgetContact />, <WidgetRooms />]}
+          />
+          <BarPhysio />
+          <Board
+            widgets={[<WidgetPhysioOffer />, <WidgetPhysioInfos />]}
+          />
+          <BarActive/>
+          <Board
+            widgets={[<WidgetActiveOffer />, <WidgetActiveSchedule />, <WidgetActivePrices />]}
+          />
+          <Sponsors />
+        </div>
+      </Provider>
     );
   }
 }

@@ -3,10 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class extends React.Component {
-  static propTypes = {
-    address: React.PropTypes.string.isRequired
-  }
+export default class GoogleMap extends React.Component {
   componentDidMount() {
     const geocoder = new google.maps.Geocoder();
     geocoder.geocode({'address': this.props.address}, (results) => {
@@ -28,3 +25,7 @@ export default class extends React.Component {
     );
   }
 }
+
+GoogleMap.propTypes = {
+  address: React.PropTypes.string.isRequired
+};

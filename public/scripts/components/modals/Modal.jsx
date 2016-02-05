@@ -3,16 +3,12 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Icon from 'scripts/components/atomic/Icon.jsx';
 
-import ModalStore from 'scripts/stores/ModalStore.js';
-import { MODAL_CLOSE } from 'scripts/constants/ActionTypes.js';
-
-export default class extends React.Component {
-  static propTypes = {
-    title: React.PropTypes.string,
-    children: React.PropTypes.node
-  }
-  state = {
-    headerFixed: false
+export default class Modal extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      headerFixed: false
+    };
   }
   _checkHeaderPos() {
     let overflow = (this.refs.visible.getBoundingClientRect().top < 0);
@@ -22,7 +18,7 @@ export default class extends React.Component {
     }
   }
   _close() {
-    ModalStore.dispatch({type: MODAL_CLOSE});
+    window.history.back();
   }
   _checkClickOutside(ev) {
     if (!this.refs.visible.contains(ev.target)) {
@@ -69,3 +65,8 @@ export default class extends React.Component {
     );
   }
 }
+
+Modal.propTypes = {
+  title: React.PropTypes.string,
+  children: React.PropTypes.node
+};

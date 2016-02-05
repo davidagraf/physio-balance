@@ -13,9 +13,12 @@ const APP_ACCESS_TOKEN = (
 );
 
 export default class extends React.Component {
-  state = {
-    posts: null,
-    error: false
+  constructor() {
+    super();
+    this.state = {
+      posts: null,
+      error: false
+    };
   }
   _loadFBData() {
     FB.init({

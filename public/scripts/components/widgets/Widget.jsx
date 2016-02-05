@@ -1,27 +1,18 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 import Modal from 'scripts/components/modals/Modal.jsx';
+import { openModal } from 'scripts/actions';
 
-import ModalStore from 'scripts/stores/ModalStore.js';
-import { MODAL_OPEN } from 'scripts/constants/ActionTypes.js';
-
-export default class extends React.Component {
-  static propTypes = {
-    img: React.PropTypes.string,
-    content: React.PropTypes.node,
-    text: React.PropTypes.string,
-    modal: React.PropTypes.element
-  }
-  static defaultProps = {
-    modal: <Modal />
-  }
+export default class Widget extends React.Component {
   _openModal() {
-    ModalStore.dispatch({type: MODAL_OPEN, modal: this.props.modal});
+    this.props.openModal(this.props.modal);
   }
   render() {
     return (
       <div>
-        <div className="widget" onClick={() => this._openModal()}>
+        <a className="widget" onClick={() => this._openModal()}>
           <div className="widget__img">
             {
               this.props.img && <img src={this.props.img}/>
@@ -31,8 +22,26 @@ export default class extends React.Component {
           <div className="widget__text"><div className="widget__text__content">{
             this.props.text
           }</div></div>
-        </div>
+        </a>
       </div>
     );
   }
 }
+
+Widget.propTypes = {
+  img: React.PropTypes.string,
+  content: React.PropTypes.node,
+  text: React.PropTypes.string,
+  modal: React.PropTypes.element,
+  openModal: React.PropTypes.func.isRequired
+};
+
+Widget.defaultProps = {
+  modal: <Modal />
+};
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ openModal }, dispatch);
+}
+
+export default connect(null, mapDispatchToProps)(Widget);

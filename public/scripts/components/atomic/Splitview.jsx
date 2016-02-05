@@ -1,10 +1,6 @@
 import React from 'react';
 
-export default class extends React.Component {
-  static propTypes = {
-    left: React.PropTypes.node.isRequired,
-    right: React.PropTypes.node.isRequired
-  }
+export default class Splitview extends React.Component {
   render() {
     return (
       <div className="splitview">
@@ -14,3 +10,8 @@ export default class extends React.Component {
     );
   }
 }
+
+Splitview.propTypes = {
+  left: React.PropTypes.node.isRequired,
+  right: React.PropTypes.node.isRequired
+};

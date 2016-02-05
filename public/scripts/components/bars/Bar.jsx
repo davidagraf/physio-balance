@@ -1,18 +1,7 @@
 import React from 'react';
 import ButtonNext from 'scripts/components/bars/ButtonNext.jsx';
 
-export default class extends React.Component {
-  static propTypes = {
-    img: React.PropTypes.node,
-    title: React.PropTypes.node,
-    subtitle: React.PropTypes.node,
-    infos: React.PropTypes.arrayOf(React.PropTypes.node),
-    buttonStart: React.PropTypes.bool,
-    className: React.PropTypes.string
-  }
-  static defaultProps = {
-    buttonStart: false
-  }
+export default class Bar extends React.Component {
   _scrollToNext() {
     let bars = document.getElementsByClassName('bar');
     for(let i = 0; i < bars.length; ++i) {
@@ -55,3 +44,16 @@ export default class extends React.Component {
     );
   }
 }
+
+Bar.propTypes = {
+  img: React.PropTypes.node,
+  title: React.PropTypes.node,
+  subtitle: React.PropTypes.node,
+  infos: React.PropTypes.arrayOf(React.PropTypes.node),
+  buttonStart: React.PropTypes.bool,
+  className: React.PropTypes.string
+};
+
+Bar.defaultProps = {
+  buttonStart: false
+};

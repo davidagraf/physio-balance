@@ -1,15 +1,6 @@
 import React from 'react';
 
-export default class extends React.Component {
-  static propTypes = {
-    icon: React.PropTypes.element,
-    href: React.PropTypes.string.isRequired,
-    children: React.PropTypes.string.isRequired,
-    newWindow: React.PropTypes.bool,
-  }
-  static defaultProps = {
-    newWindow: false
-  }
+export default class Link extends React.Component {
   render() {
     return (
       <a className="link" href={this.props.href} target={ this.props.newWindow && '_blank'}>
@@ -21,3 +12,14 @@ export default class extends React.Component {
     );
   }
 }
+
+Link.propTypes = {
+  icon: React.PropTypes.element,
+  href: React.PropTypes.string.isRequired,
+  children: React.PropTypes.string.isRequired,
+  newWindow: React.PropTypes.bool,
+};
+
+Link.defaultProps = {
+  newWindow: false
+};

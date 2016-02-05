@@ -13,6 +13,7 @@
 
 .widget {
   background-color: $color-background-widget;
+  display: block;
   height: 240px;
   margin: $margin-widgets;
   outline: $style-border;
@@ -23,7 +24,7 @@
   &:hover {
     box-shadow: 0 0 5px 1px $color-border;
     cursor: pointer;
-    outline-color: $color-border-hover;
+    outline: $style-border-hover;
     text-decoration: underline;
   }
 
