@@ -28,6 +28,10 @@ function generateMatix(sheetsEntries) {
 }
 
 export default class extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
   componentDidMount() {
     request.get(SHEETS_URL).end((err, res) => {
       if (!err) {
