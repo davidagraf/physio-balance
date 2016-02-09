@@ -1,5 +1,6 @@
 import React from 'react';
 import { Router, Route } from 'react-router';
+import createBrowserHistory from 'history/lib/createBrowserHistory';
 
 import Board from 'scripts/components/Board.jsx';
 import Facebook from 'scripts/components/Facebook.jsx';
@@ -64,7 +65,7 @@ Content.propTypes = {
 export default class extends React.Component {
   render() {
     return (
-      <Router>
+      <Router history={createBrowserHistory()}>
         <Route path="/" component={Content}>
           <Route path="/activeoffer" component={ModalActiveOffer} />
           <Route path="/activeprices" component={ModalActivePrices} />
