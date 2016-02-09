@@ -1,14 +1,10 @@
-.noscroll {
-  overflow: hidden;
-}
-
 body {
   background-color: $color-background;
   font-family: 'Open Sans', sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
 
-button {
+@mixin button {
   background-color: $color-button;
   border: 0;
   border-radius: 0;
@@ -19,6 +15,18 @@ button {
   &:hover {
     background-color: $color-button-hover;
   }
+}
+
+.button--white {
+  @include button;
+
+  color: $color-white;
+}
+
+.button--black {
+  @include button;
+
+  color: $color-black;
 }
 
 table {

@@ -6,7 +6,7 @@ export default class ButtonNext extends React.Component {
     const iconName = ( this.props.start ? 'angle-up' : 'angle-down' );
 
     return (
-      <button tabIndex="-1" className="button--next" onClick={(ev) => this.props.onClick(ev)}>
+      <button tabIndex="-1" className="button--next button--white" onClick={(ev) => this.props.onClick(ev)}>
         <Icon name={iconName} />
       </button>
     );

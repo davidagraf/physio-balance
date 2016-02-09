@@ -3,6 +3,8 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Icon from 'scripts/components/atomic/Icon.jsx';
 
+import { Link } from 'react-router';
+
 export default class Modal extends React.Component {
   constructor() {
     super();
@@ -26,11 +28,7 @@ export default class Modal extends React.Component {
     }
   }
   render() {
-    const closeButton = (
-      <button key="1" className="modal__header__close" onClick={() => this._close()}>
-        <Icon name="times" />
-      </button>
-    );
+    const closeButton = <Link tabIndex="-1" className="button--black" to="/"><Icon name="times" /></Link>;
 
     const headerContent = (
       <div className="modal__header__content">
