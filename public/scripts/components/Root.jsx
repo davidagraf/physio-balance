@@ -76,6 +76,7 @@ export default class extends React.Component {
           <Route path="/physiooffer" component={ModalPhysioOffer} />
           <Route path="/rooms" component={ModalRooms} />
           <Route path="/team" component={ModalTeam} />
+          <Route path="*" component={null}/>
         </Route>
       </Router>
     );
