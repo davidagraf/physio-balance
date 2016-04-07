@@ -13,7 +13,7 @@ export default class extends React.Component {
         <p>
           Physiotherapie ist mit ärztlicher Verordnung eine Dienstleistung der Krankenkassen Grundversicherung.
           Zudem besteht die Möglichkeit ohne Verordnung als Selbstzahler von unserem Angebot zu profitieren
-          (65.00 Fr.pro Behandlung).
+          (60.00 Fr.pro Behandlung).
         </p>
         <p>
           <Link icon={<Icon name="file-pdf-o" />} href={formularPDF}>Verordnungsformular</Link>
