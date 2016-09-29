@@ -13,12 +13,12 @@ export default class extends React.Component {
               <td>Fr. 950.--</td>
             </tr>
             <tr>
-              <td></td>
+              <td />
               <td>Halb&shy;jahres&shy;abo</td>
               <td>Fr. 580.--</td>
             </tr>
             <tr>
-              <td></td>
+              <td />
               <td>10er Karte</td>
               <td>Fr. 250.--</td>
             </tr>
@@ -28,7 +28,7 @@ export default class extends React.Component {
               <td>Aktivitäten abhängig</td>
             </tr>
             <tr>
-              <td></td>
+              <td />
               <td>Kinder</td>
               <td>Fr. 15.-- / pro Anlass</td>
             </tr>

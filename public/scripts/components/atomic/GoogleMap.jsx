@@ -21,7 +21,7 @@ export default class GoogleMap extends React.Component {
   }
   render() {
     return (
-      <div className="googlemap" ref="map"></div>
+      <div className="googlemap" ref="map" />
     );
   }
 }

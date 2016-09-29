@@ -3,6 +3,7 @@
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
   eslint: {
@@ -38,20 +39,19 @@ module.exports = {
         )
       }, {
         test: /\.js$/,
-        exclude: path.join(__dirname, 'node_modules'),
+        exclude: /node_modules/,
         loader: 'babel',
         query: {
-          optional: 'runtime',
-          blacklist: 'react',
-          stage: 0
+          plugins: ['transform-object-rest-spread'],
+          presets: ['es2015']
         }
       }, {
         test: /\.jsx$/,
-        exclude: path.join(__dirname, 'node_modules'),
+        exclude: /node_modules/,
         loader: 'babel',
         query: {
-          optional: 'runtime',
-          stage: 0
+          plugins: ['transform-object-rest-spread'],
+          presets: ['es2015', 'react']
         }
       }, {
         test: /\.json$/, loader: 'json-loader'
@@ -79,6 +79,8 @@ module.exports = {
       favicon: path.join(__dirname, 'public', 'imgs', 'logo', 'pb_logo_color_rgb_fav.png'),
       hash: true
     }),
+    // tell moment to load a subset of locales only
+    new webpack.ContextReplacementPlugin(/moment[\\\/]locale$/, /^\.\/(en|de|fr|it)$/)
   ],
   resolve: {
     alias: {
