@@ -13,7 +13,7 @@ export default class ModalContact extends React.Component {
         <Splitview
           left = {
             <p>
-              physio balance gmbh<br/>
+              physio balance<br/>
               Widengasse 16<br/>
               5070 Frick<br/>
               team@physiobalance.fit<br/>

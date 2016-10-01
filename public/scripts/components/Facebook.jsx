@@ -52,7 +52,7 @@ export default class extends React.Component {
   }
   _openFacebook() {
     //window.location = 'fb://page/1730730807149650';
-    window.open('https://www.facebook.com/physiobalance.fit', '_blank');
+    window.open('https://www.facebook.com/physiobalancefrick', '_blank');
   }
   render() {
     let content;

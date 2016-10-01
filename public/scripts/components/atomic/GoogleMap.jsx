@@ -15,7 +15,7 @@ export default class GoogleMap extends React.Component {
       new google.maps.Marker({
         map: this._map,
         position: location,
-        title: 'Physio Balance GmbH'
+        title: 'Physio Balance'
       });
     });
   }

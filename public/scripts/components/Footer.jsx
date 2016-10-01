@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Widget from 'scripts/components/widgets/Widget.jsx';
-
 export default class extends React.Component {
   render() {
     return (
-      <Widget text={'team'} path="/team" />
+      <div className="footers">
+        <div className="footers__inner" />
+      </div>
     );
   }
 }
