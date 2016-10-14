@@ -8,7 +8,6 @@ import Facebook from 'scripts/components/Facebook.jsx';
 import BarCompany from 'scripts/components/bars/BarCompany.jsx';
 
 import WidgetTeam from 'scripts/components/widgets/WidgetTeam.jsx';
-import WidgetContact from 'scripts/components/widgets/WidgetContact.jsx';
 import WidgetConcept from 'scripts/components/widgets/WidgetConcept.jsx';
 import WidgetRooms from 'scripts/components/widgets/WidgetRooms.jsx';
 
@@ -33,7 +32,7 @@ class Content extends React.Component {
         <Facebook />
         <Board
           widgets={[
-            <WidgetTeam />, <WidgetConcept />, <WidgetContact />, <WidgetRooms />,
+            <WidgetTeam />, <WidgetConcept />, <WidgetRooms />,
             <WidgetPhysioOffer />, <WidgetPhysioInfos />
           ]}
         />
