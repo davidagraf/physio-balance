@@ -15,15 +15,19 @@ export default class extends React.Component {
   render() {
     return (
       <Modal title="Räumlichkeiten">
-
         <p>
-          Wir bieten eine top moderne Infrastruktur mit einem grosszügigen Aktivraum, zwei
-          freundlichen Behandlungsräumen, Duschen und WC. Zur Entspannung während den passiven Therapieeinheiten
-          tragen die komfortablen und hochwertigen
-          Behandlungsliegen bei.
+          Wir bieten eine top moderne Infrastruktur mit zwei freundlichen Behandlungsräumen und einem hellen,
+          grosszügigen Aktivraum inkl. Duschmöglichkeit. 
         </p>
-        <p className="text-center">
-          <i>&laquo;eine Wohlfühloase&raquo;</i>
+        <p>
+          Alle Räumlichkeiten sind ohne Stufen erreichbar.
+        </p>
+        <p>
+          Die Praxis liegt wenige Schritte vom Widenplatz, der genügend Parkmöglichkeiten bietet, entfernt. Ein
+          markierter Parkplatz steht direkt vor der Praxis zur Verfügung.
+        </p>
+        <p>
+          Von den Bushaltestellen Oberdorf und Unterdorf sind wir in wenigen Minuten zu Fuss gut zu erreichen.
         </p>
       </Modal>
     );

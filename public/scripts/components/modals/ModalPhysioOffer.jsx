@@ -8,16 +8,17 @@ export default class extends React.Component {
     return (
       <Modal title="Angebot">
         <ul>
-          <Li>Rehabilitation</Li>
-          <Li>Sportphysiotherapie</Li>
-          <Li>Manuelle Therapie</Li>
-          <Li>Massage</Li>
-          <Li>Kinesiologisches Taping</Li>
-          <Li>Triggerpunkttherapie</Li>
-          <Li>Physikalische Therapie</Li>
+          <Li>rehabilitation</Li>
+          <Li>sportphysiotherapie</Li>
+          <Li>craniosacral therapie</Li>
+          <Li>manuelle therapie</Li>
+          <Li>massage</Li>
+          <Li>kinesiologisches taping</Li>
+          <Li>triggerpunkttherapie</Li>
+          <Li>physikalische therapie (ultraschall, pneumatron, wärmeanwendung, elektrotherapie)</Li>
         </ul>
 
-        <p>
+        <p className="text--red">
           Eine physiotherapeutische Behandlung dauert ca. 25 Minuten.
         </p>
 
