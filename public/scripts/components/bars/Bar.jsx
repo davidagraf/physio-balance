@@ -3,7 +3,7 @@ import React from 'react';
 export default class Bar extends React.Component {
   render() {
     return (
-      <div className={'bar ' + (this.props.className || '')} ref="bar">
+      <div className="bar">
         {this.props.img}
         <div className="bar__title">{this.props.title}</div>
         {
@@ -28,7 +28,6 @@ Bar.propTypes = {
   title: React.PropTypes.node,
   subtitle: React.PropTypes.node,
   infos: React.PropTypes.arrayOf(React.PropTypes.node),
-  className: React.PropTypes.string
 };
 
 Bar.defaultProps = {
