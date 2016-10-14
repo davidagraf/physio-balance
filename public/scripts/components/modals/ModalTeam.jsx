@@ -36,7 +36,7 @@ export default class extends React.Component {
           Die individuelle Betreuung liegt mir dabei sehr am Herzen.
         </p>
         <p>
-          <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufMB} newWindow={true}>lebenslauf</Link>
+          <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufMB} newWindow={true}>Lebenslauf</Link>
         </p>
 
         <h2>carmen</h2>
@@ -60,7 +60,7 @@ export default class extends React.Component {
           Gesundheitszustandes erreichen und somit dein Wohlbefinden steigern.
         </p>
         <p>
-          <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufCB} newWindow={true}>lebenslauf</Link>
+          <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufCB} newWindow={true}>Lebenslauf</Link>
         </p>
 
       </Modal>

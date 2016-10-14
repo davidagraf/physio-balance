@@ -9,18 +9,18 @@ import Splitview from 'scripts/components/atomic/Splitview.jsx';
 export default class ModalContact extends React.Component {
   render() {
     return (
-      <Modal title="Kontakt">
+      <Modal title="kontakt">
         <Splitview
           left = {
             <div>
               <p>
-                Mirjam Böni<br/>
-                Carmen Brugger
+                mirjam böni<br/>
+                carmen brugger
               </p>
               <p>
                 physio balance<br/>
-                Widengasse 16<br/>
-                5070 Frick
+                widengasse 16<br/>
+                5070 frick
               </p>
               <p>
                 team@physiobalance.fit<br/>

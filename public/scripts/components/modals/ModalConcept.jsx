@@ -4,7 +4,7 @@ import Modal from 'scripts/components/modals/Modal.jsx';
 export default class extends React.Component {
   render() {
     return (
-      <Modal title="Philosophie">
+      <Modal title="philosophie">
         <p>
           Gesundheit ist das grösste und wichtigste Gut des Menschen, welches sorgfältig gepflegt werden sollte.
           Dazu bedarf es gezielter Prävention und Rehabilitation. Dem Team von physio balance liegt dies sehr am Herzen
@@ -15,7 +15,7 @@ export default class extends React.Component {
           Sport hat bei uns höchste Priorität. Durch ständiges fachliches Weiterbilden versuchen wir diesen
           Anforderungen gerecht zu werden. Zudem ermöglichen wir ein breites Spektrum an Behandlungsmethoden. Das Team
           von physio balance ergänzt sich optimal durch die unterschiedlichen Schwerpunkte der Zusatzausbildungen der
-          einzelnen PhysiotherapeutInnen. 
+          einzelnen PhysiotherapeutInnen.
         </p>
       </Modal>
     );

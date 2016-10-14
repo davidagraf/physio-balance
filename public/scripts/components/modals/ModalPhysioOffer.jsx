@@ -6,7 +6,7 @@ import Li from 'scripts/components/atomic/Li.jsx';
 export default class extends React.Component {
   render() {
     return (
-      <Modal title="Angebot">
+      <Modal title="angebot">
         <ul>
           <Li>rehabilitation</Li>
           <Li>sportphysiotherapie</Li>

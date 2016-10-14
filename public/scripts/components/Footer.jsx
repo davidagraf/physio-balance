@@ -5,7 +5,7 @@ export default class extends React.Component {
     return (
       <div className="footers">
         <div className="footers__inner">
-          &laquo;Leben ist Bewegung, Bewegung ist Gesundheit, Gesundheit ist Leben&raquo;
+          &laquo;leben ist bewegung, bewegung ist gesundheit, gesundheit ist leben&raquo;
         </div>
       </div>
     );

@@ -14,10 +14,10 @@ import Modal from 'scripts/components/modals/Modal.jsx';
 export default class extends React.Component {
   render() {
     return (
-      <Modal title="Räumlichkeiten">
+      <Modal title="räumlichkeiten">
         <p>
           Wir bieten eine top moderne Infrastruktur mit zwei freundlichen Behandlungsräumen und einem hellen,
-          grosszügigen Aktivraum inkl. Duschmöglichkeit. 
+          grosszügigen Aktivraum inkl. Duschmöglichkeit.
         </p>
         <p>
           Alle Räumlichkeiten sind ohne Stufen erreichbar.
