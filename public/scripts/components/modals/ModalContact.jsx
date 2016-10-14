@@ -12,13 +12,21 @@ export default class ModalContact extends React.Component {
       <Modal title="Kontakt">
         <Splitview
           left = {
-            <p>
-              physio balance<br/>
-              Widengasse 16<br/>
-              5070 Frick<br/>
-              team@physiobalance.fit<br/>
-              062 871 16 20
-            </p>
+            <div>
+              <p>
+                Mirjam Böni<br/>
+                Carmen Brugger
+              </p>
+              <p>
+                physio balance<br/>
+                Widengasse 16<br/>
+                5070 Frick
+              </p>
+              <p>
+                team@physiobalance.fit<br/>
+                062 871 16 20
+              </p>
+            </div>
           }
           right = {
             <Square>
