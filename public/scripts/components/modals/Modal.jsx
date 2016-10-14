@@ -28,7 +28,7 @@ export default class Modal extends React.Component {
     }
   }
   render() {
-    const closeButton = <Link tabIndex="-1" className="button--black" to="/"><Icon name="times" /></Link>;
+    const closeButton = <Link tabIndex="-1" className="button--close" to="/"><Icon name="times" /></Link>;
 
     const headerContent = (
       <div className="modal__header__content">

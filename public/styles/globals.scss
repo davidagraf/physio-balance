@@ -17,16 +17,10 @@ body {
   }
 }
 
-.button--white {
+.button--close {
   @include button;
 
   color: $color-white;
-}
-
-.button--black {
-  @include button;
-
-  color: $color-black;
 }
 
 table {
