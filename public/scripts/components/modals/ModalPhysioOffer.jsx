@@ -1,10 +1,7 @@
 import React from 'react';
 import Modal from 'scripts/components/modals/Modal.jsx';
-import Link from 'scripts/components/atomic/Link.jsx';
-import Li from 'scripts/components/atomic/Li.jsx';
-import Icon from 'scripts/components/atomic/Icon.jsx';
 
-import lebenslauf from 'documents/Lebenslauf_MB_pb.pdf';
+import Li from 'scripts/components/atomic/Li.jsx';
 
 export default class extends React.Component {
   render() {
@@ -22,9 +19,6 @@ export default class extends React.Component {
 
         <p>
           Eine physiotherapeutische Behandlung dauert ca. 25 Minuten.
-        </p>
-        <p>
-          <Link icon={<Icon name="file-pdf-o" />} href={lebenslauf} newWindow={true}>Lebenslauf Mirjam Böni</Link>
         </p>
 
       </Modal>

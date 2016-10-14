@@ -34,11 +34,10 @@
 
   &__header {
 
-    color: $color-white;
-
     &__content {
       align-items: center;
       background: $color-green;
+      color: $color-white;
       display: flex;
       justify-content: space-between;
     }
