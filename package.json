@@ -5,11 +5,10 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --history-api-fallback --port 9000 --colors --config ./webpack.dev.js",
     "dist": "rm -rf dist && node ./node_modules/webpack/bin/webpack.js --colors --config ./webpack.dist.js",
-    "deploy_rm": "gsutil -m rm -r gs://www.physiobalance.fit/*",
-    "deploy_upload": "gsutil -m rsync -R dist/ gs://www.physiobalance.fit",
+    "deploy_upload": "gsutil -m rsync -r -d dist/ gs://www.physiobalance.fit",
     "deploy_publish": "gsutil -m acl ch -r -u AllUsers:R gs://www.physiobalance.fit/*",
     "deploy_cache": "gsutil setmeta -h \"Cache-Control: no-cache, no-store, must-revalidate, private\" gs://www.physiobalance.fit/index.html",
-    "deploy": "npm run dist && npm run deploy_rm && npm run deploy_upload && npm run deploy_publish && npm run deploy_cache"
+    "deploy": "npm run dist && npm run deploy_upload && npm run deploy_publish && npm run deploy_cache"
   },
   "repository": {
     "type": "git",
