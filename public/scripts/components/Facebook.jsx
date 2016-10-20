@@ -27,7 +27,7 @@ export default class extends React.Component {
       version    : 'v2.5'
     });
 
-    FB.api('/physiobalancefrick/posts', {access_token: APP_ACCESS_TOKEN}, (response) => {
+    FB.api('/physiobalance.fit/posts', {access_token: APP_ACCESS_TOKEN}, (response) => {
       if (response.data) {
         this.setState({
           posts: response.data.filter((post) => {
