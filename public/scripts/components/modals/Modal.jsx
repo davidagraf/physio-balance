@@ -15,7 +15,7 @@ export default class Modal extends React.Component {
   _checkHeaderPos() {
     let overflow = (this.refs.visible.getBoundingClientRect().top < 0);
 
-    if (overflow != this.state.headerFixed) {
+    if (overflow !== this.state.headerFixed) {
       this.setState({headerFixed: overflow});
     }
   }

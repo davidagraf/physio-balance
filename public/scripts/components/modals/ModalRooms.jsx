@@ -1,18 +1,15 @@
 import React from 'react';
 import Modal from 'scripts/components/modals/Modal.jsx';
+import Gallery from 'scripts/components/atomic/Gallery.jsx';
 
-// import Gallery from 'scripts/components/atomic/Gallery.jsx';
-
-// import one from 'imgs/gallery/header-02.jpg';
-// import two from 'imgs/gallery/image_kurse.jpg';
-// import three from 'imgs/gallery/p4.jpg';
-// import four from 'imgs/gallery/Physiotherapie-1.png';
-// import five from 'imgs/gallery/physiotherapie.jpg';
-
-// <Gallery uris={[one, two, three, four, five]} />
+// function requireAll(r) { r.keys().forEach(r); }
+// requireAll(require.context('./modules/', true, /\.js$/));
 
 export default class extends React.Component {
   render() {
+    const imgsContext = require.context('imgs/gallery/room/', false, /\.png$/);
+    const imgs = imgsContext.keys().map(imgsContext);
+
     return (
       <Modal title="räumlichkeiten">
         <p>
@@ -29,6 +26,7 @@ export default class extends React.Component {
         <p>
           Von den Bushaltestellen Oberdorf und Unterdorf sind wir in wenigen Minuten zu Fuss gut zu erreichen.
         </p>
+        <Gallery uris={imgs} />
       </Modal>
     );
   }

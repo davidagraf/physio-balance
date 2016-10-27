@@ -42,7 +42,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          plugins: ['transform-object-rest-spread'],
+          plugins: ['babel-polyfill', 'transform-object-rest-spread'],
           presets: ['es2015']
         }
       }, {
@@ -50,7 +50,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          plugins: ['transform-object-rest-spread'],
+          plugins: ['babel-polyfill', 'transform-object-rest-spread'],
           presets: ['es2015', 'react']
         }
       }, {
