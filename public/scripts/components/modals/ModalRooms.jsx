@@ -2,9 +2,6 @@ import React from 'react';
 import Modal from 'scripts/components/modals/Modal.jsx';
 import Gallery from 'scripts/components/atomic/Gallery.jsx';
 
-// function requireAll(r) { r.keys().forEach(r); }
-// requireAll(require.context('./modules/', true, /\.js$/));
-
 export default class extends React.Component {
   render() {
     const imgsContext = require.context('imgs/gallery/room/', false, /\.png$/);

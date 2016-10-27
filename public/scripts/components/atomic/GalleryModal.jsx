@@ -70,7 +70,9 @@ export default class GalleryModal extends React.Component {
             <Icon name="angle-right" />
           </button>
         </div>
-        <img className="gallerymodal__img" src={this.props.uris[this.state.index]} />
+        <div className="gallerymodal__imgwrapper">
+          <img className="gallerymodal__img" src={this.props.uris[this.state.index]} />
+        </div>
       </div>
     );
   }
