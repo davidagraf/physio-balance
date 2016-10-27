@@ -85,6 +85,12 @@
         word-wrap: break-word;
       }
     }
+
+    &--contact {
+      background-image: url("../imgs/entry.png");
+      background-position: center top;
+      background-size: auto 100%;
+    }
   }
 
   &__contact__form {

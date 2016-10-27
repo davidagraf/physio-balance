@@ -47,7 +47,7 @@ export default class Modal extends React.Component {
                                    transitionLeaveTimeout={0}>
             <div className="modal__visible" ref="visible">
               <div className="modal__header">{headerContent}</div>
-              <div className="modal__content">
+              <div className={'modal__content ' + this.props.className}>
               { this.props.children }
               </div>
               {(this.state.headerFixed ?
@@ -66,5 +66,6 @@ export default class Modal extends React.Component {
 
 Modal.propTypes = {
   title: React.PropTypes.string,
-  children: React.PropTypes.node
+  children: React.PropTypes.node,
+  className: React.PropTypes.string
 };
