@@ -93,12 +93,12 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      padding: 0 20px 0 20px;
 
       & > div {
         max-width: 450px;
         width: 100%;
         margin-top: 20px;
-        margin-right: 20px;
         &:first-child {
           background-color: $color-white;
           box-sizing:border-box;
