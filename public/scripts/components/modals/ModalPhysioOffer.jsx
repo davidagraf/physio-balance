@@ -1,30 +1,25 @@
 import React from 'react';
 import Modal from 'scripts/components/modals/Modal.jsx';
-import Link from 'scripts/components/atomic/Link.jsx';
-import Li from 'scripts/components/atomic/Li.jsx';
-import Icon from 'scripts/components/atomic/Icon.jsx';
 
-import lebenslauf from 'documents/Lebenslauf_MB_pb.pdf';
+import Li from 'scripts/components/atomic/Li.jsx';
 
 export default class extends React.Component {
   render() {
     return (
-      <Modal title="Angebot">
+      <Modal title="angebot">
         <ul>
-          <Li>Rehabilitation</Li>
-          <Li>Sportphysiotherapie</Li>
-          <Li>Manuelle Therapie</Li>
-          <Li>Massage</Li>
-          <Li>Kinesiologisches Taping</Li>
-          <Li>Triggerpunkttherapie</Li>
-          <Li>Physikalische Therapie</Li>
+          <Li>rehabilitation</Li>
+          <Li>sportphysiotherapie</Li>
+          <Li>craniosacral therapie</Li>
+          <Li>manuelle therapie</Li>
+          <Li>massage</Li>
+          <Li>kinesiologisches taping</Li>
+          <Li>triggerpunkttherapie</Li>
+          <Li>physikalische therapie (ultraschall, pneumatron, wärmeanwendung, elektrotherapie)</Li>
         </ul>
 
-        <p>
+        <p className="text--red">
           Eine physiotherapeutische Behandlung dauert ca. 25 Minuten.
-        </p>
-        <p>
-          <Link icon={<Icon name="file-pdf-o" />} href={lebenslauf} newWindow={true}>Lebenslauf Mirjam Böni</Link>
         </p>
 
       </Modal>

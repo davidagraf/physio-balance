@@ -1,15 +1,12 @@
-$color-green: #393f37;
-$color-green-logo: #7bb064;
-$color-red: #aa4465;
-$color-blue: #658e9c;
+$color-green: #7bb064;
 $color-white: #fff;
 $color-black: #000;
 $color-background: #e3e8e5;
 $color-background-widget: #fff;
 $color-border: #c1c1c1;
 $color-border-hover: #b0b0b0;
-$color-button: $color-green-logo;
-$color-button-hover: lighten($color-green-logo, 20%);
+$color-button: $color-green;
+$color-button-hover: lighten($color-green, 20%);
 $color-button-gallery: $color-border;
 $color-background-button-gallery-hover: #333;
 $color-grey-logo: #6f6f6f;

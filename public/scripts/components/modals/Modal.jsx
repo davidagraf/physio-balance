@@ -15,7 +15,7 @@ export default class Modal extends React.Component {
   _checkHeaderPos() {
     let overflow = (this.refs.visible.getBoundingClientRect().top < 0);
 
-    if (overflow != this.state.headerFixed) {
+    if (overflow !== this.state.headerFixed) {
       this.setState({headerFixed: overflow});
     }
   }
@@ -28,7 +28,7 @@ export default class Modal extends React.Component {
     }
   }
   render() {
-    const closeButton = <Link tabIndex="-1" className="button--black" to="/"><Icon name="times" /></Link>;
+    const closeButton = <Link tabIndex="-1" className="button--close" to="/"><Icon name="times" /></Link>;
 
     const headerContent = (
       <div className="modal__header__content">
@@ -47,7 +47,7 @@ export default class Modal extends React.Component {
                                    transitionLeaveTimeout={0}>
             <div className="modal__visible" ref="visible">
               <div className="modal__header">{headerContent}</div>
-              <div className="modal__content">
+              <div className={this.props.contentClassName || 'modal__content '}>
               { this.props.children }
               </div>
               {(this.state.headerFixed ?
@@ -66,5 +66,6 @@ export default class Modal extends React.Component {
 
 Modal.propTypes = {
   title: React.PropTypes.string,
-  children: React.PropTypes.node
+  children: React.PropTypes.node,
+  contentClassName: React.PropTypes.string
 };

@@ -2,12 +2,12 @@ import React from 'react';
 
 import Widget from 'scripts/components/widgets/Widget.jsx';
 
-import tape from 'imgs/widgets/tape.png';
+import img from 'imgs/widgets/angebot.png';
 
 export default class extends React.Component {
   render() {
     return (
-      <Widget img={tape}
+      <Widget img={img}
         text={'angebot'} path="/physiooffer" />
     );
   }

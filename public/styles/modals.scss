@@ -33,9 +33,11 @@
   }
 
   &__header {
+
     &__content {
       align-items: center;
-      background: $color-green-logo;
+      background: $color-green;
+      color: $color-white;
       display: flex;
       justify-content: space-between;
     }
@@ -81,6 +83,30 @@
       td {
         overflow-wrap: break-word;
         word-wrap: break-word;
+      }
+    }
+
+    &--contact {
+      background: url("../imgs/entry.png") no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: scroll;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 0 20px 0 20px;
+
+      & > div {
+        max-width: 450px;
+        width: 100%;
+        margin-top: 20px;
+        &:first-child {
+          background-color: $color-white;
+          box-sizing:border-box;
+          padding: 20px;
+        }
+        &:last-child {
+          margin-bottom: 20px;
+        }
       }
     }
   }

@@ -1,8 +1,10 @@
-.sponsors {
+.footers {
   border-top: 1px solid $color-border-hover;
+  color: $color-grey-logo;
 
   &__inner {
     display: flex;
+    font-style: italic;
     justify-content: center;
     margin: 0 auto;
     max-width: 1000px;

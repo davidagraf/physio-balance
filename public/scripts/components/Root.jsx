@@ -1,30 +1,19 @@
 import React from 'react';
-import { Router, Route } from 'react-router';
-import createBrowserHistory from 'history/lib/createBrowserHistory';
+import { Router, Route, browserHistory } from 'react-router';
 
 import Board from 'scripts/components/Board.jsx';
 import Facebook from 'scripts/components/Facebook.jsx';
 
 //import Menu from 'scripts/components/bars/Menu.jsx';
 import BarCompany from 'scripts/components/bars/BarCompany.jsx';
-import BarPhysio from 'scripts/components/bars/BarPhysio.jsx';
-import BarActive from 'scripts/components/bars/BarActive.jsx';
 
 import WidgetTeam from 'scripts/components/widgets/WidgetTeam.jsx';
-import WidgetContact from 'scripts/components/widgets/WidgetContact.jsx';
 import WidgetConcept from 'scripts/components/widgets/WidgetConcept.jsx';
 import WidgetRooms from 'scripts/components/widgets/WidgetRooms.jsx';
 
 import WidgetPhysioOffer from 'scripts/components/widgets/WidgetPhysioOffer.jsx';
 import WidgetPhysioInfos from 'scripts/components/widgets/WidgetPhysioInfos.jsx';
 
-import WidgetActiveSchedule from 'scripts/components/widgets/WidgetActiveSchedule.jsx';
-import WidgetActivePrices from 'scripts/components/widgets/WidgetActivePrices.jsx';
-import WidgetActiveOffer from 'scripts/components/widgets/WidgetActiveOffer.jsx';
-
-import ModalActiveOffer from 'scripts/components/modals/ModalActiveOffer.jsx';
-import ModalActivePrices from 'scripts/components/modals/ModalActivePrices.jsx';
-import ModalActiveSchedule from 'scripts/components/modals/ModalActiveSchedule.jsx';
 import ModalConcept from 'scripts/components/modals/ModalConcept.jsx';
 import ModalContact from 'scripts/components/modals/ModalContact.jsx';
 import ModalPhysioInfos from 'scripts/components/modals/ModalPhysioInfos.jsx';
@@ -32,7 +21,7 @@ import ModalPhysioOffer from 'scripts/components/modals/ModalPhysioOffer.jsx';
 import ModalRooms from 'scripts/components/modals/ModalRooms.jsx';
 import ModalTeam from 'scripts/components/modals/ModalTeam.jsx';
 
-import Sponsors from 'scripts/components/Sponsors.jsx';
+import Footer from 'scripts/components/Footer.jsx';
 
 class Content extends React.Component {
   render() {
@@ -42,17 +31,12 @@ class Content extends React.Component {
         <BarCompany />
         <Facebook />
         <Board
-          widgets={[<WidgetTeam />, <WidgetConcept />, <WidgetContact />, <WidgetRooms />]}
+          widgets={[
+            <WidgetTeam />, <WidgetConcept />, <WidgetRooms />,
+            <WidgetPhysioOffer />, <WidgetPhysioInfos />
+          ]}
         />
-        <BarPhysio />
-        <Board
-          widgets={[<WidgetPhysioOffer />, <WidgetPhysioInfos />]}
-        />
-        <BarActive/>
-        <Board
-          widgets={[<WidgetActiveOffer />, <WidgetActiveSchedule />, <WidgetActivePrices />]}
-        />
-        <Sponsors />
+        <Footer />
       </div>
     );
   }
@@ -65,11 +49,8 @@ Content.propTypes = {
 export default class extends React.Component {
   render() {
     return (
-      <Router history={createBrowserHistory()}>
+      <Router history={browserHistory}>
         <Route path="/" component={Content}>
-          <Route path="/activeoffer" component={ModalActiveOffer} />
-          <Route path="/activeprices" component={ModalActivePrices} />
-          <Route path="/activeschedule" component={ModalActiveSchedule} />
           <Route path="/concept" component={ModalConcept} />
           <Route path="/contact" component={ModalContact} />
           <Route path="/physioinfos" component={ModalPhysioInfos} />

@@ -2,23 +2,33 @@ import React from 'react';
 
 import GalleryModal from 'scripts/components/atomic/GalleryModal.jsx';
 
-import ModalStore from 'scripts/stores/ModalStore.js';
-import { MODAL_OPEN } from 'scripts/constants/ActionTypes.js';
-
-export default class extends React.Component {
-  static propTypes = {
-    uris: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
-  }
-  _open(index) {
-    ModalStore.dispatch({type: MODAL_OPEN, modal: <GalleryModal startIndex={index} uris={this.props.uris} />});
+export default class Gallery extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modalStartIndex: null
+    };
   }
   render() {
     return (
-      <div className="gallery"><div className="gallery__wrapper">{
-        this.props.uris.map((uri, i) => {
-          return <div key={i} className="gallery__thumbnail" onClick={() => this._open(i)} ><img src={uri} /></div>;
-        })
-      }</div></div>
+      <div className="gallery">{
+        this.state.modalStartIndex !== null &&
+          <GalleryModal startIndex={this.state.modalStartIndex} uris={this.props.uris}
+                        close={() => this.setState({modalStartIndex: null})}/>
+        }<div className="gallery__wrapper">{
+          this.props.uris.map((uri, i) => {
+            return (
+              <div key={i} className="gallery__thumbnail" onClick={() => this.setState({modalStartIndex: i})} >
+                <img src={uri} />
+              </div>
+            );
+          })
+        }</div>
+      </div>
     );
   }
+}
+
+Gallery.propTypes = {
+  uris: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
 }

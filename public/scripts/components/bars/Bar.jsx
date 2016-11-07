@@ -1,22 +1,9 @@
 import React from 'react';
-import ButtonNext from 'scripts/components/bars/ButtonNext.jsx';
 
 export default class Bar extends React.Component {
-  _scrollToNext() {
-    let bars = document.getElementsByClassName('bar');
-    for(let i = 0; i < bars.length; ++i) {
-      let bar = bars[i];
-      if (bar === this.refs.bar) {
-        if (++i < bars.length) {
-          bars[i].scrollIntoView();
-        }
-        break;
-      }
-    }
-  }
   render() {
     return (
-      <div className={'bar ' + (this.props.className || '')} ref="bar">
+      <div className="bar">
         {this.props.img}
         <div className="bar__title">{this.props.title}</div>
         {
@@ -31,15 +18,6 @@ export default class Bar extends React.Component {
             })
           }</div></div>
         }
-        {(
-          this.props.buttonStart ?
-          <div className="bar__next">
-            <ButtonNext start={true} onClick={() => window.scrollTo(0, 0)} />
-          </div> :
-          <div className="bar__next">
-            <ButtonNext onClick={() => this._scrollToNext()} />
-          </div>
-        )}
       </div>
     );
   }
@@ -50,8 +28,6 @@ Bar.propTypes = {
   title: React.PropTypes.node,
   subtitle: React.PropTypes.node,
   infos: React.PropTypes.arrayOf(React.PropTypes.node),
-  buttonStart: React.PropTypes.bool,
-  className: React.PropTypes.string
 };
 
 Bar.defaultProps = {

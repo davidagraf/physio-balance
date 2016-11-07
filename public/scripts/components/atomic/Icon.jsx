@@ -12,7 +12,7 @@ export default class Icon extends React.Component {
     }).join(' ');
 
     return (
-      <i className={'fa ' + classes}></i>
+      <i className={'fa ' + classes} />
     );
   }
 }

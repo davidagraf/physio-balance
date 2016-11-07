@@ -2,13 +2,14 @@ import React from 'react';
 
 import Widget from 'scripts/components/widgets/Widget.jsx';
 
-import entry from 'imgs/widgets/entry.png';
+import img from 'imgs/widgets/room.png';
 
 export default class extends React.Component {
   render() {
     return (
       <Widget
-        img={entry} text={'räumlichkeiten'} path="/rooms" />
+        img={img}
+        text={'räumlichkeiten'} path="/rooms" />
     );
   }
 }

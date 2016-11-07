@@ -1,19 +1,12 @@
 import React from 'react';
 import Icon from 'scripts/components/atomic/Icon.jsx';
 
-import ModalStore from 'scripts/stores/ModalStore.js';
-import { MODAL_CLOSE } from 'scripts/constants/ActionTypes.js';
-
-export default class extends React.Component {
-  static propTypes = {
-    uris: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    startIndex : React.PropTypes.number.isRequired
-  }
-  state = {
-    index: this.props.startIndex
-  }
-  _close() {
-    ModalStore.dispatch({type: MODAL_CLOSE});
+export default class GalleryModal extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      index: props.startIndex
+    }
   }
   _next() {
     let newIndex = this.state.index + 1;
@@ -62,8 +55,9 @@ export default class extends React.Component {
   }
   render() {
     return (
-      <div className="gallerymodal" onTouchStart={(ev) => this._touchStart(ev)} onTouchEnd={(ev) => this._touchEnd(ev)}>
-        <button className="gallerymodal__close" onClick={() => this._close()}>
+      <div className="gallerymodal" onTouchStart={(ev) => this._touchStart(ev)}
+                                    onTouchEnd={(ev) => this._touchEnd(ev)}>
+        <button className="gallerymodal__close" onClick={() => this.props.close()}>
           <Icon name="times" />
         </button>
         <div className="gallerymodal__prev" onClick={() => this._prev()}>
@@ -76,8 +70,16 @@ export default class extends React.Component {
             <Icon name="angle-right" />
           </button>
         </div>
-        <img className="gallerymodal__img" src={this.props.uris[this.state.index]} />
+        <div className="gallerymodal__imgwrapper">
+          <img className="gallerymodal__img" src={this.props.uris[this.state.index]} />
+        </div>
       </div>
     );
   }
 }
+
+GalleryModal.propTypes = {
+  uris: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  startIndex : React.PropTypes.number.isRequired,
+  close: React.PropTypes.func.isRequired
+};
