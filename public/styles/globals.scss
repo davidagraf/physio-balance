@@ -116,10 +116,9 @@ ul {
 .link {
   color: $color-black;
   text-decoration: none;
-
-  &__text {
-    text-decoration: underline;
-  }
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 .infoicon {

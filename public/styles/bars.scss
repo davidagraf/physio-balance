@@ -32,11 +32,6 @@
 
   &__link {
     color: $color-background;
-    text-decoration: none;
-
-    &__text:hover {
-      text-decoration: underline;
-    }
   }
 
   &__infos {

@@ -4,6 +4,7 @@ import moment from 'moment';
 import React from 'react';
 import Spinner from 'scripts/components/atomic/Spinner.jsx';
 import Error from 'scripts/components/atomic/Error.jsx';
+import {FACEBOOK} from '../utils/links.js';
 
 const APP_ID = (process.env.NODE_ENV === 'production' ? '691100814354778' : '718726034925589');
 const APP_ACCESS_TOKEN = (
@@ -52,7 +53,7 @@ export default class extends React.Component {
   }
   _openFacebook() {
     //window.location = 'fb://page/1730730807149650';
-    window.open('https://www.facebook.com/physiobalance.fit', '_blank');
+    window.open(FACEBOOK, '_blank');
   }
   render() {
     let content;

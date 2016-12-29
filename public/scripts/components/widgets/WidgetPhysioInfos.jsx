@@ -9,7 +9,7 @@ export default class extends React.Component {
     return (
       <Widget
         img={formular}
-        text={'verordnungsformular'} path="/physioinfos" />
+        text={'leistungsabrechnung'} path="/physioinfos" />
     );
   }
 }

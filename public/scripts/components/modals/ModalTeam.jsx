@@ -7,7 +7,7 @@ import Icon from 'scripts/components/atomic/Icon.jsx';
 
 import Mirjam from 'imgs/mirjam.jpg';
 import Carmen from 'imgs/carmen.jpg';
-import lebenslaufMB from 'documents/Lebenslauf_MB_pb.pdf';
+import lebenslaufMB from 'documents/Lebenslauf_MB_Okt_2016.pdf';
 import lebenslaufCB from 'documents/Lebenslauf_CB.pdf';
 
 export default class extends React.Component {
