@@ -4,11 +4,11 @@ import { Router, Route, browserHistory } from 'react-router';
 import Board from 'scripts/components/Board.jsx';
 import Facebook from 'scripts/components/Facebook.jsx';
 
-//import Menu from 'scripts/components/bars/Menu.jsx';
 import BarCompany from 'scripts/components/bars/BarCompany.jsx';
 
 import WidgetTeam from 'scripts/components/widgets/WidgetTeam.jsx';
 import WidgetConcept from 'scripts/components/widgets/WidgetConcept.jsx';
+import WidgetContact from 'scripts/components/widgets/WidgetContact.jsx';
 import WidgetRooms from 'scripts/components/widgets/WidgetRooms.jsx';
 
 import WidgetPhysioOffer from 'scripts/components/widgets/WidgetPhysioOffer.jsx';
@@ -32,7 +32,7 @@ class Content extends React.Component {
         <Facebook />
         <Board
           widgets={[
-            <WidgetTeam />, <WidgetConcept />, <WidgetRooms />,
+            <WidgetTeam />, <WidgetConcept />, <WidgetContact/>, <WidgetRooms />,
             <WidgetPhysioOffer />, <WidgetPhysioInfos />
           ]}
         />
