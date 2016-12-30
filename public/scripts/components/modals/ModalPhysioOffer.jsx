@@ -2,15 +2,17 @@ import React from 'react';
 import Modal from 'scripts/components/modals/Modal.jsx';
 
 import Li from 'scripts/components/atomic/Li.jsx';
-
 import Link from 'scripts/components/atomic/Link.jsx';
 import Icon from 'scripts/components/atomic/Icon.jsx';
+import Gallery from 'scripts/components/atomic/Gallery.jsx';
 
 import formularWord from 'documents/Verordnung_zur_Physiotherapie.docx';
 import formularPDF from 'documents/Verordnung_zur_Physiotherapie.pdf';
 
 export default class extends React.Component {
   render() {
+    const imgsContext = require.context('imgs/gallery/offer/', false, /\.png$/);
+    const imgs = imgsContext.keys().map(imgsContext);
     return (
       <Modal title="angebot">
         <ul>
@@ -28,6 +30,7 @@ export default class extends React.Component {
         <br/>
           <Link icon={<Icon name="file-word-o" />} href={formularWord}>Verordnungsformular</Link>
         </p>
+				<Gallery uris={imgs} />
       </Modal>
     );
   }

@@ -54,6 +54,9 @@ export default class GalleryModal extends React.Component {
     window.removeEventListener('keydown', this._keyUpThis);
   }
   render() {
+    const style = {
+      'background-image': `url("${this.props.uris[this.state.index]}")`
+    };
     return (
       <div className="gallerymodal" onTouchStart={(ev) => this._touchStart(ev)}
                                     onTouchEnd={(ev) => this._touchEnd(ev)}>
@@ -71,7 +74,7 @@ export default class GalleryModal extends React.Component {
           </button>
         </div>
         <div className="gallerymodal__imgwrapper">
-          <img className="gallerymodal__img" src={this.props.uris[this.state.index]} />
+          <div className="gallerymodal__img" style={style} />
         </div>
       </div>
     );

@@ -97,13 +97,16 @@
   }
 
   &__imgwrapper {
-    max-width: $width-max-modal;
+    box-shadow: 0 0 100px 1px $color-black;
+		height: 100%;
+    width: $width-max-modal;
   }
 
   &__img {
-    box-shadow: 0 0 100px 1px $color-black;
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+		background-repeat: no-repeat;
+    background-size: contain;
   }
 }
