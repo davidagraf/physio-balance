@@ -10,8 +10,9 @@ export default class ModalContact extends React.Component {
       <Modal title="kontakt" contentClassName="modal__content--contact">
         <div>
           <p>
-            mirjam böni<br/>
-            carmen brugger
+            mirjam dysli-böni<br/>
+            carmen brugger<br/>
+						mirjam bölsterli
           </p>
           <p>
             physio balance<br/>

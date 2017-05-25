@@ -8,7 +8,7 @@ import Icon from 'scripts/components/atomic/Icon.jsx';
 import Mirjam from 'imgs/mirjam.jpg';
 import Carmen from 'imgs/carmen.jpg';
 import MirjamB from 'imgs/mirjamb.jpg';
-import lebenslaufMD from 'documents/Lebenslauf_MD_Okt_2016.pdf';
+import lebenslaufMD from 'documents/Lebenslauf_MD_Mai_2017.pdf';
 import lebenslaufCB from 'documents/Lebenslauf_CB.pdf';
 import lebenslaufMB from 'documents/Lebenslauf_MB.pdf';
 
@@ -16,13 +16,14 @@ export default class extends React.Component {
   render() {
     return (
       <Modal title="Team">
-        <h2>mirjam dysli</h2>
+        <h2>mirjam dysli-böni</h2>
         <Splitview
           left = {
             <img src={Mirjam} width="100" />
           }
           right = {
             <ul>
+							<Li>geschäftsinhaberin physio balance</Li>
               <Li>dipl. physiotherapeutin fh</Li>
               <Li>msc. sports physiotherapy</Li>
               <Li>leukotape k - instruktorin</Li>
