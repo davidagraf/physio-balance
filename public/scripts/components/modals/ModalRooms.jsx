@@ -4,7 +4,7 @@ import Gallery from 'scripts/components/atomic/Gallery.jsx';
 
 export default class extends React.Component {
   render() {
-    const imgsContext = require.context('imgs/gallery/room/', false, /\.(png|jpg)$/);
+    const imgsContext = require.context('imgs/gallery/room/', false, /\.jpg$/);
     const imgs = imgsContext.keys().map(imgsContext);
 
     return (

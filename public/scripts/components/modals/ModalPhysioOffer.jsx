@@ -11,7 +11,7 @@ import formularPDF from 'documents/Verordnung_zur_Physiotherapie.pdf';
 
 export default class extends React.Component {
   render() {
-    const imgsContext = require.context('imgs/gallery/offer/', false, /\.png$/);
+    const imgsContext = require.context('imgs/gallery/offer/', false, /\.jpg$/);
     const imgs = imgsContext.keys().map(imgsContext);
     return (
       <Modal title="angebot">
