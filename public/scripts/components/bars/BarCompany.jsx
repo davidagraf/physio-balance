@@ -1,7 +1,7 @@
 import React from 'react';
 import Bar from 'scripts/components/bars/Bar.jsx';
 import Icon from 'scripts/components/atomic/Icon.jsx';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import AtomicLink from 'scripts/components/atomic/Link.jsx';
 import {FACEBOOK} from '../../utils/links.js';
 

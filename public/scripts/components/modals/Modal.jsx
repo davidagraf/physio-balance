@@ -3,7 +3,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Icon from 'scripts/components/atomic/Icon.jsx';
 
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 export default class Modal extends React.Component {
   constructor() {

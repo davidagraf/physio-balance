@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, browserHistory } from 'react-router';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Board from 'scripts/components/Board.jsx';
 import Facebook from 'scripts/components/Facebook.jsx';
@@ -49,17 +49,17 @@ Content.propTypes = {
 export default class extends React.Component {
   render() {
     return (
-      <Router history={browserHistory}>
-        <Route path="/" component={Content}>
-          <Route path="/concept" component={ModalConcept} />
-          <Route path="/contact" component={ModalContact} />
-          <Route path="/physioinfos" component={ModalPhysioInfos} />
-          <Route path="/physiooffer" component={ModalPhysioOffer} />
-          <Route path="/rooms" component={ModalRooms} />
-          <Route path="/team" component={ModalTeam} />
-          <Route path="*" component={null}/>
-        </Route>
-      </Router>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/concept" children={<Content><ModalConcept/></Content>} />
+          <Route path="/contact" children={<Content><ModalContact/></Content>} />
+          <Route path="/physioinfos" children={<Content><ModalPhysioInfos/></Content>} />
+          <Route path="/physiooffer" children={<Content><ModalPhysioOffer/></Content>} />
+          <Route path="/rooms" children={<Content><ModalRooms/></Content>} />
+          <Route path="/team" children={<Content><ModalTeam/></Content>} />
+          <Route path="*" component={Content}/>
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
