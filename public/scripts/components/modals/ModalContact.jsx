@@ -12,10 +12,11 @@ export default class ModalContact extends React.Component {
           <p>
             mirjam dysli-böni<br/>
             carmen brugger<br/>
-						mirjam bölsterli
+            mirjam bölsterli<br/>
+            kathrin schmid
           </p>
           <p>
-            physio balance<br/>
+            <b>physio balance</b><br/>
             widengasse 16<br/>
             5070 frick
           </p>

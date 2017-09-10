@@ -5,17 +5,19 @@ import Splitview from 'scripts/components/atomic/Splitview.jsx';
 import Link from 'scripts/components/atomic/Link.jsx';
 import Icon from 'scripts/components/atomic/Icon.jsx';
 
-import Mirjam from 'imgs/mirjam.jpg';
-import Carmen from 'imgs/carmen.jpg';
-import MirjamB from 'imgs/mirjamb.jpg';
-import lebenslaufMD from 'documents/Lebenslauf_MD_Mai_2017.pdf';
+import Mirjam from 'imgs/portraits/131.jpg';
+import Carmen from 'imgs/portraits/141.jpg';
+import MirjamB from 'imgs/portraits/121.jpg';
+import KathrinS from 'imgs/portraits/111.jpg';
+import lebenslaufMD from 'documents/Lebenslauf_MD.pdf';
 import lebenslaufCB from 'documents/Lebenslauf_CB.pdf';
 import lebenslaufMB from 'documents/Lebenslauf_MB.pdf';
+import lebenslaufKS from 'documents/Lebenslauf_KS.pdf';
 
 export default class extends React.Component {
   render() {
     return (
-      <Modal title="Team">
+      <Modal title="team">
         <h2>mirjam dysli-böni</h2>
         <Splitview
           left = {
@@ -94,6 +96,28 @@ export default class extends React.Component {
 				</p>
 				<p>
 					<Link icon={<Icon name="file-pdf-o" />} href={lebenslaufMB} newWindow={true}>Lebenslauf</Link>
+				</p>
+
+        <h2>kathrin schmid</h2>
+				<Splitview
+					left = {
+						<img src={KathrinS} width="100" />
+					}
+					right = {
+						<ul>
+							<Li>dipl. physiotherapeutin fh</Li>
+							<Li>manuelle therapie nach maitland i.a</Li>
+							<Li>kinesio taping nach dr. kenzo kase</Li>
+						</ul>
+					}
+				/>
+
+				<p>
+          Jeder Mensch ist individuell - so auch meine Therapie.
+          Mit einer ganzheitlichen Behandlung begleite ich dich zu deinen persönlich gesetzten Zielen.
+				</p>
+				<p>
+					<Link icon={<Icon name="file-pdf-o" />} href={lebenslaufKS} newWindow={true}>Lebenslauf</Link>
 				</p>
 
       </Modal>
