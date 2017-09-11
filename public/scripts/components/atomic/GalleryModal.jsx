@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Icon from 'scripts/components/atomic/Icon.jsx';
 
 export default class GalleryModal extends React.Component {
@@ -82,7 +83,7 @@ export default class GalleryModal extends React.Component {
 }
 
 GalleryModal.propTypes = {
-  uris: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  startIndex : React.PropTypes.number.isRequired,
-  close: React.PropTypes.func.isRequired
+  uris: PropTypes.arrayOf(PropTypes.string).isRequired,
+  startIndex : PropTypes.number.isRequired,
+  close: PropTypes.func.isRequired
 };

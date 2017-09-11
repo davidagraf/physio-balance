@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Splitview extends React.Component {
   render() {
@@ -12,6 +13,6 @@ export default class Splitview extends React.Component {
 }
 
 Splitview.propTypes = {
-  left: React.PropTypes.node.isRequired,
-  right: React.PropTypes.node.isRequired
+  left: PropTypes.node.isRequired,
+  right: PropTypes.node.isRequired
 };

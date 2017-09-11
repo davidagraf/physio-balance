@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class extends React.Component {
   static propTypes = {
-    label: React.PropTypes.string,
-    field: React.PropTypes.element.isRequired
+    label: PropTypes.string,
+    field: PropTypes.element.isRequired
   }
   render() {
     return (

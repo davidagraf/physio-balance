@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
 
@@ -23,8 +24,8 @@ export default class Widget extends React.Component {
 }
 
 Widget.propTypes = {
-  img: React.PropTypes.string,
-  content: React.PropTypes.node,
-  text: React.PropTypes.string,
-  path: React.PropTypes.string.isRequired
+  img: PropTypes.string,
+  content: PropTypes.node,
+  text: PropTypes.string,
+  path: PropTypes.string.isRequired
 };

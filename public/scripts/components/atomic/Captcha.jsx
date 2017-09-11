@@ -1,11 +1,12 @@
 /* global grecaptcha */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 
 export default class extends React.Component {
   static propTypes = {
-    tokenChanged: React.PropTypes.func.isRequired
+    tokenChanged: PropTypes.func.isRequired
   }
   componentDidMount() {
     grecaptcha.render(

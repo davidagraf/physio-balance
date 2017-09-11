@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Bar extends React.Component {
   render() {
@@ -24,10 +25,10 @@ export default class Bar extends React.Component {
 }
 
 Bar.propTypes = {
-  img: React.PropTypes.node,
-  title: React.PropTypes.node,
-  subtitle: React.PropTypes.node,
-  infos: React.PropTypes.arrayOf(React.PropTypes.node),
+  img: PropTypes.node,
+  title: PropTypes.node,
+  subtitle: PropTypes.node,
+  infos: PropTypes.arrayOf(PropTypes.node),
 };
 
 Bar.defaultProps = {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 export default class Link extends React.Component {
@@ -20,11 +21,11 @@ export default class Link extends React.Component {
 }
 
 Link.propTypes = {
-  icon: React.PropTypes.element,
-  href: React.PropTypes.string.isRequired,
-  children: React.PropTypes.string.isRequired,
-  newWindow: React.PropTypes.bool,
-  className: React.PropTypes.string,
+  icon: PropTypes.element,
+  href: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
+  newWindow: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 Link.defaultProps = {

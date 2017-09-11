@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Li extends React.Component {
   render() {
@@ -9,5 +10,5 @@ export default class Li extends React.Component {
 }
 
 Li.propTypes = {
-  children: React.PropTypes.node.isRequired
+  children: PropTypes.node.isRequired
 };

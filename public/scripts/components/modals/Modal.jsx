@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Icon from 'scripts/components/atomic/Icon.jsx';
@@ -65,7 +66,7 @@ export default class Modal extends React.Component {
 }
 
 Modal.propTypes = {
-  title: React.PropTypes.string,
-  children: React.PropTypes.node,
-  contentClassName: React.PropTypes.string
+  title: PropTypes.string,
+  children: PropTypes.node,
+  contentClassName: PropTypes.string
 };

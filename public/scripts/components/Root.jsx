@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Board from 'scripts/components/Board.jsx';
@@ -43,7 +44,7 @@ class Content extends React.Component {
 }
 
 Content.propTypes = {
-  children: React.PropTypes.node
+  children: PropTypes.node
 }
 
 export default class extends React.Component {

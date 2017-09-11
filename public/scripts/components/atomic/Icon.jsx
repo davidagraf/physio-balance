@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Icon extends React.Component {
   render() {
@@ -18,8 +19,8 @@ export default class Icon extends React.Component {
 }
 
 Icon.propTypes = {
-  name: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.arrayOf(React.PropTypes.string)
+  name: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string)
   ]).isRequired
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import GalleryModal from 'scripts/components/atomic/GalleryModal.jsx';
 
@@ -30,5 +31,5 @@ export default class Gallery extends React.Component {
 }
 
 Gallery.propTypes = {
-  uris: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+  uris: PropTypes.arrayOf(PropTypes.string).isRequired
 }

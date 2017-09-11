@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Board extends React.Component {
   render() {
@@ -15,5 +16,5 @@ export default class Board extends React.Component {
 }
 
 Board.propTypes = {
-  widgets: React.PropTypes.arrayOf(React.PropTypes.element).isRequired
+  widgets: PropTypes.arrayOf(PropTypes.element).isRequired
 };

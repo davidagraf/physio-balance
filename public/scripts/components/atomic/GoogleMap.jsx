@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 export default class GoogleMap extends React.Component {
   componentDidMount() {
@@ -27,5 +28,5 @@ export default class GoogleMap extends React.Component {
 }
 
 GoogleMap.propTypes = {
-  address: React.PropTypes.string.isRequired
+  address: PropTypes.string.isRequired
 };
