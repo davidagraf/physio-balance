@@ -14,7 +14,7 @@ export default class Modal extends React.Component {
     };
   }
   _checkHeaderPos() {
-    let overflow = (this.refs.visible.getBoundingClientRect().top < 0);
+    let overflow = (this.divModal.getBoundingClientRect().top < 0);
 
     if (overflow !== this.state.headerFixed) {
       this.setState({headerFixed: overflow});
@@ -24,7 +24,7 @@ export default class Modal extends React.Component {
     window.history.back();
   }
   _checkClickOutside(ev) {
-    if (!this.refs.visible.contains(ev.target)) {
+    if (!this.divModal.contains(ev.target)) {
       this._close();
     }
   }
@@ -40,13 +40,13 @@ export default class Modal extends React.Component {
 
     return (
       <div className="modal" onClick={(ev) => this._checkClickOutside(ev)}>
-        <div className="modal__scroll" ref="scroll" onScroll={() => this._checkHeaderPos()}>
+        <div className="modal__scroll" onScroll={() => this._checkHeaderPos()}>
           <ReactCSSTransitionGroup transitionName="modal--animation"
             transitionAppear={true}
             transitionAppearTimeout={500}
             transitionEnterTimeout={0}
             transitionLeaveTimeout={0}>
-            <div className="modal__visible" ref="visible">
+            <div className="modal__visible" ref={divModal => {this.divModal = divModal;}}>
               <div className="modal__header">{headerContent}</div>
               <div className={this.props.contentClassName || 'modal__content '}>
                 { this.props.children }
