@@ -42,14 +42,14 @@ export default class Modal extends React.Component {
       <div className="modal" onClick={(ev) => this._checkClickOutside(ev)}>
         <div className="modal__scroll" ref="scroll" onScroll={() => this._checkHeaderPos()}>
           <ReactCSSTransitionGroup transitionName="modal--animation"
-                                   transitionAppear={true}
-                                   transitionAppearTimeout={500}
-                                   transitionEnterTimeout={0}
-                                   transitionLeaveTimeout={0}>
+            transitionAppear={true}
+            transitionAppearTimeout={500}
+            transitionEnterTimeout={0}
+            transitionLeaveTimeout={0}>
             <div className="modal__visible" ref="visible">
               <div className="modal__header">{headerContent}</div>
               <div className={this.props.contentClassName || 'modal__content '}>
-              { this.props.children }
+                { this.props.children }
               </div>
               {(this.state.headerFixed ?
                 <div className="modal__header--fixed">

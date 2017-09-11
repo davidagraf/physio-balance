@@ -18,12 +18,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // TODO
-      // {
-      //   test: /\.(js|jsx)$/,
-      //   exclude: /node_modules/,
-      //   loader: 'eslint-loader'
-      // },
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
@@ -72,6 +66,10 @@ module.exports = {
             presets: ['es2015', 'react']
           }
         }
+      }, {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
       }, {
         test: /\.json$/, loader: 'json-loader'
       }, {

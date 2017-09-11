@@ -6,9 +6,9 @@ export default class Board extends React.Component {
     return (
       <div className="board">
         <div className="board__content">{
-            this.props.widgets.map(
-              (child, index) => <div key={index}>{child}</div>
-            )
+          this.props.widgets.map(
+            (child, index) => <div key={index}>{child}</div>
+          )
         }</div>
       </div>
     );

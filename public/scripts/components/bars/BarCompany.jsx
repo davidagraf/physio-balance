@@ -26,11 +26,11 @@ export default class extends React.Component {
           <div><Icon name="phone"/> {PHONE}</div>,
           <div><Icon name="envelope"/> {MAIL}</div>,
           <div><AtomicLink className="bar__link"
-						href={FACEBOOK}
-						newWindow={true}
-						icon={<Icon name="facebook-official"/>}>
-						 physiobalance.fit
-					</AtomicLink></div>
+            href={FACEBOOK}
+            newWindow={true}
+            icon={<Icon name="facebook-official"/>}>
+            physiobalance.fit
+          </AtomicLink></div>
         ]}
       />
     );

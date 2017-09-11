@@ -9,8 +9,8 @@ import {FACEBOOK} from '../utils/links.js';
 const APP_ID = (process.env.NODE_ENV === 'production' ? '691100814354778' : '718726034925589');
 const APP_ACCESS_TOKEN = (
   process.env.NODE_ENV === 'production' ?
-  '691100814354778|iSb_maGHNC9x7zyG9oUD7FGFHdw' :
-  '718726034925589|RQQdhc0N8UgJU0b1iiuA3_y8XE0'
+    '691100814354778|iSb_maGHNC9x7zyG9oUD7FGFHdw' :
+    '718726034925589|RQQdhc0N8UgJU0b1iiuA3_y8XE0'
 );
 
 export default class extends React.Component {

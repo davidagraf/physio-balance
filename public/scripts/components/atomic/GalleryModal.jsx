@@ -60,7 +60,7 @@ export default class GalleryModal extends React.Component {
     };
     return (
       <div className="gallerymodal" onTouchStart={(ev) => this._touchStart(ev)}
-                                    onTouchEnd={(ev) => this._touchEnd(ev)}>
+        onTouchEnd={(ev) => this._touchEnd(ev)}>
         <button className="gallerymodal__close" onClick={() => this.props.close()}>
           <Icon name="times" />
         </button>

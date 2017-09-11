@@ -15,16 +15,16 @@ export default class Gallery extends React.Component {
       <div className="gallery">{
         this.state.modalStartIndex !== null &&
           <GalleryModal startIndex={this.state.modalStartIndex} uris={this.props.uris}
-                        close={() => this.setState({modalStartIndex: null})}/>
-        }<div className="gallery__wrapper">{
-          this.props.uris.map((uri, i) => {
-            return (
-              <div key={i} className="gallery__thumbnail" onClick={() => this.setState({modalStartIndex: i})} >
-                <img src={uri} />
-              </div>
-            );
-          })
-        }</div>
+            close={() => this.setState({modalStartIndex: null})}/>
+      }<div className="gallery__wrapper">{
+        this.props.uris.map((uri, i) => {
+          return (
+            <div key={i} className="gallery__thumbnail" onClick={() => this.setState({modalStartIndex: i})} >
+              <img src={uri} />
+            </div>
+          );
+        })
+      }</div>
       </div>
     );
   }

@@ -25,12 +25,12 @@ export default class extends React.Component {
           <Li>triggerpunkttherapie</Li>
           <Li>physikalische therapie (ultraschall, pneumatron, wärmeanwendung, elektrotherapie)</Li>
         </ul>
-				<p>
+        <p>
           <Link icon={<Icon name="file-pdf-o" />} href={formularPDF}>Verordnungsformular</Link>
-        <br/>
+          <br/>
           <Link icon={<Icon name="file-word-o" />} href={formularWord}>Verordnungsformular</Link>
         </p>
-				<Gallery uris={imgs} />
+        <Gallery uris={imgs} />
       </Modal>
     );
   }

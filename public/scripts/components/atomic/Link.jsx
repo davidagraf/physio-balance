@@ -6,9 +6,9 @@ export default class Link extends React.Component {
   render() {
     const {icon, href, children, newWindow, className} = this.props;
     const linkClass = classNames(
-			'link',
-			className
-		);
+      'link',
+      className
+    );
     return (
       <a className={linkClass} href={href || '#'} target={ newWindow && '_blank'}>
         {
