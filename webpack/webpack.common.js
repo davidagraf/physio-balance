@@ -10,10 +10,10 @@ module.exports = {
   // eslint: {
   //   configFile: 'public/.eslintrc'
   // },
-  context: path.join(__dirname, 'public'),
+  context: path.join(rootDir, 'public'),
   entry: ['babel-polyfill', path.join('scripts', 'main.jsx')],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(rootDir, 'dist'),
     filename: '[hash].bundle.js'
   },
   module: {
