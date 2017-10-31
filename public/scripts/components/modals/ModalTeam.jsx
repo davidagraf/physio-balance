@@ -51,8 +51,9 @@ export default class extends React.Component {
           }
           right = {
             <ul>
+              <Li>selbstständige mitarbeiterin physio balance</Li>
               <Li>dipl. physiotherapeutin fh</Li>
-              <Li>craniosacral therapeutin</Li>
+              <Li>dipl. craniosacral therapeutin</Li>
               <Li>funktionelles elastisches taping (mtc und ntc)</Li>
               <Li>manuelle therapie nach cyriax</Li>
               <Li>medizinische klangschalentherapie</Li>
@@ -75,6 +76,7 @@ export default class extends React.Component {
           }
           right = {
             <ul>
+              <Li>selbstständige mitarbeiterin physio balance</Li>
               <Li>dipl. physiotherapeutin fh</Li>
               <Li>dipl. craniosacral therapeutin</Li>
               <Li>manuelle therapie nach samt</Li>
