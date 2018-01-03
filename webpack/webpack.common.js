@@ -3,6 +3,7 @@
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var webpack = require('webpack');
 var rootDir = process.cwd();
 
@@ -93,6 +94,9 @@ module.exports = {
       favicon: path.join(rootDir, 'public', 'imgs', 'logo', 'pb_logo_color_rgb_fav.png'),
       hash: true
     }),
+    new CopyWebpackPlugin([
+      { from: 'static', to: 'static' }
+    ]),
     new webpack.LoaderOptionsPlugin({
       eslint: {
         configFile: 'public/.eslintrc'
