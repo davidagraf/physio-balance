@@ -25,7 +25,7 @@ export default class extends React.Component {
     FB.init({
       appId      : APP_ID,
       xfbml      : true,
-      version    : 'v2.5'
+      version    : 'v4.0'
     });
 
     FB.api('/physiobalance.fit/posts', {access_token: APP_ACCESS_TOKEN}, (response) => {

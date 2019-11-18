@@ -94,6 +94,11 @@ module.exports = {
       favicon: path.join(rootDir, 'public', 'imgs', 'logo', 'pb_logo_color_rgb_fav.png'),
       hash: true
     }),
+    new HtmlWebpackPlugin({
+      template: path.join(rootDir, 'public', 'privacy.html'),
+      favicon: path.join(rootDir, 'public', 'imgs', 'logo', 'pb_logo_color_rgb_fav.png'),
+      filename: 'privacy.html'
+    }),
     new CopyWebpackPlugin([
       { from: 'static', to: 'static' }
     ]),
