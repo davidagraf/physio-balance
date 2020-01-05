@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Board from 'scripts/components/Board.jsx';
-import Facebook from 'scripts/components/Facebook.jsx';
+// import Facebook from 'scripts/components/Facebook.jsx';
 
 import BarCompany from 'scripts/components/bars/BarCompany.jsx';
 
@@ -30,7 +30,7 @@ class Content extends React.Component {
       <div>
         {this.props.children}
         <BarCompany />
-        <Facebook />
+        {/*<Facebook />*/}
         <Board
           widgets={[
             <WidgetTeam />, <WidgetConcept />, <WidgetContact/>, <WidgetRooms />,

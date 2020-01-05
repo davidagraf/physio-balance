@@ -6,13 +6,11 @@ import Link from 'scripts/components/atomic/Link.jsx';
 import Icon from 'scripts/components/atomic/Icon.jsx';
 
 import Mirjam from 'imgs/portraits/131.jpg';
-import Carmen from 'imgs/portraits/141.jpg';
-import MirjamB from 'imgs/portraits/121.jpg';
-import KathrinS from 'imgs/portraits/111.jpg';
+import Catrina from 'imgs/portraits/windlin.jpg';
+import Mario from 'imgs/portraits/muilwijk.jpg';
 import lebenslaufMD from 'documents/Lebenslauf_MD.pdf';
-import lebenslaufCB from 'documents/Lebenslauf_CB.pdf';
-import lebenslaufMB from 'documents/Lebenslauf_MB.pdf';
-import lebenslaufKS from 'documents/Lebenslauf_KS.pdf';
+import lebenslaufCW from 'documents/Lebenslauf_catrina_windlin.pdf';
+
 
 export default class extends React.Component {
   render() {
@@ -44,83 +42,48 @@ export default class extends React.Component {
           <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufMD} newWindow={true}>Lebenslauf</Link>
         </p>
 
-        <h2>carmen brugger</h2>
+        <h2>catrina windlin</h2>
         <Splitview
           left = {
-            <img src={Carmen} width="100" />
+            <img src={Catrina} width="100" />
           }
           right = {
             <ul>
-              <Li>selbstständige mitarbeiterin physio balance</Li>
               <Li>dipl. physiotherapeutin fh</Li>
-              <Li>dipl. craniosacral therapeutin</Li>
-              <Li>funktionelles elastisches taping (mtc und ntc)</Li>
-              <Li>manuelle therapie nach cyriax</Li>
-              <Li>medizinische klangschalentherapie</Li>
+              <Li>manuelle therapie nach maitland level 2a</Li>
+              <Li>triggerpunkttherapie</Li>
+              <Li>myofasziales taping</Li>
+              <Li>kiefergelenktherapie</Li>
             </ul>
           }
         />
 
         <p>
-          Durch eine ganzheitliche und individuelle Betreuung möchte ich zusammen mit dir eine Verbesserung deines
-          Gesundheitszustandes erreichen und somit dein Wohlbefinden steigern.
+          Eine lösungsorientierte Behandlung, die individuell auf dich abgestimmt ist, steht für mich im Vordergrund.
+          Mit viel Engagement und breitem Fachwissen begleite ich dich zu deinem Ziel! 
         </p>
         <p>
-          <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufCB} newWindow={true}>Lebenslauf</Link>
+          <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufCW} newWindow={true}>Lebenslauf</Link>
         </p>
 
-        <h2>mirjam bölsterli</h2>
+        <h2>mario muilwijk</h2>
         <Splitview
           left = {
-            <img src={MirjamB} width="100" />
+            <img src={Mario} width="100" />
           }
           right = {
             <ul>
-              <Li>selbstständige mitarbeiterin physio balance</Li>
-              <Li>dipl. physiotherapeutin fh</Li>
-              <Li>dipl. craniosacral therapeutin</Li>
-              <Li>manuelle therapie nach samt</Li>
-              <Li>kinesio taping nach dr. kenzo kase</Li>
-              <Li>esp sportphysiotherapie (wirbelsäule, knie, schulter)</Li>
-              <Li>fussreflexzonentherapie</Li>
+              <Li>dipl. physiotherapeut (zulassung schweiz &amp; holland)</Li>
+              <Li>manuelle lymphdrainage nach vodder </Li>
+              <Li>faszien distortions modell</Li>
+              <Li>fascial manipulation</Li>
+              <Li>dry needling extremitaten, wirbelsaule und kiefer</Li>
+              <Li>strength &amp; conditioning specialist</Li>
+              <Li>kinesiotaping kenzo kase</Li>
+              <Li>mulligan concept</Li>
             </ul>
           }
         />
-
-        <h3>klassische physiotherapie trifft auf ganzheitliche körperarbeit</h3>
-        <p>
-          Mit zunehmender Berufserfahrung haben mich vermehrt Systeme interessiert, in welchen der
-          Mensch als Ganzes
-          betrachtet wird. So stehen mir heute sehr unterschiedliche Ansätze für die individuelle
-          Behandlung zur Verfügung, von der klassischen Physiotherapie bis hin zur Stimulation der
-          Selbstheilungskräfte, um deinem Körper die Möglichkeit zu geben, sein Gleichgewicht wieder
-          zu finden.
-        </p>
-        <p>
-          <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufMB} newWindow={true}>Lebenslauf</Link>
-        </p>
-
-        <h2>kathrin schmid</h2>
-        <Splitview
-          left = {
-            <img src={KathrinS} width="100" />
-          }
-          right = {
-            <ul>
-              <Li>dipl. physiotherapeutin fh</Li>
-              <Li>manuelle therapie nach maitland i.a</Li>
-              <Li>kinesio taping nach dr. kenzo kase</Li>
-            </ul>
-          }
-        />
-
-        <p>
-          Jeder Mensch ist individuell - so auch meine Therapie.
-          Mit einer ganzheitlichen Behandlung begleite ich dich zu deinen persönlich gesetzten Zielen.
-        </p>
-        <p>
-          <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufKS} newWindow={true}>Lebenslauf</Link>
-        </p>
 
       </Modal>
     );
