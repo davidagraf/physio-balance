@@ -9,12 +9,9 @@ export default class extends React.Component {
           Physiotherapie ist mit ärztlicher Verordnung eine Dienstleistung der Krankenkassen Grundversicherung.
         </p>
         <p>
-          Zusätzlich kann die Craniosacral Therapie ohne ärztliche Verordnung über die Krankenkassen Zusatzversicherung
-          abgerechnet werden.
-        </p>
-        <p>
-          Zudem besteht die Möglichkeit ohne Verordnung als Selbstzahler von unserem Angebot zu profitieren
-          (65.00Fr. pro 25-minütige Behandlung oder 130.00Fr. pro 55-minütige Behandlung).
+          Zudem besteht die Möglichkeit ohne Verordnung als Selbstzahler von
+          unserem Angebot zu profitieren (60.00Fr. pro 25-minütige Behandlung oder
+          120.00Fr. pro 55-minütige Behandlung).
         </p>
       </Modal>
     );
