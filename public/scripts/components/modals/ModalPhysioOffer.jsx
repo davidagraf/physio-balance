@@ -19,12 +19,14 @@ export default class extends React.Component {
           <Li>rehabilitation</Li>
           <Li>sportphysiotherapie</Li>
           <Li>manuelle therapie</Li>
+          <Li>triggerpunkttherapie</Li>
+          <Li>kiefergelenkstherapie</Li>
           <Li>massage</Li>
           <Li>kinesiologisches taping</Li>
-          <Li>triggerpunkttherapie</Li>
-          <Li>physikalische therapie (ultraschall, pneumatron, wärmeanwendung, elektrotherapie)</Li>
-          <Li>dry needling</Li>
+          <Li>physikalische therapien (ultraschall, pneumatron, wärmeanwendung, elektrotherapie)</Li>
           <Li>domizilbehandlungen</Li>
+          <Li>pilates</Li>
+          <Li>lymphdrainage</Li>
         </ul>
         <p>
           <Link icon={<Icon name="file-pdf-o" />} href={formularPDF}>Verordnungsformular</Link>

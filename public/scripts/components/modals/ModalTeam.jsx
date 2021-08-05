@@ -5,12 +5,12 @@ import Splitview from 'scripts/components/atomic/Splitview.jsx';
 import Link from 'scripts/components/atomic/Link.jsx';
 import Icon from 'scripts/components/atomic/Icon.jsx';
 
-import Mirjam from 'imgs/portraits/131.jpg';
-import Catrina from 'imgs/portraits/windlin.jpg';
-import Larissa from 'imgs/portraits/Larissa_moesli_team.jpg';
+import Mirjam from 'imgs/portraits/MirjamTeam.jpg';
+import Catrina from 'imgs/portraits/CatrinaTeam.jpg';
+import Larissa from 'imgs/portraits/LarissaTeam.jpg';
 import lebenslaufMD from 'documents/Lebenslauf_MD_Aug21.pdf';
-import lebenslaufCW from 'documents/Lebenslauf_catrina_windlin.pdf';
-import lebenslaufLM from 'documents/Lebenslauf_LM.pdf';
+import lebenslaufCW from 'documents/Lebenslauf_CW_Aug21.pdf';
+import lebenslaufLM from 'documents/Lebenslauf_LM_Aug21.pdf';
 
 
 export default class extends React.Component {
@@ -74,8 +74,9 @@ export default class extends React.Component {
           }
           right = {
             <ul>
-              <Li>dipl. physiotherapeutin</Li>
+              <Li>dipl. physiotherapeutin fh</Li>
               <Li>medical taping</Li>
+              <Li>manuelle therapie</Li>
             </ul>
           }
         />
