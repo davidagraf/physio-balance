@@ -7,8 +7,10 @@ import Icon from 'scripts/components/atomic/Icon.jsx';
 
 import Mirjam from 'imgs/portraits/131.jpg';
 import Catrina from 'imgs/portraits/windlin.jpg';
+import Larissa from 'imgs/portraits/Larissa_moesli_team.jpg';
 import lebenslaufMD from 'documents/Lebenslauf_MD.pdf';
 import lebenslaufCW from 'documents/Lebenslauf_catrina_windlin.pdf';
+import lebenslaufLM from 'documents/Lebenslauf_LM.pdf';
 
 
 export default class extends React.Component {
@@ -63,6 +65,27 @@ export default class extends React.Component {
         </p>
         <p>
           <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufCW} newWindow={true}>Lebenslauf</Link>
+        </p>
+
+        <h2>larissa mösli</h2>
+        <Splitview
+          left = {
+            <img src={Larissa} width="100" />
+          }
+          right = {
+            <ul>
+              <Li>dipl. physiotherapeutin</Li>
+              <Li>medical taping</Li>
+            </ul>
+          }
+        />
+
+        <p>
+          Gesundheit ist leichter verloren als wiedergewonnen. Daher begleite ich dich bestmöglich mit meinem
+          Wissen in Richtung Gesundheit.
+        </p>
+        <p>
+          <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufLM} newWindow={true}>Lebenslauf</Link>
         </p>
 
       </Modal>
