@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --history-api-fallback --port 9000 --colors --config ./webpack/webpack.dev.js",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --history-api-fallback --port 9005 --colors --config ./webpack/webpack.dev.js",
     "dist": "rm -rf dist && node ./node_modules/webpack/bin/webpack.js --colors --config ./webpack/webpack.dist.js",
     "deploy_upload": "gsutil -m rsync -r -d dist/ gs://www.physiobalance.fit",
     "deploy_publish": "gsutil -m acl ch -r -u AllUsers:R gs://www.physiobalance.fit/*",

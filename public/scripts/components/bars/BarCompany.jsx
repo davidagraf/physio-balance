@@ -3,7 +3,7 @@ import Bar from 'scripts/components/bars/Bar.jsx';
 import Icon from 'scripts/components/atomic/Icon.jsx';
 import { Link } from 'react-router-dom';
 import AtomicLink from 'scripts/components/atomic/Link.jsx';
-import {FACEBOOK} from '../../utils/links.js';
+import {FACEBOOK, INSTAGRAM} from '../../utils/links.js';
 
 import logo from 'imgs/logo/pb_logo_white_rgb.png';
 import wirbelsaeule from 'imgs/wirbelsaeule.png';
@@ -29,6 +29,12 @@ export default class extends React.Component {
             href={FACEBOOK}
             newWindow={true}
             icon={<Icon name="facebook-official"/>}>
+            physiobalance.fit
+          </AtomicLink></div>,
+          <div><AtomicLink className="bar__link"
+            href={INSTAGRAM}
+            newWindow={true}
+            icon={<Icon name="instagram"/>}>
             physiobalance.fit
           </AtomicLink></div>
         ]}

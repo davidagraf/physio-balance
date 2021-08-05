@@ -7,7 +7,7 @@ import Icon from 'scripts/components/atomic/Icon.jsx';
 
 import Mirjam from 'imgs/portraits/131.jpg';
 import Catrina from 'imgs/portraits/windlin.jpg';
-import lebenslaufMD from 'documents/Lebenslauf_MD.pdf';
+import lebenslaufMD from 'documents/Lebenslauf_MD_Aug21.pdf';
 import lebenslaufCW from 'documents/Lebenslauf_catrina_windlin.pdf';
 
 
