@@ -8,9 +8,9 @@ import Icon from 'scripts/components/atomic/Icon.jsx';
 import Mirjam from 'imgs/portraits/MirjamTeam.jpg';
 import Catrina from 'imgs/portraits/CatrinaTeam.jpg';
 import Larissa from 'imgs/portraits/LarissaTeam.jpg';
-import lebenslaufMD from 'documents/Lebenslauf_MD_Aug21.pdf';
-import lebenslaufCW from 'documents/Lebenslauf_CW_Aug21.pdf';
-import lebenslaufLM from 'documents/Lebenslauf_LM_Aug21.pdf';
+import lebenslaufMD from 'documents/Lebenslauf_MD_Mai23.pdf';
+import lebenslaufCW from 'documents/Lebenslauf_CW_Mai23.pdf';
+import lebenslaufLM from 'documents/Lebenslauf_LM_Mai23.pdf';
 
 
 export default class extends React.Component {
@@ -27,10 +27,10 @@ export default class extends React.Component {
               <Li>geschäftsinhaberin physio balance</Li>
               <Li>dipl. physiotherapeutin fh</Li>
               <Li>msc. sports physiotherapy</Li>
-              <Li>leukotape k - instruktorin</Li>
               <Li>manuelle therapie nach r. sohier</Li>
+              <Li>leukotape k - instruktorin</Li>
               <Li>triggerpunkt, orthomolekulare medizin, sportosteopathie</Li>
-              <Li>personal training, sling training, pilates</Li>
+              <Li>personal training, sling training, pilates, schwindeltherapie</Li>
             </ul>
           }
         />
@@ -43,7 +43,7 @@ export default class extends React.Component {
           <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufMD} newWindow={true}>Lebenslauf</Link>
         </p>
 
-        <h2>catrina windlin</h2>
+        <h2 className="h2--space">catrina windlin</h2>
         <Splitview
           left = {
             <img src={Catrina} width="100" />
@@ -54,8 +54,9 @@ export default class extends React.Component {
               <Li>manuelle therapie nach maitland level 2a</Li>
               <Li>manuelle lymphdrainage</Li>
               <Li>pilates</Li>
+              <Li>GLA:D arthrose therapeutin</Li>
               <Li>triggerpunkttherapie, myofasziales taping</Li>
-              <Li>kiefergelenktherapie</Li>
+              <Li>kiefergelenktherapie, schwindeltherapie</Li>
             </ul>
           }
         />
@@ -68,7 +69,7 @@ export default class extends React.Component {
           <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufCW} newWindow={true}>Lebenslauf</Link>
         </p>
 
-        <h2>larissa mösli</h2>
+        <h2 className="h2--space">larissa mösli</h2>
         <Splitview
           left = {
             <img src={Larissa} width="100" />
@@ -76,8 +77,12 @@ export default class extends React.Component {
           right = {
             <ul>
               <Li>dipl. physiotherapeutin fh</Li>
+              <Li>manuelle therapie nach vollmer</Li>
+              <Li>manuelle lymphdrainage</Li>
               <Li>medical taping</Li>
-              <Li>manuelle therapie</Li>
+              <Li>GLA:D arthrose therapeutin, GLA:D rücken therapeutin</Li>
+              <Li>triggerpunkttherapie</Li>
+              <Li>dry needling</Li>
             </ul>
           }
         />
