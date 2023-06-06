@@ -30,7 +30,7 @@ export default class extends React.Component {
               <Li>leukotape k - instruktorin</Li>
               <Li>manuelle therapie nach r. sohier</Li>
               <Li>triggerpunkt, orthomolekulare medizin, sportosteopathie</Li>
-              <Li>personal training, sling training</Li>
+              <Li>personal training, sling training, pilates</Li>
             </ul>
           }
         />
@@ -52,8 +52,9 @@ export default class extends React.Component {
             <ul>
               <Li>dipl. physiotherapeutin fh</Li>
               <Li>manuelle therapie nach maitland level 2a</Li>
-              <Li>triggerpunkttherapie</Li>
-              <Li>myofasziales taping</Li>
+              <Li>manuelle lymphdrainage</Li>
+              <Li>pilates</Li>
+              <Li>triggerpunkttherapie, myofasziales taping</Li>
               <Li>kiefergelenktherapie</Li>
             </ul>
           }
