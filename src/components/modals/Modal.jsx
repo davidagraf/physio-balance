@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CSSTransition } from 'react-transition-group';
 
 import Icon from '../atomic/Icon.jsx';
 
@@ -9,9 +10,16 @@ export default class Modal extends React.Component {
   constructor() {
     super();
     this.state = {
-      headerFixed: false
+      headerFixed: false,
+      showComponent: false
     };
   }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ showComponent: true });
+    });
+  }
+
   _checkHeaderPos() {
     let overflow = (this.divModal.getBoundingClientRect().top < 0);
 
@@ -41,18 +49,25 @@ export default class Modal extends React.Component {
     return (
       <div className="modal" onClick={(ev) => this._checkClickOutside(ev)}>
         <div className="modal__scroll" onScroll={() => this._checkHeaderPos()}>
-          <div className="modal__visible" ref={divModal => {this.divModal = divModal;}}>
-            <div className="modal__header">{headerContent}</div>
-            <div className={this.props.contentClassName || 'modal__content '}>
-              { this.props.children }
+          <CSSTransition
+            in={this.state.showComponent}
+            classNames="modal--animation"
+            timeout={500}
+            unmountOnExit
+          >
+            <div className="modal__visible" ref={divModal => {this.divModal = divModal;}}>
+              <div className="modal__header">{headerContent}</div>
+              <div className={this.props.contentClassName || 'modal__content '}>
+                { this.props.children }
+              </div>
+              {(this.state.headerFixed ?
+                <div className="modal__header--fixed">
+                  {headerContent}
+                  <div className="modal__header__shadow"/>
+                </div> :
+                null)}
             </div>
-            {(this.state.headerFixed ?
-              <div className="modal__header--fixed">
-                {headerContent}
-                <div className="modal__header__shadow"/>
-              </div> :
-              null)}
-          </div>
+          </CSSTransition>
         </div>
       </div>
     );
