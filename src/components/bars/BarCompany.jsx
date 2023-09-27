@@ -16,7 +16,7 @@ export default class extends React.Component {
   render() {
     return (
       <Bar
-        title={<img src={logo}/>}
+        title={<Link to="/"><img src={logo}/></Link>}
         img={<img className="bar__img--company" src={wirbelsaeule} />}
         subtitle="&laquo;das gesundheitszentrum für prävention und rehabilitation&raquo;"
         infos={[
