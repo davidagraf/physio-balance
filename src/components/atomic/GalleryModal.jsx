@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from 'scripts/components/atomic/Icon.jsx';
+import Icon from './Icon.jsx';
 
 export default class GalleryModal extends React.Component {
   constructor(props) {

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Widget from 'scripts/components/widgets/Widget.jsx';
+import Widget from './Widget.jsx';
 
-import team from 'imgs/widgets/team.jpeg';
+import team from '../../imgs/widgets/team.jpeg';
 
 export default class extends React.Component {
   render() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from 'scripts/components/modals/Modal.jsx';
+import Modal from './Modal.jsx';
 
 export default class extends React.Component {
   render() {

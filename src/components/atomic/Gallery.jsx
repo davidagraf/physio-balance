@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import GalleryModal from 'scripts/components/atomic/GalleryModal.jsx';
+import GalleryModal from './GalleryModal.jsx';
 
 export default class Gallery extends React.Component {
   constructor(props) {

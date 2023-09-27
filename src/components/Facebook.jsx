@@ -2,8 +2,8 @@
 
 import moment from 'moment';
 import React from 'react';
-import Spinner from 'scripts/components/atomic/Spinner.jsx';
-import Error from 'scripts/components/atomic/Error.jsx';
+import Spinner from './atomic/Spinner.jsx';
+import Error from './atomic/Error.jsx';
 import {FACEBOOK} from '../utils/links.js';
 
 const APP_ID = (process.env.NODE_ENV === 'production' ? '691100814354778' : '718726034925589');

@@ -10,11 +10,11 @@
   width: 100%;
   z-index: 300;
 
-  &--animation-appear {
+  &--animation-enter { 
     transform: scale(1, .5);
     transform-origin: center;
 
-    &.modal--animation-appear-active {
+    &.modal--animation-enter-active {
       transform: scale(1);
       transition: all .5s cubic-bezier(.09, 1.14, .35, 1);
     }

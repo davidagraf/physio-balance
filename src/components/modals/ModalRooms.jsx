@@ -1,10 +1,10 @@
 import React from 'react';
-import Modal from 'scripts/components/modals/Modal.jsx';
-import Gallery from 'scripts/components/atomic/Gallery.jsx';
+import Modal from './Modal.jsx';
+import Gallery from '../atomic/Gallery.jsx';
 
 export default class extends React.Component {
   render() {
-    const imgsContext = require.context('imgs/gallery/room/', false, /\.jpg$/);
+    const imgsContext = require.context('../../imgs/gallery/room/', false, /\.jpg$/);
     const imgs = imgsContext.keys().map(imgsContext);
 
     return (

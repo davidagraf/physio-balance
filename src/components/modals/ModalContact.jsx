@@ -1,8 +1,8 @@
 import React from 'react';
-import Modal from 'scripts/components/modals/Modal.jsx';
+import Modal from './Modal.jsx';
 
-import GoogleMap from 'scripts/components/atomic/GoogleMap.jsx';
-import Square from 'scripts/components/atomic/Square.jsx';
+import GoogleMap from '../atomic/GoogleMap.jsx';
+import Square from '../atomic/Square.jsx';
 
 export default class ModalContact extends React.Component {
   render() {

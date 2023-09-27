@@ -1,61 +1,43 @@
 {
   "name": "physio-balance",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "classnames": "^2.3.2",
+    "font-awesome": "^4.7.0",
+    "node-sass": "^7.0.3",
+    "normalize.css": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --history-api-fallback --port 9005 --colors --config ./webpack/webpack.dev.js",
-    "dist": "rm -rf dist && node ./node_modules/webpack/bin/webpack.js --colors --config ./webpack/webpack.dist.js",
-    "deploy_upload": "gsutil -m rsync -r -d dist/ gs://www.physiobalance.fit",
-    "deploy_publish": "gsutil -m acl ch -r -u AllUsers:R gs://www.physiobalance.fit/*",
-    "deploy_cache": "gsutil setmeta -h \"Cache-Control: no-cache, no-store, must-revalidate, private\" gs://www.physiobalance.fit/index.html",
-    "deploy": "npm run dist && npm run deploy_upload && npm run deploy_publish && npm run deploy_cache"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/davidagraf/physio-balance.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/davidagraf/physio-balance#readme",
-  "devDependencies": {
-    "autoprefixer-loader": "3.2.0",
-    "babel-core": "6.26.0",
-    "babel-loader": "7.1.2",
-    "babel-plugin-transform-object-rest-spread": "6.26.0",
-    "babel-polyfill": "6.26.0",
-    "babel-preset-es2015": "6.24.1",
-    "babel-preset-react": "6.24.1",
-    "babel-runtime": "6.26.0",
-    "classnames": "2.2.5",
-    "copy-webpack-plugin": "^4.3.1",
-    "css-loader": "0.28.7",
-    "eslint": "4.6.1",
-    "eslint-loader": "1.9.0",
-    "eslint-plugin-react": "7.3.0",
-    "extract-text-webpack-plugin": "3.0.0",
-    "file-loader": "0.11.2",
-    "font-awesome": "4.7.0",
-    "html-webpack-plugin": "2.30.1",
-    "jquery": "3.2.1",
-    "keymirror": "0.1.1",
-    "moment": "2.18.1",
-    "node-sass": "4.13.0",
-    "normalize.css": "7.0.0",
-    "prop-types": "^15.5.10",
-    "react": "15.6.1",
-    "react-addons-css-transition-group": "15.6.0",
-    "react-dom": "15.6.1",
-    "react-redux": "5.0.6",
-    "react-router-dom": "4.2.2",
-    "redux": "3.7.2",
-    "sass-loader": "6.0.6",
-    "superagent": "3.6.0",
-    "url-loader": "0.5.9",
-    "webpack": "3.5.6",
-    "webpack-dev-server": "2.7.1"
-  },
-  "dependencies": {},
-  "volta": {
-    "node": "14.19.0"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -1,16 +1,16 @@
 import React from 'react';
-import Modal from 'scripts/components/modals/Modal.jsx';
-import Li from 'scripts/components/atomic/Li.jsx';
-import Splitview from 'scripts/components/atomic/Splitview.jsx';
-import Link from 'scripts/components/atomic/Link.jsx';
-import Icon from 'scripts/components/atomic/Icon.jsx';
+import Modal from './Modal.jsx';
+import Li from '../atomic/Li.jsx';
+import Splitview from '../atomic/Splitview.jsx';
+import Link from '../atomic/Link.jsx';
+import Icon from '../atomic/Icon.jsx';
 
-import Mirjam from 'imgs/portraits/MirjamTeam.jpg';
-import Catrina from 'imgs/portraits/CatrinaTeam.jpg';
-import Larissa from 'imgs/portraits/LarissaTeam.jpg';
-import lebenslaufMD from 'documents/Lebenslauf_MD_Mai23.pdf';
-import lebenslaufCW from 'documents/Lebenslauf_CW_Mai23.pdf';
-import lebenslaufLM from 'documents/Lebenslauf_LM_Mai23.pdf';
+import Mirjam from '../../imgs/portraits/MirjamTeam.jpg';
+import Catrina from '../../imgs/portraits/CatrinaTeam.jpg';
+import Larissa from '../../imgs/portraits/LarissaTeam.jpg';
+import lebenslaufMD from '../../documents/Lebenslauf_MD_Mai23.pdf';
+import lebenslaufCW from '../../documents/Lebenslauf_CW_Mai23.pdf';
+import lebenslaufLM from '../../documents/Lebenslauf_LM_Mai23.pdf';
 
 
 export default class extends React.Component {

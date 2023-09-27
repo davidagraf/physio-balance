@@ -1,12 +1,12 @@
 import React from 'react';
-import Bar from 'scripts/components/bars/Bar.jsx';
-import Icon from 'scripts/components/atomic/Icon.jsx';
+import Bar from './Bar.jsx';
+import Icon from '../atomic/Icon.jsx';
 import { Link } from 'react-router-dom';
-import AtomicLink from 'scripts/components/atomic/Link.jsx';
+import AtomicLink from '../atomic/Link.jsx';
 import {FACEBOOK, INSTAGRAM} from '../../utils/links.js';
 
-import logo from 'imgs/logo/pb_logo_white_rgb.png';
-import wirbelsaeule from 'imgs/wirbelsaeule.png';
+import logo from '../../imgs/logo/pb_logo_white_rgb.png';
+import wirbelsaeule from '../../imgs/wirbelsaeule.png';
 
 const MAIL = 'team@physiobalance.fit';
 const PHONE = '+41 62 871 16 20';
