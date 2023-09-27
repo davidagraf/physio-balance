@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 
 export default () => {
   const location = useLocation();
-  console.log(location)
   return (
     <div className="footers">
       <div className="footers__inner text--center">
