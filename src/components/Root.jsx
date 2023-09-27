@@ -23,20 +23,14 @@ import ModalRooms from './modals/ModalRooms.jsx';
 import ModalTeam from './modals/ModalTeam.jsx';
 
 import Footer from './Footer.jsx';
+import DataProtection from './DataProtection.jsx';
 
 class Content extends React.Component {
   render() {
     return (
       <div>
-        {this.props.children}
         <BarCompany />
-        {/*<Facebook />*/}
-        <Board
-          widgets={[
-            <WidgetTeam />, <WidgetConcept />, <WidgetContact/>, <WidgetRooms />,
-            <WidgetPhysioOffer />, <WidgetPhysioInfos />
-          ]}
-        />
+        {this.props.children}
         <Footer />
       </div>
     );
@@ -47,18 +41,39 @@ Content.propTypes = {
   children: PropTypes.node
 }
 
+class BoardContent extends React.Component {
+  render() {
+    return (
+      <Content>
+        {this.props.children}
+        <Board
+          widgets={[
+            <WidgetTeam />, <WidgetConcept />, <WidgetContact/>, <WidgetRooms />,
+            <WidgetPhysioOffer />, <WidgetPhysioInfos />
+          ]}
+        />
+      </Content>
+    );
+  }
+}
+
+BoardContent.propTypes = {
+  children: PropTypes.node
+}
+
 export default class extends React.Component {
   render() {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path="/concept" element={<Content><ModalConcept/></Content>} />
-          <Route path="/contact" element={<Content><ModalContact/></Content>} />
-          <Route path="/physioinfos" element={<Content><ModalPhysioInfos/></Content>} />
-          <Route path="/physiooffer" element={<Content><ModalPhysioOffer/></Content>} />
-          <Route path="/rooms" element={<Content><ModalRooms/></Content>} />
-          <Route path="/team" element={<Content><ModalTeam/></Content>} />
-          <Route path="*" element={<Content/>}/>
+          <Route path="/concept" element={<BoardContent><ModalConcept/></BoardContent>} />
+          <Route path="/contact" element={<BoardContent><ModalContact/></BoardContent>} />
+          <Route path="/physioinfos" element={<BoardContent><ModalPhysioInfos/></BoardContent>} />
+          <Route path="/physiooffer" element={<BoardContent><ModalPhysioOffer/></BoardContent>} />
+          <Route path="/rooms" element={<BoardContent><ModalRooms/></BoardContent>} />
+          <Route path="/team" element={<BoardContent><ModalTeam/></BoardContent>} />
+          <Route path="/data-protection" element={<Content><DataProtection/></Content>}/>
+          <Route path="*" element={<BoardContent/>}/>
         </Routes>
       </BrowserRouter>
     );
