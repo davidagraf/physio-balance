@@ -1,6 +1,7 @@
 .footers {
   border-top: 1px solid $color-border-hover;
   color: $color-grey-logo;
+  padding: 40px 0 20px 0;
 
   &__inner {
     display: flex;
@@ -8,7 +9,7 @@
     justify-content: center;
     margin: 0 auto;
     max-width: 1000px;
-    padding: 40px 0 20px 0;
+    padding-bottom: 20px;
 
     img {
       max-height: 50px;
@@ -18,8 +19,8 @@
   &__link {
     display: flex;
     justify-content: center;
-    padding: 0 0 40px 0;
     font-size: 14px;
+    padding-bottom: 20px;
 
     a {
       color: black;
