@@ -10,7 +10,7 @@ import Catrina from '../../imgs/portraits/CatrinaTeam.jpg';
 import Larissa from '../../imgs/portraits/LarissaTeam.jpg';
 import lebenslaufMD from '../../documents/Lebenslauf_MD_Mai23.pdf';
 import lebenslaufCW from '../../documents/Lebenslauf_CW_Mai23.pdf';
-import lebenslaufLM from '../../documents/Lebenslauf_LM_Mai23.pdf';
+import lebenslaufLM from '../../documents/Lebenslauf_LM_Mai24.pdf';
 
 
 export default class extends React.Component {
@@ -79,10 +79,10 @@ export default class extends React.Component {
               <Li>dipl. physiotherapeutin fh</Li>
               <Li>manuelle therapie nach vollmer</Li>
               <Li>manuelle lymphdrainage</Li>
-              <Li>medical taping</Li>
+              <Li>sportphysiotherapie esp i.A.</Li>
               <Li>GLA:D arthrose therapeutin, GLA:D rücken therapeutin</Li>
               <Li>triggerpunkttherapie</Li>
-              <Li>dry needling</Li>
+              <Li>dry needling, triggerpunkttherapie</Li>
             </ul>
           }
         />
