@@ -5,11 +5,11 @@ import Link from '../atomic/Link.jsx';
 import { Icon } from '../atomic/Icon';
 
 import Mirjam from '../../imgs/portraits/MirjamTeam.jpg';
-import Catrina from '../../imgs/portraits/CatrinaTeam.jpg';
 import Larissa from '../../imgs/portraits/LarissaTeam.jpg';
-import lebenslaufMD from '../../documents/Lebenslauf_MD_Mai23.pdf';
-import lebenslaufCW from '../../documents/Lebenslauf_CW_Mai23.pdf';
+import Saskia from '../../imgs/portraits/SaskiaTeam.jpeg';
+import lebenslaufMD from '../../documents/Lebenslauf_MD_Mrz26.pdf';
 import lebenslaufLM from '../../documents/Lebenslauf_LM_Mai24.pdf';
+import lebenslaufSM from '../../documents/Lebenslauf_SM_Mrz26.pdf';
 
 
 export default function ModalTeam() {
@@ -26,8 +26,8 @@ export default function ModalTeam() {
               <Li>dipl. physiotherapeutin fh</Li>
               <Li>msc. sports physiotherapy</Li>
               <Li>manuelle therapie nach r. sohier</Li>
-              <Li>leukotape k - instruktorin</Li>
-              <Li>triggerpunkt, orthomolekulare medizin, sportosteopathie</Li>
+              <Li>leukotape k</Li>
+              <Li>triggerpunkt, orthomolekulare medizin, kiefergelenktherapie</Li>
               <Li>personal training, sling training, pilates, schwindeltherapie</Li>
             </ul>
           }
@@ -39,32 +39,6 @@ export default function ModalTeam() {
         </p>
         <p>
           <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufMD} newWindow={true}>Lebenslauf</Link>
-        </p>
-
-        <h2 className="h2--space">catrina windlin</h2>
-        <Splitview
-          left = {
-            <img src={Catrina} width="100" />
-          }
-          right = {
-            <ul>
-              <Li>dipl. physiotherapeutin fh</Li>
-              <Li>manuelle therapie nach maitland level 2a</Li>
-              <Li>manuelle lymphdrainage</Li>
-              <Li>pilates</Li>
-              <Li>GLA:D arthrose therapeutin</Li>
-              <Li>triggerpunkttherapie, myofasziales taping</Li>
-              <Li>kiefergelenktherapie, schwindeltherapie</Li>
-            </ul>
-          }
-        />
-
-        <p>
-          Eine lösungsorientierte Behandlung, die individuell auf dich abgestimmt ist, steht für mich im Vordergrund.
-          Mit viel Engagement und breitem Fachwissen begleite ich dich zu deinem Ziel! 
-        </p>
-        <p>
-          <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufCW} newWindow={true}>Lebenslauf</Link>
         </p>
 
         <h2 className="h2--space">larissa mösli</h2>
@@ -91,6 +65,30 @@ export default function ModalTeam() {
         </p>
         <p>
           <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufLM} newWindow={true}>Lebenslauf</Link>
+        </p>
+
+        <h2 className="h2--space">saskia mahrer</h2>
+        <Splitview
+          left = {
+            <img src={Saskia} width="100" />
+          }
+          right = {
+            <ul>
+              <Li>dipl. physiotherapeutin fh</Li>
+              <Li>manuelle therapie nach maitland</Li>
+              <Li>medical taping</Li>
+              <Li>schwindeltherapie</Li>
+              <Li>triggerpunkttherapie, dry needling</Li>
+              <Li>bobath, expert geriattrische rehabiliation</Li>
+            </ul>
+          }
+        />
+
+        <p>
+          Mit viel Herz und Fachwissen, begleite ich dich nachhaltig beim erreichen deiner Ziele. Ich biete dir Therapie die zuhört und auf dich abgestimmt ist.
+        </p>
+        <p>
+          <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufSM} newWindow={true}>Lebenslauf</Link>
         </p>
 
     </Modal>
