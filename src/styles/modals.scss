@@ -10,15 +10,15 @@
   width: 100%;
   z-index: 300;
 
-  &--animation-enter { 
-    transform: scale(1, .5);
-    transform-origin: center;
+  // &--animation-enter { 
+  //   transform: scale(1, .5);
+  //   transform-origin: center;
 
-    &.modal--animation-enter-active {
-      transform: scale(1);
-      transition: all .5s cubic-bezier(.09, 1.14, .35, 1);
-    }
-  }
+  //   &.modal--animation-enter-active {
+  //     transform: scale(1);
+  //     transition: all .5s cubic-bezier(.09, 1.14, .35, 1);
+  //   }
+  // }
 
   &__scroll {
     max-height: 100%;
@@ -26,7 +26,18 @@
     width: 100%;
   }
 
+  @keyframes pb-open-modal {
+    from {
+      transform: scale(1, 0.5);
+    }
+
+    to {
+      transform: scale(1, 1);
+    }
+  }
+
   &__visible {
+    animation: pb-open-modal 0.5s cubic-bezier(0.09, 1.14, 0.35, 1);
     background: $color-white;
     margin: 25px auto;
     max-width: $width-max-modal;
