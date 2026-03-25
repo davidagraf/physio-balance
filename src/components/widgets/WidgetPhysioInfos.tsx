@@ -1,4 +1,3 @@
-import React from 'react';
 import Widget from './Widget.js';
 import formular from '../../imgs/widgets/form.jpg';
 

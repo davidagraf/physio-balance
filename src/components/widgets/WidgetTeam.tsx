@@ -1,7 +1,6 @@
-import React from 'react';
 import Widget from './Widget.jsx';
-import team from '../../imgs/widgets/team.jpeg';
+import team from '../../imgs/widgets/team_small.webp';
 
 export default function WidgetTeam() {
-  return <Widget img={team} text="team" path="/team" />;
+  return <Widget text="team" path="/team" img={team} />;
 }
