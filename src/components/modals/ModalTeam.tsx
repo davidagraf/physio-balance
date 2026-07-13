@@ -7,9 +7,11 @@ import { Icon } from '../atomic/Icon';
 import Mirjam from '../../imgs/portraits/MirjamTeam.jpg';
 import Larissa from '../../imgs/portraits/LarissaTeam.jpg';
 import Saskia from '../../imgs/portraits/SaskiaTeam.jpeg';
+import Celine from '../../imgs/portraits/CelineTeam.jpeg';
 import lebenslaufMD from '../../documents/Lebenslauf_MD_Mrz26.pdf';
 import lebenslaufLM from '../../documents/Lebenslauf_LM_Mai24.pdf';
 import lebenslaufSM from '../../documents/Lebenslauf_SM_Mrz26.pdf';
+import lebenslaufCG from '../../documents/Lebenslauf_CJ_Mai26.pdf';
 
 
 export default function ModalTeam() {
@@ -89,6 +91,30 @@ export default function ModalTeam() {
         </p>
         <p>
           <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufSM} newWindow={true}>Lebenslauf</Link>
+        </p>
+
+        <h2 className="h2--space">céline jain-garcia</h2>
+        <Splitview
+          left = {
+            <img src={Celine} width="100" />
+          }
+          right = {
+            <ul>
+              <Li>dipl. physiotherapeutin fh</Li>
+              <Li>expertin für läuferpathologien</Li>
+              <Li>begleitung durch der schwangerschaft und postpartum</Li>
+              <Li>personal training & coaching für läufer:innen</Li>
+              <Li>taping</Li>
+              <Li>triggerpunkttherapie</Li>
+            </ul>
+          }
+        />
+
+        <p>
+          Durch gezielte Therapie und individuelles Coaching helfe ich dir, deine Ziele zu erreichen – ob im Sport oder im Alltag. Dein Wohlbefinden und deine Gesundheit stehen dabei immer im Mittelpunkt.
+        </p>
+        <p>
+          <Link icon={<Icon name="file-pdf-o" />} href={lebenslaufCG} newWindow={true}>Lebenslauf</Link>
         </p>
 
     </Modal>
