@@ -6,12 +6,12 @@ import { Icon } from '../atomic/Icon';
 
 import Mirjam from '../../imgs/portraits/MirjamTeam.jpg';
 import Larissa from '../../imgs/portraits/LarissaTeam.jpg';
-import Saskia from '../../imgs/portraits/SaskiaTeam.jpeg';
-import Celine from '../../imgs/portraits/CelineTeam.jpeg';
+import Saskia from '../../imgs/portraits/SaskiaTeam.jpg';
+import Celine from '../../imgs/portraits/CelineTeam.jpg';
 import lebenslaufMD from '../../documents/Lebenslauf_MD_Mrz26.pdf';
 import lebenslaufLM from '../../documents/Lebenslauf_LM_Mai24.pdf';
-import lebenslaufSM from '../../documents/Lebenslauf_SM_Mrz26.pdf';
-import lebenslaufCG from '../../documents/Lebenslauf_CJ_Mai26.pdf';
+import lebenslaufSM from '../../documents/Lebenslauf_SM_Sept26.pdf';
+import lebenslaufCG from '../../documents/Lebenslauf_CJ_Sept26.pdf';
 
 
 export default function ModalTeam() {
